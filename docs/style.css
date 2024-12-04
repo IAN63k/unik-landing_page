@@ -113,7 +113,7 @@ section {
   width: 100%;
   height: 30px;
   display: flex;
-  bottom: 5%;
+  bottom: 0;
   align-items: center;
   justify-content: space-around;
   color: #fff;
@@ -266,7 +266,7 @@ section {
     width: 80px;
   }
 }
-
+/* 
 @media (max-width: 1050px) {
   .swiper {
     width: 350px;
@@ -309,4 +309,4 @@ section {
     width: 300px;
     height: 400px;
   }
-}
+} */
