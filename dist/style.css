@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'mollen', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: all 0.3s;
+  background: linear-gradient(60deg, rgba(0, 72, 62, 1) 0%, rgba(34, 123, 64, 1) 47%, rgba(96, 170, 61, 1) 100%);
+  background-attachment: fixed;
+}
+
+
+a-waves {
+  --x: -0.5rem;
+  --y: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+a-waves:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #160000;
+  border-radius: 50%;
+  transform: translate3d(calc(var(--x) - 50%), calc(var(--y) - 50%), 0);
+  will-change: transform;
+  content: "";
+}
+a-waves canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
