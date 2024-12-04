@@ -1,0 +1,45 @@
+
+## Tecnologías Utilizadas
+
+- HTML
+- CSS
+- JavaScript
+
+## Instalación
+
+1. Clona el repositorio:
+    ```sh
+    git clone https://github.com/IAN63k/unik-landing_page
+    ```
+2. Navega al directorio del proyecto:
+    ```sh
+    cd docs
+    ```
+
+## Uso
+
+Abre el archivo `index.html` en tu navegador para ver la landing page.
+
+## Estructura de Archivos
+
+- `index.html`: Contiene la estructura principal de la página.
+- `style.css`: Contiene los estilos CSS para la página.
+- `script.js`: Contiene los scripts JavaScript para la funcionalidad de la página.
+- `scriptOther.js`: Contiene scripts adicionales.
+- `src/font/mollen/`: Contiene las fuentes utilizadas en la página.
+- `src/img/`: Contiene las imágenes utilizadas en la página.
+- `src/patrons/`: Contiene los logos de los patrocinadores.
+
+## Contribución
+
+Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza tus cambios y haz commit (`git commit -am 'Añadir nueva funcionalidad'`).
+4. Sube tus cambios (`git push origin feature/nueva-funcionalidad`).
+5. Abre un Pull Request.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
