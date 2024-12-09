@@ -304,8 +304,8 @@ function OpenModal(id) {
       titulo:
         "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-13-1.png",
       parrafo:
-        "El proyecto Senatic ofrece la posibilidad de formación y certificación en cursos reconocidos por gigantes tecnológicos, abarcando diferentes líneas de acción para impulsar el desarrollo tecnológico y digital del país.",
-      llamda: "¡Conócelos aquí!",
+        "El proyecto tic ofrece la posibilidad de formación y certificación en cursos reconocidos por gigantes tecnológicos, abarcando diferentes líneas de acción para impulsar el desarrollo tecnológico y digital del país.",
+      llamada: "¡Conócelos aquí!",
       urlllamada: "",
     },
   ];
@@ -322,7 +322,7 @@ function OpenModal(id) {
     {
       titulo: "image",
       parrafo: "yawa ",
-      llamda: "concenos",
+      llamada: "concenos",
       urlllamada: "https://",
     },
   ];
@@ -343,8 +343,8 @@ function OpenModal(id) {
           "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-12.png')";
         modal.style.backgroundRepeat = "no-repeat";
         modal.style.backgroundSize = "cover";
-        tituloSenatic.innerHTML = `<img src=${item.titulo} />`;
-        parrafo.innerHTML = `<p>${item.parrafo}</p> <span><a href="${item.urlllamada}">${item.llamada}</a></span>`;
+        tituloSenatic.innerHTML = `<img class="animate__animated animate__fadeInUp" src=${item.titulo} />`;
+        parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${item.parrafo}</p> <span class="animate__animated animate__fadeInLeft"><a  href="${item.urlllamada}">${item.llamada}</a></span>`;
       });
 
       break;
@@ -355,8 +355,8 @@ function OpenModal(id) {
           "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-13.png')";
         modal.style.backgroundRepeat = "no-repeat";
         modal.style.backgroundSize = "cover";
-        tituloSenatic.innerHTML = `<img src=${item.titulo} />`;
-        parrafo.innerHTML = `<p>${item.parrafo}</p> <span><a href="${item.urlllamada}">${item.llamada}</a></span>`;
+        tituloSenatic.innerHTML = `<img class="animate__animated animate__fadeInUp" src=${item.titulo} />`;
+        parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${item.parrafo}</p> <span><a class="animate__animated animate__fadeInLeft"  href="${item.urlllamada}">${item.llamada}</a></span>`;
       });
 
       break;
@@ -368,8 +368,10 @@ function OpenModal(id) {
          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-12.png')";
        modal.style.backgroundRepeat = "no-repeat";
        modal.style.backgroundSize = "cover";
-       tituloSenatic.innerHTML = `<img src=${item.titulo} />`;
-       parrafo.innerHTML = `<p>${item.parrafo}</p> <span><a href="${item.urlllamada}">${item.llamada}</a></span>`;
+       tituloSenatic.innerHTML = `<img 
+       class="animate__animated animate__fadeInUp" 
+       src=${item.titulo} />`;
+       parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${item.parrafo}</p> <span><a class="animate__animated animate__fadeInLeft"  href="${item.urlllamada}">${item.llamada}</a></span>`;
      });
 
      break;
@@ -380,8 +382,10 @@ function OpenModal(id) {
            "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-12.png')";
          modal.style.backgroundRepeat = "no-repeat";
          modal.style.backgroundSize = "cover";
-         tituloSenatic.innerHTML = `<img src=${item.titulo} />`;
-         parrafo.innerHTML = `<p>${item.parrafo}</p> <span><a href="${item.urlllamada}">${item.llamada}</a></span>`;
+         tituloSenatic.innerHTML = `<img 
+         class="animate__animated animate__fadeInUp" 
+         src=${item.titulo} />`;
+         parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${item.parrafo}</p> <span><a class="animate__animated animate__fadeInLeft"  href="${item.urlllamada}">${item.llamada}</a></span>`;
        });
 
       break;
