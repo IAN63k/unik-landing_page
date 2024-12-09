@@ -18,7 +18,7 @@ class AWaves extends HTMLElement {
       v: 0,
       vs: 0,
       a: 0,
-      set: false
+      set: false,
     };
 
     this.lines = [];
@@ -126,7 +126,7 @@ class AWaves extends HTMLElement {
           x: xStart + xGap * i,
           y: yStart + yGap * j,
           wave: { x: 0, y: 0 },
-          cursor: { x: 0, y: 0, vx: 0, vy: 0 }
+          cursor: { x: 0, y: 0, vx: 0, vy: 0 },
         };
 
         points.push(point);
@@ -189,7 +189,7 @@ class AWaves extends HTMLElement {
   moved(point, withCursorForce = true) {
     const coords = {
       x: point.x + point.wave.x + (withCursorForce ? point.cursor.x : 0),
-      y: point.y + point.wave.y + (withCursorForce ? point.cursor.y : 0)
+      y: point.y + point.wave.y + (withCursorForce ? point.cursor.y : 0),
     };
 
     // Round to 2 decimals
@@ -271,22 +271,71 @@ class AWaves extends HTMLElement {
 
 customElements.define("a-waves", AWaves);
 
-// Menú activo
-const lista = document.getElementById('list_item');
-lista.addEventListener('click', function(event) {
+//modales ofertas de formacion
 
-  if (event.target.tagName === 'LI') {
+function setActive(element) {
+  // Primero, elimina el desenfoque de todos los elementos
+  const listItems = document.querySelectorAll("#ulModales li");
+  listItems.forEach((item) => {
+    item.classList.add("blur"); // Añade el blur a todos los elementos
+  });
+
+  // Elimina el desenfoque (clase 'blur') del elemento que fue clicado
+  element.classList.remove("blur");
+}
+
+function OpenModal(id) {
+  let modals = document.getElementById(id);
+  let bgModal = document.getElementById("bgModal");
+  let ContModales = document.getElementById("ContModales");
+
+  ContModales.style.height = "100px";
+  modals.classList.add("open");
+  bgModal.classList.add("bgModal");
+}
+
+//modales ofertas de formacion
+
+function closeModal(id) {
+  let modals = document.getElementById(id);
+  let bgModal = document.getElementById("bgModal");
+  let ContModales = document.getElementById("ContModales");
+
+
+  modals.classList.remove("open");
+  ContModales.style.height = "200px";
+  bgModal.classList.remove("bgModal");
+
+  setTimeout(noRender, 300);
+  function noRender() {
+    modals.style.display = "none";
+  }
+
+
+  const listItems = document.querySelectorAll("#ulModales li");
+  listItems.forEach((item) => {
+    item.classList.remove("blur"); // Añade el blur a todos los elementos
+  });
+
+}
+
+//********************************************************** */
+
+// Menú activo
+const lista = document.getElementById("list_item");
+lista.addEventListener("click", function (event) {
+  if (event.target.tagName === "LI") {
     // Remover la clase active
-    const items = lista.getElementsByTagName('li');
+    const items = lista.getElementsByTagName("li");
     for (let item of items) {
-      item.classList.remove('active');
+      item.classList.remove("active");
     }
     // Agregar la clase active
-    event.target.classList.add('active');
-    
+    event.target.classList.add("active");
+
     // Obtener el value de los <li> clickeado
-    const selectedValue = event.target.getAttribute('value');
-    
+    const selectedValue = event.target.getAttribute("value");
+
     // Cambiar la cara visible del swiper en base al value
     swiper.slideTo(getSlideIndexByValue(selectedValue), 1000);
   }
@@ -296,13 +345,13 @@ lista.addEventListener('click', function(event) {
 
 function getSlideIndexByValue(value) {
   const slideIds = {
-    "senatic": 0,
-    "TalentoTech": 1,
-    "AvanzaTec": 2,
-    "Gobiernodigital": 3,
-    "Yawa": 4
+    senatic: 0,
+    TalentoTech: 1,
+    AvanzaTec: 2,
+    Gobiernodigital: 3,
+    Yawa: 4,
   };
-  return slideIds[value] || 0;  // Valor predeterminado si no se encuentra
+  return slideIds[value] || 0; // Valor predeterminado si no se encuentra
 }
 
 // Swiper (cubo)

@@ -191,7 +191,6 @@ body {
     justify-content: center;
     align-items: center;
     opacity: 0.1;
-
   }
 }
 
@@ -1286,7 +1285,7 @@ body {
       h2 {
         font-size: 5.5rem;
         font-weight: 600;
-        line-height: .8;
+        line-height: 0.8;
         letter-spacing: 0.04em;
       }
     }
@@ -1518,8 +1517,6 @@ body {
   }
 }
 
-
-
 .container_serv {
   max-width: 1300px;
   display: flex;
@@ -1577,7 +1574,6 @@ body {
             }
 
             &:hover {
-
               circle {
                 transition: all 0.3s ease;
                 fill: #27a37d;
@@ -1587,7 +1583,6 @@ body {
                 transition: all 0.3s ease;
                 fill: #fff;
               }
-
             }
           }
         }
@@ -1623,7 +1618,6 @@ body {
         }
       }
     }
-
   }
 
   main {
@@ -1804,6 +1798,10 @@ body {
       justify-content: center;
       align-items: flex-start;
 
+      figure {
+        margin: auto;
+      }
+
       h3 {
         font-size: 3rem;
         font-weight: 600;
@@ -1834,32 +1832,180 @@ body {
       }
     }
   }
+}
 
-  .figure {
+.figure {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  figure {
     position: relative;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      user-select: none;
+      -drag: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+    }
+  }
+}
+
+#bgModal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .contenedorModal {
+    position: absolute;
+    width: 80vw;
+    height: 700px;
+    background: red;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    display: none;
+    opacity: 0;
+    z-index: 100;
+    transition: all 1s ease-in-out;
+
+    .close {
+      width: 60px;
+      height: 60px;
+      background: #000;
+      border-radius: 100%;
+      display: flex;
+      color: #fff;
+      font-size: 30px;
+      font-weight: 600;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      border: 2px solid #fff;
+      transition: all 0.5s ease-in-out;
+      cursor: pointer;
+    }
+    .close:hover {
+      background: #5c5c5c;
+      display: flex;
+      color: #ff040473;
+      font-weight: 800;
+      border: 2px solid #fff;
+    }
 
     figure {
-      position: relative;
+      margin: auto;
+      height: 180px;
+      rgb(255, 0, 0) img {
+      }
+    }
 
-      img {
-        width: 100%;
-        height: 100%;
-        user-select: none;
-        -drag: none;
-        -moz-user-select: none;
-        -webkit-user-drag: none;
-        -webkit-user-select: none;
+    p {
+      color: #fff;
+      margin: 0;
+      font-size: 20px;
+      span a {
+        color: #fff;
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+
+    .ContenidoCardsModal {
+      margin-top: 10px;
+      transition: all 1s ease-in-out;
+
+      strong {
+        color: #ffffff;
+        font-size: 20px;
+        margin: 10px 0;
+        display: block;
+      }
+      .card {
+        padding: 15px;
+        background: #fff;
+        width: 320px;
+        height: 350px;
+        border-radius: 30px;
+        overflow: hidden;
+
+        figure {
+          width: 100%;
+          height: 200px;
+          img {
+            width: 100%;
+            height: 180px;
+
+            border-radius: 30px;
+            object-fit: cover;
+          }
+        }
+        h2 {
+          margin: 0;
+          font-size: 15px;
+        }
+
+        span {
+          width: 100%;
+          p {
+            color: aqua;
+            margin: 0;
+            font-size: 15px;
+          }
+        }
+        p {
+          color: #000;
+          font-size: 12px;
+          margin: 5px 0;
+        }
       }
     }
   }
 }
 
+#ulModales li {
+  transition: all 0.5s ease-in-out;
+}
+
+#ulModales li {
+  filter: none;
+  transition: all 0.5s ease-in-out;
+}
+
+#ulModales li.blur {
+  filter: blur(1px);
+  opacity: 0.5;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.open {
+  display: grid !important;
+  padding: 50px;
+  opacity: 1 !important;
+  transition: all 1s ease-in-out;
+}
+
+.bgModal {
+  backdrop-filter: blur(5px);
+  transition: all 0.5s ease-in-out;
+}
+
 .menu-aliados {
+  z-index: 60;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1868,12 +2014,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 1s ease-in-out;
 
   .info {
     position: absolute;
     width: 600px;
     height: 80px;
-    background-color: var(--color-primary);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -1881,19 +2027,35 @@ body {
     border-radius: 1rem;
     margin-top: 10px;
 
-    figure {
+    ul {
+      transition: all 1s ease-in-out;
       width: 100%;
       height: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: transparent;
+      gap: 40px;
 
+      li {
+        transition: all 1s ease-in-out;
+        border-radius: 20px;
+        display: flex;
+        width: 120px;
+        height: 70px;
+        list-style: none;
+        background-color: var(--color-primary);
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: 2px solid #fff;
+      }
       img {
-        width: 70px;
-        height: auto;
+        width: 100%;
+        height: 100%;
         object-fit: contain;
         transition: all 0.3s;
+        padding: 10px;
 
         &:hover {
           transition: all 0.3s;
@@ -1958,9 +2120,10 @@ a-waves canvas {
   grid-template-columns: 50% 45%;
   place-items: center;
   gap: 60px;
+  width: 100%;
   min-height: 100vh;
   padding: 20px 60px;
-
+  background-color: #00926e;
   /* CONTENT */
 
   .content {
