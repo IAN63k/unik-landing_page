@@ -1768,6 +1768,8 @@ body {
 }
 
 .section_ofert {
+  overflow-x: hidden;
+  overflow-y: hidden;
   background-color: var(--color-quaternary);
   height: 800px;
   width: 100%;
@@ -1870,7 +1872,7 @@ body {
     position: absolute;
     width: 90vw;
     height: 700px;
-    background: rgba(255, 255, 255, 0.479);
+    background: rgba(129, 129, 129, 0.842);
     border-radius: 30px;
     border: 2px solid #fff;
     display: none;
@@ -1898,6 +1900,7 @@ body {
       transition: all 0.5s ease-in-out;
       cursor: pointer;
     }
+
     .close:hover {
       background: #5c5c5c;
       display: flex;
@@ -1908,51 +1911,62 @@ body {
 
     figure {
       margin: auto;
-      height: 180px;
-      rgb(255, 0, 0) img {
-      }
+      height: 100px;
     }
 
+  #parrafo{
     p {
       color: #fff;
       margin: 0;
       font-size: 20px;
-      span a {
+       }
+
+      span{
+margin: 20px 0;
+       a {
         color: #fff;
         font-weight: 600;
         font-size: 20px;
+        
       }
+      }
+  }
+    .llamadoCards {
+      color: #ffffff;
+      font-size: 20px;
+      margin: 10px 0;
+      display: block;
     }
-
     .ContenidoCardsModal {
       margin-top: 10px;
       transition: all 1s ease-in-out;
+      display: flex;
+      gap: 30px;
+      height: 320px;
+      overflow: hidden;
+      justify-content: center;
 
-      strong {
-        color: #ffffff;
-        font-size: 20px;
-        margin: 10px 0;
-        display: block;
-      }
+
       .card {
         padding: 15px;
         background: #fff;
         width: 320px;
-        height: 310px;
+        height: 320px;
         border-radius: 30px;
         overflow: hidden;
 
         figure {
           width: 100%;
           height: 200px;
+
           img {
             width: 100%;
             height: 180px;
-
             border-radius: 30px;
             object-fit: cover;
           }
         }
+
         h2 {
           margin: 0;
           font-size: 15px;
@@ -1966,6 +1980,7 @@ body {
             font-size: 15px;
           }
         }
+
         p {
           color: #000;
           font-size: 12px;
@@ -2055,7 +2070,7 @@ body {
       img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: none;
         transition: all 0.3s;
         padding: 10px;
 

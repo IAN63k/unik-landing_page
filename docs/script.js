@@ -289,6 +289,8 @@ function OpenModal(id) {
   let bgModal = document.getElementById("bgModal");
   let ContModales = document.getElementById("ContModales");
 
+  //Contenido superior de modal
+
   const Senatic = [
     {
       titulo:
@@ -311,19 +313,135 @@ function OpenModal(id) {
   ];
   const tech = [
     {
-      titulo: "image",
-      parrafo: "rech ",
-      llamda: "concenos",
+      titulo:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-20.png",
+      parrafo:
+        "Talento Tech es un programa de formación que busca mediante un entrenamiento intensivo bajo la metodología de bootcamps, preparar a los nuevos talentos digitales del país en habilidades digitales avanzadas,capacitándolos para ingresar al mercado laboral tecnológico.  ",
+      llamada: "¡Descúbrelos aquí!",
       urlllamada: "https://",
     },
   ];
 
   const yawa = [
     {
-      titulo: "image",
-      parrafo: "yawa ",
-      llamada: "concenos",
-      urlllamada: "https://",
+      titulo:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-21.png",
+      parrafo:
+        "En YAWA encontrarás un espacio que impulsa tus ideas y expande tus horizontes, combinando ciencia, arte y tecnología. Desde su Planetario de tercera generación hasta Salas de Motion Capture y Laboratorios de Innovación, el conocimiento aquí se transforma en una herramienta poderosa. ",
+      llamada: "",
+      urlllamada: "#",
+    },
+  ];
+
+  //Contenido de tarjetas por modal de cada oferta
+
+  const SenaticCards = [
+    {
+      portada:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15-100.jpg",
+      titulo: "Análisis de datos de Google",
+      tipo: "Avanza hacia un título universitario ",
+      reconocimiento: "Certificado profesional",
+    },
+    {
+      portada:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15-100.jpg",
+      titulo: "Gestión de proyectos de Google",
+      tipo: "Avanza hacia un título universitario ",
+      reconocimiento: "Certificado profesional",
+    },
+    {
+      portada:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15-100.jpg",
+      titulo: "Soporte de TI de googlev",
+      tipo: "Avanza hacia un título universitario ",
+      reconocimiento: "Certificado profesional",
+    },
+    {
+      portada:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15-100.jpg",
+      titulo: "Diseño de experiencia del usuario (UX) de Google",
+      tipo: "Avanza hacia un título universitario ",
+      reconocimiento: "Certificado profesional",
+    },
+  ];
+
+  const ticCards = [
+    {
+      portada:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-16-100.jpg",
+      titulo: "WhatsApp Bussines para emprendedores",
+      tipo: "Taller ",
+      reconocimiento: "Certificado",
+    },
+    {
+      portada:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15-100-1.jpg",
+      titulo: "Uso básico de herramientas digitales",
+      tipo: "Taller ",
+      reconocimiento: "Certificado",
+    },
+    {
+      portada:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-14-100-1.jpg",
+      titulo: "Excel para principiantes",
+      tipo: "Taller ",
+      reconocimiento: "Certificado",
+    },
+    {
+      portada:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-13-100.jpg",
+      titulo: "WhatsApp web para la vida digital",
+      tipo: "Taller ",
+      reconocimiento: "Certificado",
+    },
+  ];
+
+  const techCards = [
+    {
+      portada:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-12-100.jpg",
+      titulo: "Desarrollo web full stack",
+      tipo: "Bootcamps",
+      reconocimiento: "Certificado",
+    },
+    {
+      portada:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-11-100.jpg",
+      titulo: "Inteligencia artificial",
+      tipo: "Bootcamps",
+      reconocimiento: "Certificado",
+    },
+    {
+      portada:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-10-100.jpg",
+      titulo: "Arquitectura en la nube",
+      tipo: "Bootcamps",
+      reconocimiento: "Certificado",
+    },
+    {
+      portada:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-9-100.jpg",
+      titulo: "Blockchain",
+      tipo: "Bootcamps",
+      reconocimiento: "Certificado",
+    },
+  ];
+
+  const yawaCards = [
+    {
+      portada:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-14-100.jpg",
+      titulo: "Motion Graphics en After Effects",
+      tipo: "Curso ",
+      reconocimiento: "Certificado",
+    },
+    {
+      portada:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15-100.jpg",
+      titulo: "Modelado de personajes para animación 3D",
+      tipo: "Curso ",
+      reconocimiento: "Certificado",
     },
   ];
 
@@ -331,63 +449,171 @@ function OpenModal(id) {
   modals.classList.add("open");
   bgModal.classList.add("bgModal");
 
-  let parrafo = document.getElementById("parrafo");
-  let tituloSenatic = document.getElementById("tituloSenatic");
-  let modal = document.getElementById("modal");
-  
+  const parrafo = document.getElementById("parrafo");
+  const tituloSenatic = document.getElementById("tituloSenatic");
+  const modal = document.getElementById("modal");
+  // Creamos un objeto para llevar el control de las tarjetas generadas por cada caso
+  let tarjetasGeneradasPorModal = {
+    modalSenatic: false,
+    modalTic: false,
+    modaltech: false,
+    modalYawa: false,
+  };
+
   switch (id) {
     case "modalSenatic":
-      Senatic.forEach((item) => {
+      // Limpiar el contenedor de tarjetas cuando se cambia de modal
+      const containerSenatic = document.getElementById("ContenidoCardsModal");
+      containerSenatic.innerHTML = ""; // Esto limpia las tarjetas existentes
 
+      // Si las tarjetas no se han generado aún para este modal
+      if (!tarjetasGeneradasPorModal.modalSenatic) {
+        // Establecemos el fondo del modal
         modal.style.backgroundImage =
           "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-12.png')";
         modal.style.backgroundRepeat = "no-repeat";
         modal.style.backgroundSize = "cover";
-        tituloSenatic.innerHTML = `<img class="animate__animated animate__fadeInUp" src=${item.titulo} />`;
-        parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${item.parrafo}</p> <span class="animate__animated animate__fadeInLeft"><a  href="${item.urlllamada}">${item.llamada}</a></span>`;
-      });
+        tituloSenatic.innerHTML = `<img class="animate__animated animate__fadeInUp" src="${Senatic[0].titulo}" />`;
+        parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${Senatic[0].parrafo}</p><span class="animate__animated animate__fadeInLeft"><a id="llamda" href="${Senatic[0].urlllamada}">${Senatic[0].llamada}</a></span>`;
 
+        // Iteramos sobre el arreglo SenaticCards y creamos las tarjetas
+        SenaticCards.forEach((item) => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+
+          // Creamos el contenido de la tarjeta
+          card.innerHTML = `
+          <figure>
+            <img src="${item.portada}" alt="Imagen del proyecto">
+          </figure>
+          <h2>${item.titulo}</h2>
+          <span><p>${item.tipo}</p></span>
+          <p>${item.reconocimiento}</p>
+        `;
+
+          // Añadimos la tarjeta al contenedor
+          containerSenatic.appendChild(card);
+        });
+
+        // Marcamos que las tarjetas ya fueron generadas para este modal
+        tarjetasGeneradasPorModal.modalSenatic = true;
+      }
       break;
 
     case "modalTic":
-      tic.forEach((item) => {
+      // Limpiar el contenedor de tarjetas cuando se cambia de modal
+      const containerTic = document.getElementById("ContenidoCardsModal");
+      containerTic.innerHTML = ""; // Esto limpia las tarjetas existentes
+
+      // Si las tarjetas no se han generado aún para este modal
+      if (!tarjetasGeneradasPorModal.modalTic) {
+        // Establecemos el fondo del modal
         modal.style.backgroundImage =
           "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-13.png')";
         modal.style.backgroundRepeat = "no-repeat";
         modal.style.backgroundSize = "cover";
-        tituloSenatic.innerHTML = `<img class="animate__animated animate__fadeInUp" src=${item.titulo} />`;
-        parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${item.parrafo}</p> <span><a class="animate__animated animate__fadeInLeft"  href="${item.urlllamada}">${item.llamada}</a></span>`;
-      });
+        tituloSenatic.innerHTML = `<img class="animate__animated animate__fadeInUp" src="${tic[0].titulo}" />`;
+        parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${tic[0].parrafo}</p><span class="animate__animated animate__fadeInLeft"><a id="llamda" href="${tic[0].urlllamada}">${tic[0].llamada}</a></span>`;
 
+        // Iteramos sobre el arreglo ticCards y creamos las tarjetas
+        ticCards.forEach((item) => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+
+          // Creamos el contenido de la tarjeta
+          card.innerHTML = `
+        <figure>
+            <img src="${item.portada}" alt="Imagen del proyecto">
+          </figure>
+          <h2>${item.titulo}</h2>
+          <span><p>${item.tipo}</p></span>
+          <p>${item.reconocimiento}</p>
+        `;
+
+          // Añadimos la tarjeta al contenedor
+          containerTic.appendChild(card);
+        });
+
+        // Marcamos que las tarjetas ya fueron generadas para este modal
+        tarjetasGeneradasPorModal.modalTic = true;
+      }
       break;
 
     case "modaltech":
+      // Limpiar el contenedor de tarjetas cuando se cambia de modal
+      const containerTech = document.getElementById("ContenidoCardsModal");
+      containerTech.innerHTML = ""; // Esto limpia las tarjetas existentes
 
-     Senatic.forEach((item) => {
-       modal.style.backgroundImage =
-         "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-12.png')";
-       modal.style.backgroundRepeat = "no-repeat";
-       modal.style.backgroundSize = "cover";
-       tituloSenatic.innerHTML = `<img 
-       class="animate__animated animate__fadeInUp" 
-       src=${item.titulo} />`;
-       parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${item.parrafo}</p> <span><a class="animate__animated animate__fadeInLeft"  href="${item.urlllamada}">${item.llamada}</a></span>`;
-     });
+      // Si las tarjetas no se han generado aún para este modal
+      if (!tarjetasGeneradasPorModal.modaltech) {
+        // Establecemos el fondo del modal
+        modal.style.backgroundImage =
+          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-23.png')";
+        modal.style.backgroundRepeat = "no-repeat";
+        modal.style.backgroundSize = "cover";
+        tituloSenatic.innerHTML = `<img class="animate__animated animate__fadeInUp" src="${tech[0].titulo}" />`;
+        parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${tech[0].parrafo}</p><span class="animate__animated animate__fadeInLeft"><a id="llamda" href="${tech[0].urlllamada}">${tech[0].llamada}</a></span>`;
 
-     break;
+        // Iteramos sobre el arreglo techCards y creamos las tarjetas
+        techCards.forEach((item) => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+
+          // Creamos el contenido de la tarjeta
+          card.innerHTML = `
+            <figure>
+            <img src="${item.portada}" alt="Imagen del proyecto">
+          </figure>
+          <h2>${item.titulo}</h2>
+          <span><p>${item.tipo}</p></span>
+          <p>${item.reconocimiento}</p>
+        `;
+
+          // Añadimos la tarjeta al contenedor
+          containerTech.appendChild(card);
+        });
+
+        // Marcamos que las tarjetas ya fueron generadas para este modal
+        tarjetasGeneradasPorModal.modaltech = true;
+      }
+      break;
+
     case "modalYawa":
+      // Limpiar el contenedor de tarjetas cuando se cambia de modal
+      const containerYawa = document.getElementById("ContenidoCardsModal");
+      containerYawa.innerHTML = ""; // Esto limpia las tarjetas existentes
 
-       Senatic.forEach((item) => {
-         modal.style.backgroundImage =
-           "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-12.png')";
-         modal.style.backgroundRepeat = "no-repeat";
-         modal.style.backgroundSize = "cover";
-         tituloSenatic.innerHTML = `<img 
-         class="animate__animated animate__fadeInUp" 
-         src=${item.titulo} />`;
-         parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${item.parrafo}</p> <span><a class="animate__animated animate__fadeInLeft"  href="${item.urlllamada}">${item.llamada}</a></span>`;
-       });
+      // Si las tarjetas no se han generado aún para este modal
+      if (!tarjetasGeneradasPorModal.modalYawa) {
+        // Establecemos el fondo del modal
+        modal.style.backgroundImage =
+          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-22.png')";
+        modal.style.backgroundRepeat = "no-repeat";
+        modal.style.backgroundSize = "cover";
+        tituloSenatic.innerHTML = `<img class="animate__animated animate__fadeInUp" src="${yawa[0].titulo}" />`;
+        parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${yawa[0].parrafo}</p><span class="animate__animated animate__fadeInLeft"><a id="llamda" href="${yawa[0].urlllamada}">${yawa[0].llamada}</a></span>`;
 
+        // Iteramos sobre el arreglo yawaCards y creamos las tarjetas
+        yawaCards.forEach((item) => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+
+          // Creamos el contenido de la tarjeta
+          card.innerHTML = `
+          <figure>
+            <img src="${item.portada}" alt="Imagen del proyecto">
+          </figure>
+          <h2>${item.titulo}</h2>
+          <span><p>${item.tipo}</p></span>
+          <p>${item.reconocimiento}</p>
+        `;
+
+          // Añadimos la tarjeta al contenedor
+          containerYawa.appendChild(card);
+        });
+        // Marcamos que las tarjetas ya fueron generadas para este modal
+        tarjetasGeneradasPorModal.modalYawa = true;
+      }
       break;
   }
 }
