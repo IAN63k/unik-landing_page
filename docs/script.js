@@ -285,22 +285,115 @@ function setActive(element) {
 }
 
 function OpenModal(id) {
-  let modals = document.getElementById(id);
+  let modals = document.getElementById("modal");
   let bgModal = document.getElementById("bgModal");
   let ContModales = document.getElementById("ContModales");
+
+  const Senatic = [
+    {
+      titulo:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-9.png",
+      parrafo:
+        "El proyecto Senatic ofrece la posibilidad de formación y certificación en cursos reconocidos por gigantes tecnológicos, abarcando diferentes líneas de acción para impulsar el desarrollo tecnológico y digital del país.",
+      llamada: "¡Conócelos aquí!",
+      urlllamada: "",
+    },
+  ];
+  const tic = [
+    {
+      titulo:
+        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-13-1.png",
+      parrafo:
+        "El proyecto Senatic ofrece la posibilidad de formación y certificación en cursos reconocidos por gigantes tecnológicos, abarcando diferentes líneas de acción para impulsar el desarrollo tecnológico y digital del país.",
+      llamda: "¡Conócelos aquí!",
+      urlllamada: "",
+    },
+  ];
+  const tech = [
+    {
+      titulo: "image",
+      parrafo: "rech ",
+      llamda: "concenos",
+      urlllamada: "https://",
+    },
+  ];
+
+  const yawa = [
+    {
+      titulo: "image",
+      parrafo: "yawa ",
+      llamda: "concenos",
+      urlllamada: "https://",
+    },
+  ];
 
   ContModales.style.height = "100px";
   modals.classList.add("open");
   bgModal.classList.add("bgModal");
+
+  let parrafo = document.getElementById("parrafo");
+  let tituloSenatic = document.getElementById("tituloSenatic");
+  let modal = document.getElementById("modal");
+  
+  switch (id) {
+    case "modalSenatic":
+      Senatic.forEach((item) => {
+
+        modal.style.backgroundImage =
+          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-12.png')";
+        modal.style.backgroundRepeat = "no-repeat";
+        modal.style.backgroundSize = "cover";
+        tituloSenatic.innerHTML = `<img src=${item.titulo} />`;
+        parrafo.innerHTML = `<p>${item.parrafo}</p> <span><a href="${item.urlllamada}">${item.llamada}</a></span>`;
+      });
+
+      break;
+
+    case "modalTic":
+      tic.forEach((item) => {
+        modal.style.backgroundImage =
+          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-13.png')";
+        modal.style.backgroundRepeat = "no-repeat";
+        modal.style.backgroundSize = "cover";
+        tituloSenatic.innerHTML = `<img src=${item.titulo} />`;
+        parrafo.innerHTML = `<p>${item.parrafo}</p> <span><a href="${item.urlllamada}">${item.llamada}</a></span>`;
+      });
+
+      break;
+
+    case "modaltech":
+
+     Senatic.forEach((item) => {
+       modal.style.backgroundImage =
+         "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-12.png')";
+       modal.style.backgroundRepeat = "no-repeat";
+       modal.style.backgroundSize = "cover";
+       tituloSenatic.innerHTML = `<img src=${item.titulo} />`;
+       parrafo.innerHTML = `<p>${item.parrafo}</p> <span><a href="${item.urlllamada}">${item.llamada}</a></span>`;
+     });
+
+     break;
+    case "modalYawa":
+
+       Senatic.forEach((item) => {
+         modal.style.backgroundImage =
+           "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-12.png')";
+         modal.style.backgroundRepeat = "no-repeat";
+         modal.style.backgroundSize = "cover";
+         tituloSenatic.innerHTML = `<img src=${item.titulo} />`;
+         parrafo.innerHTML = `<p>${item.parrafo}</p> <span><a href="${item.urlllamada}">${item.llamada}</a></span>`;
+       });
+
+      break;
+  }
 }
 
 //modales ofertas de formacion
 
 function closeModal(id) {
-  let modals = document.getElementById(id);
+  let modals = document.getElementById("modal");
   let bgModal = document.getElementById("bgModal");
   let ContModales = document.getElementById("ContModales");
-
 
   modals.classList.remove("open");
   ContModales.style.height = "200px";
@@ -311,12 +404,10 @@ function closeModal(id) {
     modals.style.display = "none";
   }
 
-
   const listItems = document.querySelectorAll("#ulModales li");
   listItems.forEach((item) => {
     item.classList.remove("blur"); // Añade el blur a todos los elementos
   });
-
 }
 
 //********************************************************** */

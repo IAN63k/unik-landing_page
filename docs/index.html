@@ -740,13 +740,13 @@
                 />
               </li>
               <li onclick="setActive(this)">
-                <img src="./src/patrons/talentotech.png" alt="" />
+                <img onclick="OpenModal('modalTic')" src="./src/patrons/talentotech.png" alt="" />
               </li>
               <li onclick="setActive(this)">
-                <img src="./src/patrons/avanzatic.png" alt="" />
+                <img onclick="OpenModal('modaltech')" src="./src/patrons/avanzatic.png" alt="" />
               </li>
               <li onclick="setActive(this)">
-                <img src="./src/patrons/gobiernoDigital.png" alt="" />
+                <img onclick="OpenModal('modalYawa')" src="./src/patrons/gobiernoDigital.png" alt="" />
               </li>
             </ul>
           </div>
@@ -754,17 +754,13 @@
       </div>
 
       <div id="bgModal">
-        <div class="contenedorModal animate__animated animate__fadeInDown" id="modalSenatic">
+        <div class="contenedorModal animate__animated animate__fadeInDown" id="modal">
           <span onclick="closeModal('modalSenatic')" class="close">X</span>
-          <figure>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTL1u8S1Nl0_yHeJLr-XRUSwTP-y-iyXq4Jw&s" alt="" />
+          <figure id="tituloSenatic">
+            <img id=""  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTL1u8S1Nl0_yHeJLr-XRUSwTP-y-iyXq4Jw&s" alt="" />
           </figure>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-           
-            <span><a href="#">Conocelos aqui</a></span>
+          <p id="parrafo">
+            <span><a id="llamda" href="#"></a></span>
           </p>
           <div class="ContenidoCardsModal">
             <strong>Certificados mas populares</strong>
@@ -775,7 +771,7 @@
                   alt=""
                 />
               </figure>
-              <h2>Analicis de datos de google</h2>
+              <h2>Analisis de datos de google</h2>
               <span><img src="" alt="" />
                 <p>Avanza hacia un titulo universitario</p></span>
               <p>Certificado profecional</p>
