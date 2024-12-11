@@ -470,10 +470,10 @@ function OpenModal(id) {
       if (!tarjetasGeneradasPorModal.modalSenatic) {
         // Establecemos el fondo del modal
         modal.style.backgroundImage =
-          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-12.png')";
+          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-17-100.jpg')";
         modal.style.backgroundRepeat = "no-repeat";
         modal.style.backgroundSize = "cover";
-        tituloSenatic.innerHTML = `<img class="animate__animated animate__fadeInUp" src="${Senatic[0].titulo}" />`;
+        tituloSenatic.innerHTML = `<img loading="lazy" class="animate__animated animate__fadeInUp" src="${Senatic[0].titulo}" />`;
         parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${Senatic[0].parrafo}</p><span class="animate__animated animate__fadeInLeft"><a id="llamda" href="${Senatic[0].urlllamada}">${Senatic[0].llamada}</a></span>`;
 
         // Iteramos sobre el arreglo SenaticCards y creamos las tarjetas
@@ -484,7 +484,7 @@ function OpenModal(id) {
           // Creamos el contenido de la tarjeta
           card.innerHTML = `
           <figure>
-            <img src="${item.portada}" alt="Imagen del proyecto">
+            <img loading="lazy" class="animate__animated animate__zoomIn" src="${item.portada}" alt="Imagen del proyecto">
           </figure>
           <h2>${item.titulo}</h2>
           <span><p>${item.tipo}</p></span>
@@ -509,10 +509,10 @@ function OpenModal(id) {
       if (!tarjetasGeneradasPorModal.modalTic) {
         // Establecemos el fondo del modal
         modal.style.backgroundImage =
-          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-13.png')";
+          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-20-100.jpg')";
         modal.style.backgroundRepeat = "no-repeat";
         modal.style.backgroundSize = "cover";
-        tituloSenatic.innerHTML = `<img class="animate__animated animate__fadeInUp" src="${tic[0].titulo}" />`;
+        tituloSenatic.innerHTML = `<img loading="lazy" class="animate__animated animate__fadeInUp" src="${tic[0].titulo}" />`;
         parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${tic[0].parrafo}</p><span class="animate__animated animate__fadeInLeft"><a id="llamda" href="${tic[0].urlllamada}">${tic[0].llamada}</a></span>`;
 
         // Iteramos sobre el arreglo ticCards y creamos las tarjetas
@@ -523,7 +523,7 @@ function OpenModal(id) {
           // Creamos el contenido de la tarjeta
           card.innerHTML = `
         <figure>
-            <img src="${item.portada}" alt="Imagen del proyecto">
+            <img loading="lazy" class="animate__animated animate__zoomIn" src="${item.portada}" alt="Imagen del proyecto">
           </figure>
           <h2>${item.titulo}</h2>
           <span><p>${item.tipo}</p></span>
@@ -548,10 +548,10 @@ function OpenModal(id) {
       if (!tarjetasGeneradasPorModal.modaltech) {
         // Establecemos el fondo del modal
         modal.style.backgroundImage =
-          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-23.png')";
+          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-19-100.jpg')";
         modal.style.backgroundRepeat = "no-repeat";
         modal.style.backgroundSize = "cover";
-        tituloSenatic.innerHTML = `<img class="animate__animated animate__fadeInUp" src="${tech[0].titulo}" />`;
+        tituloSenatic.innerHTML = `<img loading="lazy" class="animate__animated animate__fadeInUp" src="${tech[0].titulo}" />`;
         parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${tech[0].parrafo}</p><span class="animate__animated animate__fadeInLeft"><a id="llamda" href="${tech[0].urlllamada}">${tech[0].llamada}</a></span>`;
 
         // Iteramos sobre el arreglo techCards y creamos las tarjetas
@@ -562,7 +562,7 @@ function OpenModal(id) {
           // Creamos el contenido de la tarjeta
           card.innerHTML = `
             <figure>
-            <img src="${item.portada}" alt="Imagen del proyecto">
+            <img loading="lazy" class="animate__animated animate__zoomIn" src="${item.portada}" alt="Imagen del proyecto">
           </figure>
           <h2>${item.titulo}</h2>
           <span><p>${item.tipo}</p></span>
@@ -587,10 +587,10 @@ function OpenModal(id) {
       if (!tarjetasGeneradasPorModal.modalYawa) {
         // Establecemos el fondo del modal
         modal.style.backgroundImage =
-          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-22.png')";
+          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-20-100.jpg')";
         modal.style.backgroundRepeat = "no-repeat";
         modal.style.backgroundSize = "cover";
-        tituloSenatic.innerHTML = `<img class="animate__animated animate__fadeInUp" src="${yawa[0].titulo}" />`;
+        tituloSenatic.innerHTML = `<img loading="lazy" class="animate__animated animate__fadeInUp" src="${yawa[0].titulo}" />`;
         parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${yawa[0].parrafo}</p><span class="animate__animated animate__fadeInLeft"><a id="llamda" href="${yawa[0].urlllamada}">${yawa[0].llamada}</a></span>`;
 
         // Iteramos sobre el arreglo yawaCards y creamos las tarjetas
@@ -601,7 +601,7 @@ function OpenModal(id) {
           // Creamos el contenido de la tarjeta
           card.innerHTML = `
           <figure>
-            <img src="${item.portada}" alt="Imagen del proyecto">
+            <img loading="lazy" class="animate__animated animate__zoomIn" src="${item.portada}" alt="Imagen del proyecto">
           </figure>
           <h2>${item.titulo}</h2>
           <span><p>${item.tipo}</p></span>
