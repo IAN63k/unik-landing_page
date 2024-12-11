@@ -1,83 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UNIK-SITE</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="./style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body>
+  <body>
     <a-waves>
-        <canvas class="js-canvas"></canvas>
+      <canvas class="js-canvas"></canvas>
     </a-waves>
     <!-- .a-waves -->
 
     <div class="dots-navegation">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
 
     <div class="search-bar-unik">
-        <div class="d-flex">
-            <div id="translate">
-                <span id="en" class="is_active">EN</span>
-                <span id="es">ES</span>
-            </div>
-            <div id="search-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </div>
-            <input type="text" id="search-input" placeholder="¿Que deseas aprender?" />
+      <div class="d-flex">
+        <div id="translate">
+          <span id="en" class="is_active">EN</span>
+          <span id="es">ES</span>
         </div>
-        <div class="contact-unik">
-
+        <div id="search-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-search"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
         </div>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="¿Que deseas aprender?"
+        />
+      </div>
+      <div class="contact-unik"></div>
     </div>
 
     <section id="Headersection">
-        <div class="container-header">
-            <!-- /*Menu hamburger*/ -->
-            <div class="hamburger">
-                <div class="_layer -top"></div>
-                <div class="_layer -mid"></div>
-                <div class="_layer -bottom"></div>
+      <div class="container-header">
+        <!-- /*Menu hamburger*/ -->
+        <div class="hamburger">
+          <div class="_layer -top"></div>
+          <div class="_layer -mid"></div>
+          <div class="_layer -bottom"></div>
+        </div>
+        <div class="menuppal"></div>
+        <nav class="menu-principal">
+          <div class="view_pincipal">
+            <h3>Ofertas educativas</h3>
+            <div>
+              <details>
+                <summary><h2>Unik</h2></summary>
+                <ul class="animate__animated animate__slideInRight">
+                  <li><a href="#">Aprende, lidera y transforma</a></li>
+                  <li><a href="#">Mooc</a></li>
+                </ul>
+              </details>
             </div>
-            <div class="menuppal"></div>
-            <nav class="menu-principal">
-                <div class="view_pincipal">
-                    <h2>Ofertas educativas</h2>
-                    <div>
-                        <h3>Unik</h3>
-                        <ul>
-                            <li>Aprende, lidera y transforma</li>
-                            <li>Mooc</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Educación Continua</h3>
-                        <ul>
-                            <li>Construcción Sostenible Guadua Domótica</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>MinTic</h3>
-                        <ul>
-                            <li>Senatic</li>
-                            <li>Talento Tech</li>
-                            <li>Avanza Tec</li>
-                            <li>Gobierno digital</li>
-                            <li>Yawa</li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <div>
+              <details>
+                <summary><h2>Educación Continua</h2></summary>
+                <ul class="animate__animated animate__slideInRight">
+                  <li>
+                    <a href="#">Construcción Sostenible Guadua Domótica</a>
+                  </li>
+                </ul>
+              </details>
+            </div>
+            <div>
+              <details>
+                <summary><h2>MinTic</h2></summary>
+                <ul class="animate__animated animate__slideInRight">
+                  <li><a href="#">Senatic</a></li>
+                  <li><a href="#">Talento Tech</a></li>
+                  <li><a href="#">Avanza Tec</a></li>
+                  <li><a href="#">Gobierno digital</a></li>
+                  <li><a href="#">Yawa</a></li>
+                </ul>
+              </details>
+            </div>
+          </div>
+        </nav>
 
             <div id="hero-section">
                 <figure class="logo-unik"></figure>
@@ -389,10 +413,183 @@
             </div>
         </div>
     </section>
-    <section class="wrapper-services">
-        <a-waves>
-            <canvas class="js-canvas"></canvas>
-        </a-waves>
+    <section
+      class="section_educacion_continua"
+      style="background-color: #2d65a9"
+    >
+      <a-waves>
+        <canvas class="js-canvas"></canvas>
+      </a-waves>
+      <div class="container_info">
+        <div class="header">
+          <h2 style="color: #fff">EDUCACIÓN CONTINUA</h2>
+        </div>
+        <div class="body">
+          <ul>
+            <li>Construcción Sostenible Guadua-Domótica</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div>
+          <a href="#">
+            <img
+              src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733346451/UNIK/uceixe1zlk6r5e6ghybm.webp"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fondo de partículas -->
+
+    <div id="tsparticles"></div>
+
+    <section id="SectionCubo">
+      <div>
+        <div class="list">
+          <h2>OFERTAS</h2>
+          <ul id="list_item">
+            <li value="senatic" class="active">Senatic</li>
+            <li value="TalentoTech">Talento Tech</li>
+            <li value="AvanzaTec">Avanza Tec</li>
+            <li value="Gobiernodigital">Gobierno digital</li>
+            <li value="Yawa">Yawa</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Swiper con efecto cubo -->
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Cada slide tiene un id correspondiente al value del <li> -->
+          <div class="swiper-slide" id="senatic">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcTugrmmsADdmXEjT6JNO7DMjUQDcGLI0Mkw&s"
+            />
+            <div class="cost">Diplomado</div>
+            <div class="overlay">
+              <h2>Senatic</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum..
+              </p>
+              <div class="btn">
+                <span><a href="#">Ver ahora</a></span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" id="TalentoTech">
+            <img
+              src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fHw%3D"
+            />
+            <div class="cost">Diplomado</div>
+            <div class="overlay">
+              <h2>Talento Tech</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div class="btn">
+                <span><a href="#">Ver ahora</a></span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" id="AvanzaTec">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEvbI2grJk1IB2ZxsxU4a3tiDYSqFJR4p6QW9wPbWh0pBwe5eZV2f_mXsvwrrMMPt4VSI&usqp=CAU"
+            />
+            <div class="cost">Diplomado</div>
+            <div class="overlay">
+              <h2>Avanza Tec</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div class="btn">
+                <span><a href="#">Ver ahora</a></span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" id="Gobiernodigital">
+            <img
+              src="https://img.freepik.com/vector-premium/fondo-degradado-color-abstracto-azul-rojo-amarillo-web-presentaciones-e-impresiones_7280-4155.jpg"
+            />
+            <div class="cost">Diplomado</div>
+            <div class="overlay">
+              <h2>Gobierno digital</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div class="btn">
+                <span><a href="#">Ver ahora</a></span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" id="Yawa">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNyhnwDOK0PZlO3dUSt5GszRNECZpYMhXKqQ&s"
+            />
+            <div class="cost">Diplomado</div>
+            <div class="overlay">
+              <h2>Yawa</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div class="btn">
+                <span><a href="#">Ver ahora</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fotterOertas">
+        <p>#FormacíonGratuitaTic</p>
+        <ul>
+          <li><a href="#">Colaboración</a></li>
+          <hr />
+          <li><a href="#">Educación digital</a></li>
+          <hr />
+          <li><a href="#">Inversión</a></li>
+          <hr />
+          <li><a href="#">Lineas de acción</a></li>
+          <hr />
+          <li><a href="#">Alcance nacional</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- <section class="bg_wrapper wrapper-services">
         <div class="container-services">
             <h1>Ofertas Educativas</h1>
             <div class="card">
@@ -521,41 +718,90 @@
         </div>
     </section>
 
-    <section class="section_ofert">
-        <div class="text">
-            <div class="title">
-                <figure class="animate__animated animate__bounce">
-                    <img src="./src/logo_tic.png" alt="logo tic">
-                </figure>
-                <h3>Ofertas de formación</h3>
-                <h1>Mintic</h1>
-                <h4>Formación gratuita</h4>
-                <p>
-                    El propósito de esta política es promover el uso y aprovechamiento de las <strong>Tecnologías de la
-                        Información y las Comunicaciones - TIC</strong>, para consolidar un Estado y ciudadanos
-                    competitivos,
-                    proactivos e innovadores, que generen valor público en un entorno de confianza digital.
-                </p>
-            </div>
+    <section class="section_ofert" id="sectionOefert">
+      <div class="text">
+        <div class="title">
+          <figure class="animate__animated animate__bounce">
+            <img src="./src/logo_tic.png" alt="logo tic" />
+          </figure>
+          <h3>Ofertas de formación</h3>
+          <h1>Mintic</h1>
+          <h4>Formación gratuita</h4>
+          <p>
+            El propósito de esta política es promover el uso y aprovechamiento
+            de las
+            <strong
+              >Tecnologías de la Información y las Comunicaciones - TIC</strong
+            >, para consolidar un Estado y ciudadanos competitivos, proactivos e
+            innovadores, que generen valor público en un entorno de confianza
+            digital.
+          </p>
         </div>
-        <div class="figure">
-            <figure>
-                <img src="src/people.png" alt="">
-            </figure>
+      </div>
+      <div class="figure">
+        <figure>
+          <img src="src/people.png" alt="" />
+        </figure>
+      </div>
+      <div id="ContModales" class="menu-aliados">
+        <div class="info">
+          <div class="bgModales">
+            <ul id="ulModales">
+              <li onclick="setActive(this)" value="senatic">
+                <img
+                  onclick="OpenModal('modalSenatic')"
+                  src="./src/patrons/senatic.png"
+                  alt="senatic"
+                />
+              </li>
+              <li onclick="setActive(this)">
+                <img
+                  onclick="OpenModal('modalTic')"
+                  src="https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15.png"
+                  alt=""
+                />
+              </li>
+              <li onclick="setActive(this)">
+                <img
+                  onclick="OpenModal('modaltech')"
+                  src="https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-16.png"
+                  alt=""
+                />
+              </li>
+              <li onclick="setActive(this)">
+                <img
+                  onclick="OpenModal('modalYawa')"
+                  src="https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-26.png"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="menu-aliados">
-            <div class="info">
-                <figure>
-                    <img src="./src/patrons/senatic.png" alt="">
-                    <img src="./src/patrons/talentotech.png" alt="">
-                    <img src="./src/patrons/avanzatic.png" alt="">
-                    <img src="./src/patrons/gobiernoDigital.png" alt="">
-                </figure>
-            </div>
+      </div>
+
+      <div id="bgModal" onclick="closeModal()">
+        <div
+          class="contenedorModal animate__animated animate__fadeInDown"
+          id="modal"
+        >
+          <span onclick="closeModal('modalSenatic')" class="close">X</span>
+          <figure id="tituloSenatic">
+            <img
+              id=""
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTL1u8S1Nl0_yHeJLr-XRUSwTP-y-iyXq4Jw&s"
+              alt=""
+            />
+          </figure>
+          <div id="parrafo"></div>
+          <strong class="llamadoCards">Certificados mas populares</strong>
+          <div
+            class="ContenidoCardsModal animate__animated animate__fadeInRight"
+            id="ContenidoCardsModal"
+          ></div>
         </div>
+      </div>
     </section>
-
-
 
     <!-- <section class="bg_wrapper section-ofert-mintic">
         <div class="container_serv">
@@ -587,13 +833,17 @@
             </div>
         </div>
     </section> -->
-    <script async src="https://cse.google.com/cse.js?cx=53f481c4c802b4503">
-    </script>
+    <script
+      async
+      src="https://cse.google.com/cse.js?cx=53f481c4c802b4503"
+    ></script>
     <div class="gcse-search"></div>
-</body>
-<script src="./scriptOther.js"></script>
-<script src="./script.js"></script>
-<script>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <!-- <script src='https://cdn.jsdelivr.net/npm/tsparticles@1.26.0/dist/tsparticles.min.js'></script> -->
+  <script src="./scriptOther.js"></script>
+  <script src="./script.js"></script>
+  <script>
     // Charater and text animation
     const item_P = document.querySelectorAll(".item-p li");
     const character = document.querySelector(".CuadroPersona figure");
@@ -617,8 +867,8 @@
             }, { once: true });
         });
     });
-</script>
-<script>
+  </script>
+  <script>
     //Hamburguesa
 
     const menu = document.querySelector(".hamburger");
@@ -628,11 +878,12 @@
     menu_principal.style.display = "none";
 
     menu.addEventListener("click", () => {
-        menu.classList.toggle("is-active");
-        document.querySelector(".menuppal").classList.toggle("is_active");
-        setTimeout(() => {
-            menu_principal.style.display = menu_principal.style.display === "none" ? "flex" : "none";
-        }, 300);
+      menu.classList.toggle("is-active");
+      document.querySelector(".menuppal").classList.toggle("is_active");
+      setTimeout(() => {
+        menu_principal.style.display =
+          menu_principal.style.display === "none" ? "flex" : "none";
+      }, 300);
     });
 
     // Search
@@ -640,13 +891,14 @@
     const searchInput = document.querySelector("#search-input");
 
     searchIcon.addEventListener("click", () => {
-        searchInput.style.display = searchInput.style.display === "flex" ? "none" : "flex";
-        searchInput.style.animation = "open-input 0.5s";
-        searchInput.focus();
+      searchInput.style.display =
+        searchInput.style.display === "flex" ? "none" : "flex";
+      searchInput.style.animation = "open-input 0.5s";
+      searchInput.focus();
     });
 
     searchInput.addEventListener("focusout", () => {
-        searchInput.style.display = "none";
+      searchInput.style.display = "none";
     });
 
     // Translate
@@ -656,19 +908,19 @@
     const es = document.querySelector("#es");
 
     translateIcon.addEventListener("click", () => {
-        en.classList.toggle("is_active");
-        es.classList.toggle("is_active");
+      en.classList.toggle("is_active");
+      es.classList.toggle("is_active");
     });
 
     // Animations
     const divImagenenTexto = document.querySelector(".ImagenenTexto");
 
     window.addEventListener("scroll", () => {
-        const scrollPosition = window.scrollY;
-        const opacity = Math.min(1, scrollPosition / 1000);
-        const scale = Math.min(1, scrollPosition / 1000);
-        divImagenenTexto.style.opacity = opacity;
-        divImagenenTexto.style.transform = `scale(${scale})`;
+      const scrollPosition = window.scrollY;
+      const opacity = Math.min(1, scrollPosition / 1000);
+      const scale = Math.min(1, scrollPosition / 1000);
+      divImagenenTexto.style.opacity = opacity;
+      divImagenenTexto.style.transform = `scale(${scale})`;
     });
 
     // control slider
@@ -724,17 +976,17 @@
     let scrollLeft;
 
     slidersImg.addEventListener("mousedown", (e) => {
-        isDown = true;
-        slidersImg.classList.add("active");
-        slidersImg.style.cursor = "grabbing";
-        startX = e.pageX - slidersImg.offsetLeft;
-        scrollLeft = slidersImg.scrollLeft;
+      isDown = true;
+      slidersImg.classList.add("active");
+      slidersImg.style.cursor = "grabbing";
+      startX = e.pageX - slidersImg.offsetLeft;
+      scrollLeft = slidersImg.scrollLeft;
     });
 
     slidersImg.addEventListener("mouseleave", () => {
-        isDown = false;
-        slidersImg.classList.remove("active");
-        slidersImg.style.cursor = "grab";
+      isDown = false;
+      slidersImg.classList.remove("active");
+      slidersImg.style.cursor = "grab";
     });
 
     slidersImg.addEventListener("mouseup", () => {
@@ -745,11 +997,11 @@
     });
 
     slidersImg.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slidersImg.offsetLeft;
-        const walk = (x - startX) * 3; //scroll-fast
-        slidersImg.scrollLeft = scrollLeft - walk;
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slidersImg.offsetLeft;
+      const walk = (x - startX) * 3; //scroll-fast
+      slidersImg.scrollLeft = scrollLeft - walk;
     });
 
     slidersImg.style.cursor = "grab";
@@ -769,7 +1021,7 @@
     }
 
     function stopAutoSlide() {
-        clearInterval(autoSlideInterval);
+      clearInterval(autoSlideInterval);
     }
 
     slidersImg.addEventListener("mouseenter", stopAutoSlide);
