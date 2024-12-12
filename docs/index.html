@@ -1,1107 +1,996 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UNIK-SITE</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
 
-  <body>
-    <a-waves>
-      <canvas class="js-canvas"></canvas>
-    </a-waves>
-    <!-- .a-waves -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNIK-SITE</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-    <div class="dots-navegation">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
+<body>
+  <a-waves>
+    <canvas class="js-canvas"></canvas>
+  </a-waves>
+  <!-- .a-waves -->
 
-    <div class="search-bar-unik">
-      <div class="d-flex">
-        <div id="translate">
-          <span id="en" class="is_active">EN</span>
-          <span id="es">ES</span>
-        </div>
-        <div id="search-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-search"
-          >
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </div>
-        <input
-          type="text"
-          id="search-input"
-          placeholder="¿Que deseas aprender?"
-        />
+  <div class="dots-navegation">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <div class="search-bar-unik">
+    <div class="d-flex">
+      <div id="translate">
+        <span id="en" class="is_active">EN</span>
+        <span id="es">ES</span>
       </div>
-      <div class="contact-unik"></div>
+      <div id="search-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+      <input type="text" id="search-input" placeholder="¿Que deseas aprender?" />
     </div>
+    <div class="contact-unik"></div>
+  </div>
 
-    <section id="Headersection">
-      <div class="container-header">
-        <!-- /*Menu hamburger*/ -->
-        <div class="hamburger">
-          <div class="_layer -top"></div>
-          <div class="_layer -mid"></div>
-          <div class="_layer -bottom"></div>
-        </div>
-        <div class="menuppal"></div>
-        <nav class="menu-principal">
-          <div class="view_pincipal">
-            <h3>Ofertas educativas</h3>
-            <div>
-              <details>
-                <summary><h2>Unik</h2></summary>
-                <ul class="animate__animated animate__slideInRight">
-                  <li><a href="#">Aprende, lidera y transforma</a></li>
-                  <li><a href="#">Mooc</a></li>
-                </ul>
-              </details>
-            </div>
-            <div>
-              <details>
-                <summary><h2>Educación Continua</h2></summary>
-                <ul class="animate__animated animate__slideInRight">
-                  <li>
-                    <a href="#">Construcción Sostenible Guadua Domótica</a>
-                  </li>
-                </ul>
-              </details>
-            </div>
-            <div>
-              <details>
-                <summary><h2>MinTic</h2></summary>
-                <ul class="animate__animated animate__slideInRight">
-                  <li><a href="#">Senatic</a></li>
-                  <li><a href="#">Talento Tech</a></li>
-                  <li><a href="#">Avanza Tec</a></li>
-                  <li><a href="#">Gobierno digital</a></li>
-                  <li><a href="#">Yawa</a></li>
-                </ul>
-              </details>
-            </div>
+  <section id="Headersection">
+    <div class="container-header">
+      <!-- /*Menu hamburger*/ -->
+      <div class="hamburger">
+        <div class="_layer -top"></div>
+        <div class="_layer -mid"></div>
+        <div class="_layer -bottom"></div>
+      </div>
+      <div class="menuppal"></div>
+      <nav class="menu-principal">
+        <div class="view_pincipal">
+          <h3>Ofertas educativas</h3>
+          <div>
+            <details>
+              <summary class="item_menu">
+                <h3>Unik</h3>
+              </summary>
+              <ul class="item-pick">
+                <li><a href="#">Aprende, lidera <br> y transforma Mooc</a></li>
+              </ul>
+            </details>
           </div>
-        </nav>
-
-            <div id="hero-section">
-                <figure class="logo-unik"></figure>
-                <div class="CuadroPersona">
-                    <figure></figure>
-                </div>
-                <ul class="item-p">
-                    <span>Portal educativo</span>
-                    <li class="item-p_active">Profesores</li>
-                    <li>Estudiantes</li>
-                    <li>Corporativos</li>
-                </ul>
-                <div class="hero-text">
-                    <h2>Única, como tu manera de aprender</h2>
-                </div>
-                <div class="hero-tellbg">
-                    <div class="RedesSociales">
-                        <ul>
-                            <li>
-                                <a href="#"><img src="https://www.uniajc.edu.co/wp-content/uploads/2022/08/Vector-2.png"
-                                        alt="facebook" /></a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://www.uniajc.edu.co/wp-content/uploads/2022/08/Group.png"
-                                        alt="instagram" /></a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://www.uniajc.edu.co/wp-content/uploads/2022/08/Vector.png"
-                                        alt="red" /></a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="https://www.uniajc.edu.co/wp-content/uploads/2022/08/Vector-1.png"
-                                        alt="youtube" /></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <strong>Aprende, lidera y transforma </strong>
-                </div>
-            </div>
-            <div id="section3">
-                <div class="container-site">
-                    <div class="textos">
-                        <h2>Aprende, lidera y transforma</h2>
-                        <p style="font-weight: 300;">
-                            Somos el portal que fortalece tus habilidades, tu catálogo de cursos en línea con
-                            aprendizaje continuo.
-                        </p>
-                        <p style="font-weight: 500;">
-                            ¡Estamos aquí para acompañarte en cada paso de tu desarrollo profesional con nuestras
-                            oportunidades de formación!
-                        </p>
-                        <div class="btn-about"><a href="#">Empieza ahora</a></div>
-                    </div>
-                    <div class="ImagenenTexto">
-                        <div>
-                            <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1732889315/UNIK/irntoxy2cg6wvdy1fhyb.webp"
-                                alt="" />
-                            <div class="ContenedorNota">
-                                <div class="container">
-                                    <div class="message">
-                                        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 13.4 13.4">
-                                            <g id="Unika">
-                                                <path
-                                                    d="M7.82,6.7c0,.62-.5,1.12-1.12,1.12s-1.12-.5-1.12-1.12.5-1.12,1.12-1.12,1.12.5,1.12,1.12ZM1.65,4.46v1.12s2.81,0,2.81,0c.61,0,1.11-.5,1.11-1.11V1.65h-1.12v2.01S.79,0,.79,0l-.79.79,3.66,3.66H1.65ZM8.94,5.58h2.8v-1.12h-2.01s3.67-3.67,3.67-3.67l-.79-.79-3.66,3.66V1.65s-1.13,0-1.13,0v2.81c0,.61.51,1.11,1.12,1.11ZM4.47,7.83H1.66s0,1.11,0,1.11h2.01l-3.67,3.67.79.79,3.67-3.67v2.01h1.12v-2.8c0-.61-.5-1.11-1.11-1.11ZM11.75,8.94v-1.12h-2.8c-.61,0-1.11.5-1.11,1.11v2.81s1.11,0,1.11,0v-2.01l3.67,3.67.79-.79-3.67-3.67h2.01Z" />
-                                            </g>
-                                        </svg>
-                                        <p>Abierta</p>
-                                    </div>
-                                    <div class="message">
-                                        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 13.46 13.46">
-                                            <g id="Unika">
-                                                <path
-                                                    d="M13.46,6.73c0,3.72-3.01,6.73-6.73,6.73S0,10.45,0,6.73,3.01,0,6.73,0c3.72,0,6.73,3.02,6.73,6.73ZM1.12,6.73c0,3.1,2.51,5.61,5.61,5.61s5.61-2.51,5.61-5.61S9.83,1.12,6.73,1.12c-3.1,0-5.61,2.51-5.61,5.61ZM8.65,5.94l-2.64-2.64-.79.79,2.64,2.64-2.62,2.62.79.79,2.62-2.62c.44-.44.44-1.15,0-1.59h0Z" />
-                                            </g>
-                                        </svg>
-                                        <p>Continua</p>
-                                    </div>
-                                </div>
-                                <div class="container">
-                                    <div class="message">
-                                        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 13.49 11.53">
-                                            <g id="Unika">
-                                                <path
-                                                    d="M13.17,4.15c-.36-.54-.96-.86-1.6-.86h-1.25l.24-.43c.34-.6.33-1.32-.02-1.91-.35-.59-.97-.95-1.66-.95-.49,0-.96.18-1.32.52l-2.51,2.4c-.25-.23-.59-.38-.96-.38H1.42c-.78,0-1.42.64-1.42,1.42v6.14c0,.78.64,1.42,1.42,1.42h2.67c.46,0,.86-.22,1.12-.56h4.76c.78,0,1.47-.46,1.77-1.18l1.6-3.83c.25-.59.18-1.27-.17-1.81ZM4.09,10.29H1.42c-.1,0-.19-.08-.19-.19V3.97c0-.1.08-.19.19-.19h2.67c.1,0,.19.08.19.19v6.14c0,.1-.08.19-.19.19ZM12.2,5.48l-1.6,3.83c-.11.26-.36.42-.63.42h-4.46v-5.54l2.9-2.77c.13-.12.3-.19.47-.19.35,0,.53.24.59.34.06.1.18.37,0,.68l-1.26,2.27h3.35c.23,0,.44.11.57.31.13.19.15.43.06.65Z" />
-                                            </g>
-                                        </svg>
-                                        <p>Personalizable</p>
-                                    </div>
-                                    <div class="message">
-                                        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 13.53 13.53">
-                                            <g id="Unika">
-                                                <g>
-                                                    <path
-                                                        d="M12.96,12.4H2.82c-.93,0-1.69-.76-1.69-1.69V.56c0-.31-.25-.56-.56-.56s-.56.25-.56.56v10.15c0,1.56,1.26,2.82,2.82,2.82h10.15c.31,0,.56-.25.56-.56s-.25-.56-.56-.56Z" />
-                                                    <path
-                                                        d="M3.38,11.27c.31,0,.56-.25.56-.56v-3.95c0-.31-.25-.56-.56-.56s-.56.25-.56.56v3.95c0,.31.25.56.56.56Z" />
-                                                    <path
-                                                        d="M5.64,5.64v5.07c0,.31.25.56.56.56s.56-.25.56-.56v-5.07c0-.31-.25-.56-.56-.56s-.56.25-.56.56Z" />
-                                                    <path
-                                                        d="M8.46,7.33v3.38c0,.31.25.56.56.56s.56-.25.56-.56v-3.38c0-.31-.25-.56-.56-.56s-.56.25-.56.56Z" />
-                                                    <path
-                                                        d="M11.27,5.07v5.64c0,.31.25.56.56.56s.56-.25.56-.56v-5.64c0-.31-.25-.56-.56-.56s-.56.25-.56.56Z" />
-                                                    <path
-                                                        d="M3.38,5.07c.15,0,.29-.06.4-.17l2.02-2.02c.22-.21.57-.21.8,0l1.22,1.22c.66.66,1.73.66,2.39,0l3.15-3.15c.22-.22.21-.58-.01-.8-.22-.21-.56-.21-.78,0l-3.15,3.15c-.22.22-.58.22-.8,0l-1.22-1.22c-.66-.66-1.73-.66-2.39,0l-2.02,2.02c-.22.22-.22.58,0,.8.11.11.25.17.4.17Z" />
-                                                </g>
-                                            </g>
-                                        </svg>
-                                        <p>Sostenible</p>
-                                    </div>
-                                    <div class="message">
-                                        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 13.64 9.92">
-                                            <g id="Unika">
-                                                <g>
-                                                    <path
-                                                        d="M10.95,3.72c1.03,0,1.86-.83,1.86-1.86,0-1.03-.83-1.86-1.86-1.86s-1.86.83-1.86,1.86.83,1.86,1.86,1.86Z" />
-                                                    <path
-                                                        d="M10.74,4.53c-.13,0-.25,0-.37.02-.78.1-1.48.53-1.93,1.17.93.42,1.65,1.18,2.03,2.13h2.76c.23,0,.41-.19.41-.41v-.02c0-1.6-1.3-2.89-2.9-2.89Z" />
-                                                    <path
-                                                        d="M6.82,5.37c1.03,0,1.86-.83,1.86-1.86s-.83-1.86-1.86-1.86c-.08,0-.16,0-.24.01-.03,0-.06,0-.09.01-.06.01-.12.02-.18.04-.03,0-.06.02-.09.03-.01,0-.03,0-.04.02-.09.03-.17.07-.25.11-.03.01-.05.03-.08.04s-.05.03-.08.05c-.01,0-.02.02-.04.03-.12.09-.23.19-.33.3-.02.02-.04.05-.06.07-.04.05-.07.1-.1.15,0,.01-.02.03-.02.04-.05.09-.1.18-.14.28,0,.01-.01.03-.02.04-.01.03-.02.06-.03.09-.05.17-.08.36-.08.55,0,1.03.83,1.86,1.86,1.86Z" />
-                                                    <path
-                                                        d="M2.69,3.72c1.03,0,1.86-.83,1.86-1.86s-.83-1.86-1.86-1.86S.83.83.83,1.86c0,1.03.83,1.86,1.86,1.86Z" />
-                                                    <path
-                                                        d="M5.2,5.72c-.45-.64-1.15-1.07-1.93-1.17-.12-.02-.25-.02-.37-.02-1.6,0-2.9,1.29-2.9,2.89v.02c0,.23.19.41.41.41h2.76c.38-.94,1.1-1.71,2.03-2.13Z" />
-                                                    <path
-                                                        d="M6.82,6.2c-1.71,0-3.1,1.39-3.1,3.1v.21c0,.23.19.41.41.41h5.37c.23,0,.41-.19.41-.41v-.21c0-1.71-1.39-3.1-3.1-3.1Z" />
-                                                </g>
-                                            </g>
-                                        </svg>
-                                        <p>Flexible</p>
-                                    </div>
-                                    <div class="message">
-                                        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 13.37 13.41">
-                                            <g id="Unika">
-                                                <path
-                                                    d="M9.03,4.82l-2.11,2.11c-.21.21-.49.33-.79.33s-.58-.12-.79-.33l-1.28-1.28.79-.79,1.28,1.28,2.11-2.11.79.79ZM13.37,10.63h-2.79v2.79l-2.39-2.39c-.15.17-.32.32-.53.43-.3.17-.64.25-.98.25s-.68-.08-.98-.25c-.2-.11-.37-.26-.52-.43l-2.39,2.39v-2.79H0l1.95-1.95c-.01-.2,0-.4.04-.6.04-.18-.05-.37-.21-.48-.29-.19-.52-.44-.7-.75-.16-.3-.25-.64-.25-.99,0-.35.08-.69.25-.99.17-.31.41-.56.7-.75.17-.11.25-.3.21-.48-.08-.34-.07-.69.03-1.05.19-.66.72-1.2,1.39-1.39.35-.1.7-.11,1.04-.03.18.04.37-.05.48-.21.19-.29.44-.52.75-.7.6-.34,1.36-.34,1.96,0,.31.17.56.41.75.7.11.17.3.26.48.21.34-.08.69-.07,1.04.03.67.19,1.2.72,1.39,1.39.1.35.11.7.03,1.05-.04.18.05.37.21.48.29.19.52.44.7.75h0c.16.3.25.64.25.99,0,.34-.08.69-.25.98-.17.31-.41.57-.7.75-.17.11-.25.3-.21.48.04.19.06.39.04.59l1.97,1.97h0ZM9.14,9.45c.16.04.32.03.49-.02.29-.08.54-.33.62-.62.05-.17.05-.33.02-.49-.14-.64.14-1.3.7-1.67.13-.09.24-.21.33-.36.07-.13.11-.29.11-.45,0-.16-.04-.32-.11-.45-.08-.15-.19-.27-.33-.36-.56-.36-.84-1.03-.7-1.66.04-.16.03-.32-.02-.49-.08-.29-.33-.54-.62-.62-.17-.05-.33-.05-.49-.02-.63.14-1.3-.14-1.66-.7-.09-.13-.21-.24-.36-.33-.27-.15-.61-.15-.88,0-.15.08-.27.19-.36.33-.36.56-1.03.84-1.66.7-.16-.04-.32-.03-.49.02-.29.08-.54.33-.62.62-.05.17-.05.33-.02.49.14.63-.14,1.3-.7,1.66-.13.09-.24.21-.33.36-.07.13-.11.29-.11.45,0,.16.04.32.11.45.08.15.19.27.33.36.56.36.84,1.03.7,1.66-.04.16-.03.32.02.49.08.29.33.54.62.62.17.05.33.05.49.02.11-.03.22-.04.33-.04.52,0,1.03.27,1.33.73.09.13.21.24.36.33.27.15.61.15.88,0,.15-.08.27-.19.36-.33.36-.56,1.03-.84,1.66-.7h0Z" />
-                                            </g>
-                                        </svg>
-                                        <p>Cetificada</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="nota">
-                                <p>
-                                    UNIK es una plataforma digital para la gestión del conocimiento, el desarrollo de
-                                    habilidades de futuro y el crecimiento profesional, que permite personalizar rutas
-                                    de aprendizaje para el cierre de brechas de conocimiento especializado, respondiendo
-                                    a una estrategia de formación integral.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          <div>
+            <details>
+              <summary class="item_menu">
+                <h3>Educación Continua</h3>
+              </summary>
+              <ul class="item-pick">
+                <li>
+                  <a href="#">Construcción Sostenible <br>Guadua Domótica</a>
+                </li>
+              </ul>
+            </details>
+          </div>
+          <div>
+            <details>
+              <summary class="item_menu">
+                <h3>MinTic</h3>
+              </summary>
+              <ul class="item-pick">
+                <li><a href="#">Senatic</a></li>
+                <li><a href="#">Datic</a></li>
+                <li><a href="#">Talento Tech</a></li>
+                <li><a href="#">Yawa</a></li>
+                <li><a href="#">Avanza Tec</a></li>
+              </ul>
+            </details>
+          </div>
         </div>
-    </section>
-    <section class="community">
-        <div class="image">
-            <figure></figure>
-        </div>
-        <div>
-            <div class="container_info">
-                <div class="header">
-                    <h2>Comunidad</h2>
-                    <h2>de <big>expertos</big></h2>
-                </div>
-                <div class="body">
-                    <p>
-                        En UNIK, conectamos a profesionales apasionados
-                        <br>
-                        por el aprendizaje y la innovación. Estamos empezando
-                        <br>
-                        a conformar nuestra comunidad de expertos que está compuesta por líderes dinámicos y diversos.
-                    </p>
-                    <p style="margin-top: 25px;">
-                        Están preparados para guiarte de manera personalizada
-                        <br>
-                        en tu crecimiento profesional, a través de experiencias
-                        <br>
-                        formativas diseñadas para el entorno digital.
-                    </p>
-                    <div class="btn-normal"><a href="#">Empieza ahora</a></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-mooc">
-        <div class="windows">
-            <div class="window is_active">MOOC</div>
-            <div class="window">Acerca del MOOC</div>
-        </div>
-        <div class="container-1">
-            <div class="textos">
-                <span class="txt-efect">Mooc</span>
-                <h2>Herramientas y tecnicas</h2>
-                <h2>para hablar en publico</h2>
-                <p>Desarrolla habilidades esenciales de <strong>comunicación clara y efectiva</strong>, enfocada en</p>
-                <p> la asertividad del <strong>lenguaje verbal y corporal</strong>, con el <strong>MOOC</strong></p>
-            </div>
-            <div class="actions">
-                <div>
-                    <figure>
-                        <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1732909366/UNIK/yiniur4hqf5tzxfrg2fm.webp"
-                            alt="">
-                    </figure>
-                    <figure>
-                        <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1732909366/UNIK/q8284zbcrxdshsixn9bm.webp"
-                            alt="">
-                    </figure>
-                    <figure>
-                        <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1732909366/UNIK/aak8gcaefua5qpiery2g.webp"
-                            alt="">
-                    </figure>
-                </div>
-                <a href="">
-                    <span>Empieza ahora</span>
-                    <div>
-                        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 19.51 19.51">
-                            <g id="Unika">
-                                <path style="fill: #000;stroke-width: 0px;"
-                                    d="M19.51,9.76c0,5.39-4.37,9.76-9.76,9.76S0,15.14,0,9.76,4.37,0,9.76,0c5.39,0,9.75,4.37,9.76,9.76ZM1.63,9.76c0,4.49,3.64,8.13,8.13,8.13s8.13-3.64,8.13-8.13S14.25,1.63,9.76,1.63c-4.49,0-8.13,3.64-8.13,8.13ZM8.13,4.88v9.76l4.59-4.2c.37-.33.4-.91.07-1.28-.02-.02-.05-.05-.07-.07l-4.59-4.2Z" />
-                            </g>
-                        </svg>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="container-2">
-            <div class="info">
-                <h2>Herramientas y técnicas para hablar en público</h2>
-                <p>Desarrollaremos <strong>habilidades esenciales</strong> para comunicarte de manera clara y efectiva.
-                    <br>
-                    Este <strong>MOOC</strong> está diseñado para ayudarte a <strong> dominar el arte de hablar en
-                        público,</strong><br>
-                    enfocándonos en el uso del <strong>lenguaje verbal y corporal.</strong>
-                </p>
-                <div class="presentation-expert">
-                    <div class="header">
-                        <figure>
-                            <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733840035/UNIK/wexjzzvplaascllsqx2e.webp"
-                                alt="">
-                        </figure>
-                        <div>
-                            <div class="row">
-                                <span>Autor</span>
-                                <span>Comunicador Social</span>
-                            </div>
-                            <h2>Diego Trujillo Pareja</h2>
-                        </div>
-                    </div>
-                    <p>
-                        Técnico en Comunicación Social y Periodismo. Tecnólogo en Mercadeo y Comunicador Social. <br>
-                        Especialista en Educación Virtual y a Distancia. Experiencia de 12 años en radio comercial
-                        (Caracol, <br> RCN, Todelar, Radio Súper, Red Sonora) 12 años en Radio Universitaria (Radio
-                        UNIAJC).
-                    </p>
-                </div>
-                <div class="presentation-expert">
-                    <div class="header">
-                        <figure>
-                            <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733843701/UNIK/ehg3hh0tltefcckisymk.webp"
-                                alt="">
-                        </figure>
-                        <div>
-                            <div class="row">
-                                <span>Colaborador</span>
-                                <span>Pedagoga</span>
-                            </div>
-                            <h2>Julieth Mejía Giraldo</h2>
-                        </div>
-                    </div>
-                    <p>
-                        Licenciada en Pedagogía Infantil - UT. Especialista en Educación a Distancia y Virtual - UNAD.
-                        <br>
-                        Magíster en Tecnología Educativa y Competencias Digitales-UNIR.
-                    </p>
-                </div>
-            </div>
-            <div class="explore">
-                <div class="content">
-                    <h2>Explora el contenido</h2>
-                    <div>
-                        <h3>Lección 1</h3>
-                        <p>¿Por qué es importante desarrollar la habilidad de hablar en público?</p>
-                    </div>
-                    <div>
-                        <h3>Lección 2</h3>
-                        <p>Preparación de un discurso efectivo</p>
-                    </div>
-                    <div>
-                        <h3>Lección 3</h3>
-                        <p>Recursos prácticos para acompañar tu voz</p>
-                    </div>
-                    <div>
-                        <h3>Lección 4</h3>
-                        <p>entre luces y cámaras</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section
-      class="section_educacion_continua"
-      style="background-color: #2d65a9"
-    >
-      <a-waves>
-        <canvas class="js-canvas"></canvas>
-      </a-waves>
-      <div class="container_info">
-        <div class="header">
-          <h2 style="color: #fff">EDUCACIÓN CONTINUA</h2>
-        </div>
-        <div class="body">
+        <div class="RedesSociales">
           <ul>
-            <li>Construcción Sostenible Guadua-Domótica</li>
+            <li>
+              <a href="#"><img src="https://www.uniajc.edu.co/wp-content/uploads/2022/08/Vector-2.png"
+                  alt="facebook" /></a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="https://www.uniajc.edu.co/wp-content/uploads/2022/08/Group.png" alt="instagram" /></a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="https://www.uniajc.edu.co/wp-content/uploads/2022/08/Vector.png" alt="red" /></a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="https://www.uniajc.edu.co/wp-content/uploads/2022/08/Vector-1.png" alt="youtube" /></a>
+            </li>
           </ul>
         </div>
-      </div>
-      <div class="card">
-        <div>
-          <a href="#">
-            <img
-              src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733346451/UNIK/uceixe1zlk6r5e6ghybm.webp"
-              alt=""
-            />
-          </a>
+      </nav>
+
+      <div id="hero-section">
+        <figure class="logo-unik"></figure>
+        <div class="CuadroPersona">
+          <figure></figure>
         </div>
-      </div>
-    </section>
-
-    <!-- Fondo de partículas -->
-
-    <div id="tsparticles"></div>
-
-    <section id="SectionCubo">
-      <div>
-        <div class="list">
-          <h2>OFERTAS</h2>
-          <ul id="list_item">
-            <li value="senatic" class="active">Senatic</li>
-            <li value="TalentoTech">Talento Tech</li>
-            <li value="AvanzaTec">Avanza Tec</li>
-            <li value="Gobiernodigital">Gobierno digital</li>
-            <li value="Yawa">Yawa</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Swiper con efecto cubo -->
-
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <!-- Cada slide tiene un id correspondiente al value del <li> -->
-          <div class="swiper-slide" id="senatic">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcTugrmmsADdmXEjT6JNO7DMjUQDcGLI0Mkw&s"
-            />
-            <div class="cost">Diplomado</div>
-            <div class="overlay">
-              <h2>Senatic</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum..
-              </p>
-              <div class="btn">
-                <span><a href="#">Ver ahora</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide" id="TalentoTech">
-            <img
-              src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fHw%3D"
-            />
-            <div class="cost">Diplomado</div>
-            <div class="overlay">
-              <h2>Talento Tech</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <div class="btn">
-                <span><a href="#">Ver ahora</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide" id="AvanzaTec">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEvbI2grJk1IB2ZxsxU4a3tiDYSqFJR4p6QW9wPbWh0pBwe5eZV2f_mXsvwrrMMPt4VSI&usqp=CAU"
-            />
-            <div class="cost">Diplomado</div>
-            <div class="overlay">
-              <h2>Avanza Tec</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <div class="btn">
-                <span><a href="#">Ver ahora</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide" id="Gobiernodigital">
-            <img
-              src="https://img.freepik.com/vector-premium/fondo-degradado-color-abstracto-azul-rojo-amarillo-web-presentaciones-e-impresiones_7280-4155.jpg"
-            />
-            <div class="cost">Diplomado</div>
-            <div class="overlay">
-              <h2>Gobierno digital</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <div class="btn">
-                <span><a href="#">Ver ahora</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide" id="Yawa">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNyhnwDOK0PZlO3dUSt5GszRNECZpYMhXKqQ&s"
-            />
-            <div class="cost">Diplomado</div>
-            <div class="overlay">
-              <h2>Yawa</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <div class="btn">
-                <span><a href="#">Ver ahora</a></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="fotterOertas">
-        <p>#FormacíonGratuitaTic</p>
-        <ul>
-          <li><a href="#">Colaboración</a></li>
-          <hr />
-          <li><a href="#">Educación digital</a></li>
-          <hr />
-          <li><a href="#">Inversión</a></li>
-          <hr />
-          <li><a href="#">Lineas de acción</a></li>
-          <hr />
-          <li><a href="#">Alcance nacional</a></li>
+        <ul class="item-p">
+          <span>Portal educativo</span>
+          <li class="item-p_active">Profesores</li>
+          <li>Estudiantes</li>
+          <li>Corporativos</li>
         </ul>
-      </div>
-    </section>
-
-    <!-- <section class="bg_wrapper wrapper-services">
-        <div class="container-services">
-            <h1>Ofertas Educativas</h1>
-            <div class="card">
-                <div class="text-section">
-                    <h2>Aprende</h2>
-                    <p class="service_descript1">
-                        En <strong>UNIK</strong>, impulsamos el aprendizaje <br>
-                        continuo y la transformación digital <br>
-                        a través de cursos diseñados para <br>
-                        inspirar y potenciar tus habilidades,<br>
-                        respaldados por alianzas estratégicas.
-                    </p>
-                    <p class="service_descript2 d-none">
-                        El <strong>Ministerio de Tecnologías</strong> de <br>
-                        la Información y las comunicaciones <br>
-                        lidera la iniciativa pública para impulsar <br>
-                        la inversión en el sector TIC <br>
-                        y para la transformación digital <br>
-                        del Estado.
-                    </p>
-                    <p class="service_descript3 d-none">
-                        <strong>Educación Continua brinda</strong> <br>
-                        oportunidades de educación enfocadas <br>
-                        en el sector de ingeniería, innovación,<br>
-                        inglés y marketing, entre otras áreas.
-                    </p>
-                </div>
-                <div class="image-section">
-                    <div class="sliders-img">
-                        <div class="slider">
-                            <div>
-                                <h4>Herramientas y técnicas <br>para hablar en público.</h4>
-                                <a href="">Empieza ahora</a>
-                            </div>
-                            <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733846745/UNIK/me94qbz7buibm8gvbsjm.webp"
-                                alt="Imagen UNIK">
-                        </div>
-                        <div class="slider">
-                            <div>
-                                <h4>Ofertas de <br>formación MINTIC</h4>
-                                <a href="">Empieza ahora</a>
-                            </div>
-                            <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733846745/UNIK/cvkoo7k81qltfzrwdaci.webp"
-                                alt="Imagen UNIK">
-                        </div>
-                        <div class="slider">
-                            <div>
-                                <h4>Educación Continua<br>UNICAMACHO</h4>
-                                <a href="">Empieza ahora</a>
-                            </div>
-                            <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733846744/UNIK/wbbeejs9jitvzng9belc.webp"
-                                alt="Imagen UNIK">
-                        </div>
-                    </div>
-                    <div class="left" id="control-slider-left">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                            <g data-name="90-Arrow Up">
-                                <path
-                                    d="M16 0a16 16 0 1 0 16 16A16 16 0 0 0 16 0zm0 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14z" />
-                                <path
-                                    d="m15.29 10.29-8 8L8.7 19.7l7.3-7.29 7.29 7.29 1.41-1.41-8-8a1 1 0 0 0-1.41 0z" />
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="right" id="control-slider-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                            <g data-name="90-Arrow Up">
-                                <path
-                                    d="M16 0a16 16 0 1 0 16 16A16 16 0 0 0 16 0zm0 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14z" />
-                                <path
-                                    d="m15.29 10.29-8 8L8.7 19.7l7.3-7.29 7.29 7.29 1.41-1.41-8-8a1 1 0 0 0-1.41 0z" />
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-text">
+          <h2>Única, como tu manera de aprender</h2>
         </div>
-    </section>
-    <section class="section_educacion_continua">
-        <div class="image">
-            <figure></figure>
-        </div>
-        <div class="container_info">
-            <div class="header">
-                <h2>Educación</h2>
-                <h2 style="color: #005387;">Continua</h2>
-            </div>
-            <div class="body">
-                <p>
-                    Somos conscientes de la relevancia que tiene <br>
-                    desarrollar y actualizar en la comunidad <br>
-                    las competencias de los programas que están <br>
-                    en el mercado. El objetivo de la <strong>Educación Continua</strong><br>
-                    <strong>en la UniCamacho</strong> es ayudar a la comunidad a potencializar <br>
-                    sus habilidades y perfil profesional según las demandas <br>
-                    y tendencias del mercado.
-                </p>
-
-            </div>
-            <figure>
-                <img src="https://www.uniajc.edu.co/wp-content/uploads/2024/05/EC.png" alt="educación continua">
-            </figure>
-        </div>
-    </section>
-    <section class="section_educacion_continua" style="background-color: #2d65a9;">
-        <a-waves>
-            <canvas class="js-canvas"></canvas>
-        </a-waves>
-        <div class="container_info">
-            <div class="header">
-                <h2 style="color: #fff;font-size: 5.5rem;">EDUCACIÓN CONTINUA</h2>
-            </div>
-            <div class="body">
-                <ul>
-                    <li>Construcción Sostenible Guadua-Domótica</li>
-                </ul>
-            </div>
-        </div>
-        <div class="card">
-            <div>
+        <div class="hero-tellbg">
+          <div class="RedesSociales">
+            <ul>
+              <li>
+                <a href="#"><img src="https://www.uniajc.edu.co/wp-content/uploads/2022/08/Vector-2.png"
+                    alt="facebook" /></a>
+              </li>
+              <li>
                 <a href="#">
-                    <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733346451/UNIK/uceixe1zlk6r5e6ghybm.webp"
-                        alt="">
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section_ofert" id="sectionOefert">
-      <div class="text">
-        <div class="title">
-          <figure class="animate__animated animate__bounce">
-            <img src="./src/logo_tic.png" alt="logo tic" />
-          </figure>
-          <h3>Ofertas de formación</h3>
-          <h1>Mintic</h1>
-          <h4>Formación gratuita</h4>
-          <p>
-            El propósito de esta política es promover el uso y aprovechamiento
-            de las
-            <strong
-              >Tecnologías de la Información y las Comunicaciones - TIC</strong
-            >, para consolidar un Estado y ciudadanos competitivos, proactivos e
-            innovadores, que generen valor público en un entorno de confianza
-            digital.
-          </p>
-        </div>
-      </div>
-      <div class="figure">
-        <figure>
-          <img src="src/people.png" alt="" />
-        </figure>
-      </div>
-      <div id="ContModales" class="menu-aliados">
-        <div class="info">
-          <div class="bgModales">
-            <ul id="ulModales">
-              <li onclick="setActive(this)" value="senatic">
-                <img
-                  onclick="OpenModal('modalSenatic')"
-                  src="./src/patrons/senatic.png"
-                  alt="senatic"
-                />
+                  <img src="https://www.uniajc.edu.co/wp-content/uploads/2022/08/Group.png" alt="instagram" /></a>
               </li>
-              <li onclick="setActive(this)">
-                <img
-                  onclick="OpenModal('modalTic')"
-                  src="https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15.png"
-                  alt=""
-                />
+              <li>
+                <a href="#">
+                  <img src="https://www.uniajc.edu.co/wp-content/uploads/2022/08/Vector.png" alt="red" /></a>
               </li>
-              <li onclick="setActive(this)">
-                <img
-                  onclick="OpenModal('modaltech')"
-                  src="https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-16.png"
-                  alt=""
-                />
-              </li>
-              <li onclick="setActive(this)">
-                <img
-                  onclick="OpenModal('modalYawa')"
-                  src="https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-26.png"
-                  alt=""
-                />
+              <li>
+                <a href="#">
+                  <img src="https://www.uniajc.edu.co/wp-content/uploads/2022/08/Vector-1.png" alt="youtube" /></a>
               </li>
             </ul>
           </div>
+          <strong>Aprende, lidera y transforma </strong>
+        </div>
+      </div>
+      <div id="section3">
+        <div class="container-site">
+          <div class="textos">
+            <h2>Aprende, lidera y transforma</h2>
+            <p style="font-weight: 300;">
+              Somos el portal que fortalece tus habilidades, tu catálogo de cursos en línea con
+              aprendizaje continuo.
+            </p>
+            <p style="font-weight: 500;">
+              ¡Estamos aquí para acompañarte en cada paso de tu desarrollo profesional con nuestras
+              oportunidades de formación!
+            </p>
+            <div class="btn-normal"><a href="#">Conoce más</a></div>
+          </div>
+          <div class="ImagenenTexto">
+            <div>
+              <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1732889315/UNIK/irntoxy2cg6wvdy1fhyb.webp"
+                alt="" />
+              <div class="ContenedorNota">
+                <div class="container">
+                  <div class="message">
+                    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.4 13.4">
+                      <g id="Unika">
+                        <path
+                          d="M7.82,6.7c0,.62-.5,1.12-1.12,1.12s-1.12-.5-1.12-1.12.5-1.12,1.12-1.12,1.12.5,1.12,1.12ZM1.65,4.46v1.12s2.81,0,2.81,0c.61,0,1.11-.5,1.11-1.11V1.65h-1.12v2.01S.79,0,.79,0l-.79.79,3.66,3.66H1.65ZM8.94,5.58h2.8v-1.12h-2.01s3.67-3.67,3.67-3.67l-.79-.79-3.66,3.66V1.65s-1.13,0-1.13,0v2.81c0,.61.51,1.11,1.12,1.11ZM4.47,7.83H1.66s0,1.11,0,1.11h2.01l-3.67,3.67.79.79,3.67-3.67v2.01h1.12v-2.8c0-.61-.5-1.11-1.11-1.11ZM11.75,8.94v-1.12h-2.8c-.61,0-1.11.5-1.11,1.11v2.81s1.11,0,1.11,0v-2.01l3.67,3.67.79-.79-3.67-3.67h2.01Z" />
+                      </g>
+                    </svg>
+                    <p>Abierta</p>
+                  </div>
+                  <div class="message">
+                    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.46 13.46">
+                      <g id="Unika">
+                        <path
+                          d="M13.46,6.73c0,3.72-3.01,6.73-6.73,6.73S0,10.45,0,6.73,3.01,0,6.73,0c3.72,0,6.73,3.02,6.73,6.73ZM1.12,6.73c0,3.1,2.51,5.61,5.61,5.61s5.61-2.51,5.61-5.61S9.83,1.12,6.73,1.12c-3.1,0-5.61,2.51-5.61,5.61ZM8.65,5.94l-2.64-2.64-.79.79,2.64,2.64-2.62,2.62.79.79,2.62-2.62c.44-.44.44-1.15,0-1.59h0Z" />
+                      </g>
+                    </svg>
+                    <p>Continua</p>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="message">
+                    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.49 11.53">
+                      <g id="Unika">
+                        <path
+                          d="M13.17,4.15c-.36-.54-.96-.86-1.6-.86h-1.25l.24-.43c.34-.6.33-1.32-.02-1.91-.35-.59-.97-.95-1.66-.95-.49,0-.96.18-1.32.52l-2.51,2.4c-.25-.23-.59-.38-.96-.38H1.42c-.78,0-1.42.64-1.42,1.42v6.14c0,.78.64,1.42,1.42,1.42h2.67c.46,0,.86-.22,1.12-.56h4.76c.78,0,1.47-.46,1.77-1.18l1.6-3.83c.25-.59.18-1.27-.17-1.81ZM4.09,10.29H1.42c-.1,0-.19-.08-.19-.19V3.97c0-.1.08-.19.19-.19h2.67c.1,0,.19.08.19.19v6.14c0,.1-.08.19-.19.19ZM12.2,5.48l-1.6,3.83c-.11.26-.36.42-.63.42h-4.46v-5.54l2.9-2.77c.13-.12.3-.19.47-.19.35,0,.53.24.59.34.06.1.18.37,0,.68l-1.26,2.27h3.35c.23,0,.44.11.57.31.13.19.15.43.06.65Z" />
+                      </g>
+                    </svg>
+                    <p>Personalizable</p>
+                  </div>
+                  <div class="message">
+                    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.53 13.53">
+                      <g id="Unika">
+                        <g>
+                          <path
+                            d="M12.96,12.4H2.82c-.93,0-1.69-.76-1.69-1.69V.56c0-.31-.25-.56-.56-.56s-.56.25-.56.56v10.15c0,1.56,1.26,2.82,2.82,2.82h10.15c.31,0,.56-.25.56-.56s-.25-.56-.56-.56Z" />
+                          <path
+                            d="M3.38,11.27c.31,0,.56-.25.56-.56v-3.95c0-.31-.25-.56-.56-.56s-.56.25-.56.56v3.95c0,.31.25.56.56.56Z" />
+                          <path
+                            d="M5.64,5.64v5.07c0,.31.25.56.56.56s.56-.25.56-.56v-5.07c0-.31-.25-.56-.56-.56s-.56.25-.56.56Z" />
+                          <path
+                            d="M8.46,7.33v3.38c0,.31.25.56.56.56s.56-.25.56-.56v-3.38c0-.31-.25-.56-.56-.56s-.56.25-.56.56Z" />
+                          <path
+                            d="M11.27,5.07v5.64c0,.31.25.56.56.56s.56-.25.56-.56v-5.64c0-.31-.25-.56-.56-.56s-.56.25-.56.56Z" />
+                          <path
+                            d="M3.38,5.07c.15,0,.29-.06.4-.17l2.02-2.02c.22-.21.57-.21.8,0l1.22,1.22c.66.66,1.73.66,2.39,0l3.15-3.15c.22-.22.21-.58-.01-.8-.22-.21-.56-.21-.78,0l-3.15,3.15c-.22.22-.58.22-.8,0l-1.22-1.22c-.66-.66-1.73-.66-2.39,0l-2.02,2.02c-.22.22-.22.58,0,.8.11.11.25.17.4.17Z" />
+                        </g>
+                      </g>
+                    </svg>
+                    <p>Sostenible</p>
+                  </div>
+                  <div class="message">
+                    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.64 9.92">
+                      <g id="Unika">
+                        <g>
+                          <path
+                            d="M10.95,3.72c1.03,0,1.86-.83,1.86-1.86,0-1.03-.83-1.86-1.86-1.86s-1.86.83-1.86,1.86.83,1.86,1.86,1.86Z" />
+                          <path
+                            d="M10.74,4.53c-.13,0-.25,0-.37.02-.78.1-1.48.53-1.93,1.17.93.42,1.65,1.18,2.03,2.13h2.76c.23,0,.41-.19.41-.41v-.02c0-1.6-1.3-2.89-2.9-2.89Z" />
+                          <path
+                            d="M6.82,5.37c1.03,0,1.86-.83,1.86-1.86s-.83-1.86-1.86-1.86c-.08,0-.16,0-.24.01-.03,0-.06,0-.09.01-.06.01-.12.02-.18.04-.03,0-.06.02-.09.03-.01,0-.03,0-.04.02-.09.03-.17.07-.25.11-.03.01-.05.03-.08.04s-.05.03-.08.05c-.01,0-.02.02-.04.03-.12.09-.23.19-.33.3-.02.02-.04.05-.06.07-.04.05-.07.1-.1.15,0,.01-.02.03-.02.04-.05.09-.1.18-.14.28,0,.01-.01.03-.02.04-.01.03-.02.06-.03.09-.05.17-.08.36-.08.55,0,1.03.83,1.86,1.86,1.86Z" />
+                          <path
+                            d="M2.69,3.72c1.03,0,1.86-.83,1.86-1.86s-.83-1.86-1.86-1.86S.83.83.83,1.86c0,1.03.83,1.86,1.86,1.86Z" />
+                          <path
+                            d="M5.2,5.72c-.45-.64-1.15-1.07-1.93-1.17-.12-.02-.25-.02-.37-.02-1.6,0-2.9,1.29-2.9,2.89v.02c0,.23.19.41.41.41h2.76c.38-.94,1.1-1.71,2.03-2.13Z" />
+                          <path
+                            d="M6.82,6.2c-1.71,0-3.1,1.39-3.1,3.1v.21c0,.23.19.41.41.41h5.37c.23,0,.41-.19.41-.41v-.21c0-1.71-1.39-3.1-3.1-3.1Z" />
+                        </g>
+                      </g>
+                    </svg>
+                    <p>Flexible</p>
+                  </div>
+                  <div class="message">
+                    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.37 13.41">
+                      <g id="Unika">
+                        <path
+                          d="M9.03,4.82l-2.11,2.11c-.21.21-.49.33-.79.33s-.58-.12-.79-.33l-1.28-1.28.79-.79,1.28,1.28,2.11-2.11.79.79ZM13.37,10.63h-2.79v2.79l-2.39-2.39c-.15.17-.32.32-.53.43-.3.17-.64.25-.98.25s-.68-.08-.98-.25c-.2-.11-.37-.26-.52-.43l-2.39,2.39v-2.79H0l1.95-1.95c-.01-.2,0-.4.04-.6.04-.18-.05-.37-.21-.48-.29-.19-.52-.44-.7-.75-.16-.3-.25-.64-.25-.99,0-.35.08-.69.25-.99.17-.31.41-.56.7-.75.17-.11.25-.3.21-.48-.08-.34-.07-.69.03-1.05.19-.66.72-1.2,1.39-1.39.35-.1.7-.11,1.04-.03.18.04.37-.05.48-.21.19-.29.44-.52.75-.7.6-.34,1.36-.34,1.96,0,.31.17.56.41.75.7.11.17.3.26.48.21.34-.08.69-.07,1.04.03.67.19,1.2.72,1.39,1.39.1.35.11.7.03,1.05-.04.18.05.37.21.48.29.19.52.44.7.75h0c.16.3.25.64.25.99,0,.34-.08.69-.25.98-.17.31-.41.57-.7.75-.17.11-.25.3-.21.48.04.19.06.39.04.59l1.97,1.97h0ZM9.14,9.45c.16.04.32.03.49-.02.29-.08.54-.33.62-.62.05-.17.05-.33.02-.49-.14-.64.14-1.3.7-1.67.13-.09.24-.21.33-.36.07-.13.11-.29.11-.45,0-.16-.04-.32-.11-.45-.08-.15-.19-.27-.33-.36-.56-.36-.84-1.03-.7-1.66.04-.16.03-.32-.02-.49-.08-.29-.33-.54-.62-.62-.17-.05-.33-.05-.49-.02-.63.14-1.3-.14-1.66-.7-.09-.13-.21-.24-.36-.33-.27-.15-.61-.15-.88,0-.15.08-.27.19-.36.33-.36.56-1.03.84-1.66.7-.16-.04-.32-.03-.49.02-.29.08-.54.33-.62.62-.05.17-.05.33-.02.49.14.63-.14,1.3-.7,1.66-.13.09-.24.21-.33.36-.07.13-.11.29-.11.45,0,.16.04.32.11.45.08.15.19.27.33.36.56.36.84,1.03.7,1.66-.04.16-.03.32.02.49.08.29.33.54.62.62.17.05.33.05.49.02.11-.03.22-.04.33-.04.52,0,1.03.27,1.33.73.09.13.21.24.36.33.27.15.61.15.88,0,.15-.08.27-.19.36-.33.36-.56,1.03-.84,1.66-.7h0Z" />
+                      </g>
+                    </svg>
+                    <p>Cetificada</p>
+                  </div>
+                </div>
+              </div>
+              <div class="nota">
+                <p>
+                  UNIK es una plataforma digital para la gestión del conocimiento, el desarrollo de
+                  habilidades de futuro y el crecimiento profesional, que permite personalizar rutas
+                  de aprendizaje para el cierre de brechas de conocimiento especializado, respondiendo
+                  a una estrategia de formación integral.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div id="bgModal" onclick="closeModal()">
-        <div
-          class="contenedorModal animate__animated animate__fadeInDown"
-          id="modal"
-        >
-          <span onclick="closeModal('modalSenatic')" class="close">X</span>
-          <figure id="tituloSenatic">
-            <img
-              id=""
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTL1u8S1Nl0_yHeJLr-XRUSwTP-y-iyXq4Jw&s"
-              alt=""
-            />
+    </div>
+  </section>
+  <section class="community">
+    <div class="image">
+      <figure></figure>
+    </div>
+    <div>
+      <div class="container_info">
+        <div class="header">
+          <h2>Comunidad</h2>
+          <h2>de <big>expertos</big></h2>
+        </div>
+        <div class="body">
+          <p>
+            En UNIK, conectamos a profesionales apasionados
+            <br>
+            por el aprendizaje y la innovación. Estamos empezando
+            <br>
+            a conformar nuestra comunidad de expertos que está compuesta por líderes dinámicos y diversos.
+          </p>
+          <p style="margin-top: 25px;">
+            Están preparados para guiarte de manera personalizada
+            <br>
+            en tu crecimiento profesional, a través de experiencias
+            <br>
+            formativas diseñadas para el entorno digital.
+          </p>
+          <div class="btn-normal"><a href="#">Empieza ahora</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-mooc">
+    <div class="windows">
+      <div class="window is_active">MOOC</div>
+      <div class="window">Acerca del MOOC</div>
+    </div>
+    <div class="container-1">
+      <div class="textos">
+        <span class="txt-efect">Mooc</span>
+        <h2>Herramientas y tecnicas</h2>
+        <h2>para hablar en publico</h2>
+        <p>Desarrolla habilidades esenciales de <strong>comunicación clara y efectiva</strong>, enfocada en</p>
+        <p> la asertividad del <strong>lenguaje verbal y corporal</strong>, con el <strong>MOOC</strong></p>
+      </div>
+      <div class="actions">
+        <div>
+          <figure>
+            <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1732909366/UNIK/yiniur4hqf5tzxfrg2fm.webp"
+              alt="">
           </figure>
-          <div id="parrafo"></div>
-          <strong class="llamadoCards">Certificados mas populares</strong>
-          <div
-            class="ContenidoCardsModal animate__animated animate__fadeInRight"
-            id="ContenidoCardsModal"
-          ></div>
+          <figure>
+            <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1732909366/UNIK/q8284zbcrxdshsixn9bm.webp"
+              alt="">
+          </figure>
+          <figure>
+            <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1732909366/UNIK/aak8gcaefua5qpiery2g.webp"
+              alt="">
+          </figure>
+        </div>
+        <a href="">
+          <span>Empieza ahora</span>
+          <div>
+            <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.51 19.51">
+              <g id="Unika">
+                <path style="fill: #000;stroke-width: 0px;"
+                  d="M19.51,9.76c0,5.39-4.37,9.76-9.76,9.76S0,15.14,0,9.76,4.37,0,9.76,0c5.39,0,9.75,4.37,9.76,9.76ZM1.63,9.76c0,4.49,3.64,8.13,8.13,8.13s8.13-3.64,8.13-8.13S14.25,1.63,9.76,1.63c-4.49,0-8.13,3.64-8.13,8.13ZM8.13,4.88v9.76l4.59-4.2c.37-.33.4-.91.07-1.28-.02-.02-.05-.05-.07-.07l-4.59-4.2Z" />
+              </g>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="container-2">
+      <div class="info">
+        <h2>Herramientas y técnicas para hablar en público</h2>
+        <p>Desarrollaremos <strong>habilidades esenciales</strong> para comunicarte de manera clara y efectiva.
+          <br>
+          Este <strong>MOOC</strong> está diseñado para ayudarte a <strong> dominar el arte de hablar en
+            público,</strong><br>
+          enfocándonos en el uso del <strong>lenguaje verbal y corporal.</strong>
+        </p>
+        <div class="presentation-expert">
+          <div class="header">
+            <figure>
+              <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733840035/UNIK/wexjzzvplaascllsqx2e.webp"
+                alt="">
+            </figure>
+            <div>
+              <div class="row">
+                <span>Autor</span>
+                <span>Comunicador Social</span>
+              </div>
+              <h2>Diego Trujillo Pareja</h2>
+            </div>
+          </div>
+          <p>
+            Técnico en Comunicación Social y Periodismo. Tecnólogo en Mercadeo y Comunicador Social. <br>
+            Especialista en Educación Virtual y a Distancia. Experiencia de 12 años en radio comercial
+            (Caracol, <br> RCN, Todelar, Radio Súper, Red Sonora) 12 años en Radio Universitaria (Radio
+            UNIAJC).
+          </p>
+        </div>
+        <div class="presentation-expert">
+          <div class="header">
+            <figure>
+              <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733843701/UNIK/ehg3hh0tltefcckisymk.webp"
+                alt="">
+            </figure>
+            <div>
+              <div class="row">
+                <span>Colaborador</span>
+                <span>Pedagoga</span>
+              </div>
+              <h2>Julieth Mejía Giraldo</h2>
+            </div>
+          </div>
+          <p>
+            Licenciada en Pedagogía Infantil - UT. Especialista en Educación a Distancia y Virtual - UNAD.
+            <br>
+            Magíster en Tecnología Educativa y Competencias Digitales-UNIR.
+          </p>
         </div>
       </div>
-    </section>
-
-    <!-- <section class="bg_wrapper section-ofert-mintic">
-        <div class="container_serv">
-            <div class="header">
-                <div class="logo">
-                    <figure>
-                        <img src="./src/logo-tic.svg" alt="">
-                    </figure>
-
-                </div>
-            </div>
-            <main>
-                <div class="content_left">
-                    <span>Alianza</span>
-                    <h1>Mintic</h1>
-                    <p>Ministerio de Tecnologias de la Información y las Comunicaciones</p>
-                </div>
-                <div class="content_right">
-                    <figure>
-                        <iframe src="https://www.youtube.com/embed/9FsyZD2RAi4?si=8zjYswZMgJXAkCyw"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </figure>
-                </div>
-            </main>
-            <div class="hastag">
-                <p>#FormaciónGratuitaTic</p>
-            </div>
+      <div class="explore">
+        <div class="content">
+          <h2>Explora el contenido</h2>
+          <div>
+            <h3>Lección 1</h3>
+            <p>¿Por qué es importante desarrollar la habilidad de hablar en público?</p>
+          </div>
+          <div>
+            <h3>Lección 2</h3>
+            <p>Preparación de un discurso efectivo</p>
+          </div>
+          <div>
+            <h3>Lección 3</h3>
+            <p>Recursos prácticos para acompañar tu voz</p>
+          </div>
+          <div>
+            <h3>Lección 4</h3>
+            <p>entre luces y cámaras</p>
+          </div>
         </div>
-    </section> -->
-    <script
-      async
-      src="https://cse.google.com/cse.js?cx=53f481c4c802b4503"
-    ></script>
-    <div class="gcse-search"></div>
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-  <!-- <script src='https://cdn.jsdelivr.net/npm/tsparticles@1.26.0/dist/tsparticles.min.js'></script> -->
-  <script src="./scriptOther.js"></script>
-  <script src="./script.js"></script>
-  <script>
-    // Charater and text animation
-    const item_P = document.querySelectorAll(".item-p li");
-    const character = document.querySelector(".CuadroPersona figure");
+      </div>
+    </div>
+  </section>
+  <section class="bg_wrapper wrapper-services">
+    <a-waves>
+      <canvas class="js-canvas"></canvas>
+    </a-waves>
+    <div class="container-services">
+      <h1>Ofertas Educativas</h1>
+      <div class="card">
+        <div class="text-section">
+          <h2>Aprende</h2>
+          <p class="service_descript1">
+            En <strong>UNIK</strong>, impulsamos el aprendizaje <br>
+            continuo y la transformación digital <br>
+            a través de cursos diseñados para <br>
+            inspirar y potenciar tus habilidades,<br>
+            respaldados por alianzas estratégicas.
+          </p>
+          <p class="service_descript2 d-none">
+            El <strong>Ministerio de Tecnologías</strong> de <br>
+            la Información y las comunicaciones <br>
+            lidera la iniciativa pública para impulsar <br>
+            la inversión en el sector TIC <br>
+            y para la transformación digital <br>
+            del Estado.
+          </p>
+          <p class="service_descript3 d-none">
+            <strong>Educación Continua brinda</strong> <br>
+            oportunidades de educación enfocadas <br>
+            en el sector de ingeniería, innovación,<br>
+            inglés y marketing, entre otras áreas.
+          </p>
+        </div>
+        <div class="image-section">
+          <div class="sliders-img">
+            <div class="slider">
+              <div>
+                <h4>Herramientas y técnicas <br>para hablar en público.</h4>
+                <a href="">Empieza ahora</a>
+              </div>
+              <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733846745/UNIK/me94qbz7buibm8gvbsjm.webp"
+                alt="Imagen UNIK">
+            </div>
+            <div class="slider">
+              <div>
+                <h4>Ofertas de <br>formación MINTIC</h4>
+                <a href="">Empieza ahora</a>
+              </div>
+              <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733846745/UNIK/cvkoo7k81qltfzrwdaci.webp"
+                alt="Imagen UNIK">
+            </div>
+            <div class="slider">
+              <div>
+                <h4>Educación Continua<br>UNICAMACHO</h4>
+                <a href="" class="">Empieza ahora</a>
+              </div>
+              <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733846744/UNIK/wbbeejs9jitvzng9belc.webp"
+                alt="Imagen UNIK">
+            </div>
+          </div>
+          <div class="left" id="control-slider-left">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <g data-name="90-Arrow Up">
+                <path d="M16 0a16 16 0 1 0 16 16A16 16 0 0 0 16 0zm0 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14z" />
+                <path d="m15.29 10.29-8 8L8.7 19.7l7.3-7.29 7.29 7.29 1.41-1.41-8-8a1 1 0 0 0-1.41 0z" />
+              </g>
+            </svg>
+          </div>
+          <div class="right" id="control-slider-right">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <g data-name="90-Arrow Up">
+                <path d="M16 0a16 16 0 1 0 16 16A16 16 0 0 0 16 0zm0 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14z" />
+                <path d="m15.29 10.29-8 8L8.7 19.7l7.3-7.29 7.29 7.29 1.41-1.41-8-8a1 1 0 0 0-1.41 0z" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section_educacion_continua">
+    <div class="image">
+      <figure></figure>
+    </div>
+    <div class="container_info">
+      <div class="header">
+        <h2>Educación</h2>
+        <h2 style="color: #005387;">Continua</h2>
+      </div>
+      <div class="body">
+        <p>
+          Somos conscientes de la relevancia que tiene <br>
+          desarrollar y actualizar en la comunidad <br>
+          las competencias de los programas que están <br>
+          en el mercado. El objetivo de la <strong>Educación Continua</strong><br>
+          <strong>en la UniCamacho</strong> es ayudar a la comunidad a potencializar <br>
+          sus habilidades y perfil profesional según las demandas <br>
+          y tendencias del mercado.
+        </p>
 
-    item_P.forEach((item, index) => {
-        item.addEventListener("click", () => {
-            item_P.forEach((item) => item.classList.remove("item-p_active"));
-            item.classList.add("item-p_active");
-            character.style.animation = "rotate-vertical-center 1.5s";
-            if (index === 0) {
-                character.style.backgroundImage = `url("https://res.cloudinary.com/dwca35nsw/image/upload/v1733754341/UNIK/character1.webp")`;
-            }
-            if (index === 1) {
-                character.style.backgroundImage = `url("https://res.cloudinary.com/dwca35nsw/image/upload/v1732822938/UNIK/character2.webp")`;
-            }
-            if (index === 2) {
-                character.style.backgroundImage = `url("https://res.cloudinary.com/dwca35nsw/image/upload/v1732822938/UNIK/character3.webp")`;
-            }
-            character.addEventListener("animationend", () => {
-                character.style.animation = "none";
-            }, { once: true });
-        });
+      </div>
+      <figure>
+        <img src="https://www.uniajc.edu.co/wp-content/uploads/2024/05/EC.png" alt="educación continua">
+      </figure>
+    </div>
+  </section>
+  <section class="section_educacion_continua" style="background-color: #005387;">
+    <a-waves>
+      <canvas class="js-canvas"></canvas>
+    </a-waves>
+    <div class="container_info">
+      <div class="header">
+        <span>OFERTAS</span>
+        <h2 style="color: #fff;font-size: 4.5rem;">EDUCACIÓN CONTINUA</h2>
+      </div>
+      <div class="body">
+        <ul>
+          <li>Construcción Sostenible Guadua-Domótica</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div>
+        <a href="#">
+          <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733346451/UNIK/uceixe1zlk6r5e6ghybm.webp"
+            alt="" />
+        </a>
+      </div>
+      <div class="footer_section" style="justify-content: center;">
+        <span style="border-right: 2px solid #fff;">Colaboración</span>
+        <span style="border-right: 2px solid #fff;">Educación digital</span>
+        <span style="border-right: 2px solid #fff;">Inversión</span>
+        <span style="border-right: 2px solid #fff;">Líneas de acción</span>
+        <span>Alcance nacional</span>
+      </div>
+    </div>
+    <div class="footer_section" style="padding-left: 10%">
+      <span style="font-size: 1.2rem">#FormaciónUnicamacho</span>
+    </div>
+  </section>
+  <section class="section_ofert" id="sectionOefert">
+    <div class="text">
+      <div class="title">
+        <figure class="animate__animated animate__bounce">
+          <img src="./src/logo_tic.png" alt="logo tic" />
+        </figure>
+        <h3>Ofertas de formación</h3>
+        <h1>Mintic</h1>
+        <h4>Formación gratuita</h4>
+        <p>
+          El propósito de esta política es promover el uso y aprovechamiento
+          de las
+          <strong>Tecnologías de la Información y las Comunicaciones - TIC</strong>, para consolidar un Estado y
+          ciudadanos competitivos, proactivos e
+          innovadores, que generen valor público en un entorno de confianza
+          digital.
+        </p>
+      </div>
+    </div>
+    <div class="figure">
+      <figure>
+        <img src="src/people.png" alt="" />
+      </figure>
+    </div>
+    <div id="ContModales" class="menu-aliados">
+      <div class="info">
+        <div class="bgModales">
+          <ul id="ulModales">
+            <li id="liModal" onclick="OpenModal('modalSenatic')" value="senatic">
+              <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733951290/UNIK/n9jdieekhz2x0gw1tnqg.webp"
+                alt="senatic" />
+            </li>
+            <li id="liModal" onclick="OpenModal('modalTic')">
+              <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733951290/UNIK/gvp6ktvxpt06l6geyz0p.webp"
+                alt="" />
+            </li>
+            <li id="liModal" onclick="OpenModal('modaltech')">
+              <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733951290/UNIK/ilbjrc9s6hyvdi1e5d6y.webp"
+                alt="" />
+            </li>
+            <li id="liModal" onclick="OpenModal('modalYawa')">
+              <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733951290/UNIK/exiy1yoczg2okfuqkxyu.webp"
+                alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="bgModal">
+      <div class="contenedorModal animate__animated animate__fadeInDown" id="modal">
+        <span onclick="closeModal('modalSenatic')" class="close">X</span>
+        <figure id="tituloSenatic">
+          <img id="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTL1u8S1Nl0_yHeJLr-XRUSwTP-y-iyXq4Jw&s"
+            alt="" />
+        </figure>
+        <div id="parrafo"></div>
+        <strong class="llamadoCards">Certificados mas populares</strong>
+        <div class="ContenidoCardsModal" id="ContenidoCardsModal"></div>
+      </div>
+    </div>
+  </section>
+  <section id="SectionCubo">
+    <a-waves>
+      <canvas class="js-canvas"></canvas>
+    </a-waves>
+    <div>
+      <div class="list">
+        <h2>OFERTAS</h2>
+        <ul id="list_item">
+          <li value="senatic" class="active">Senatic</li>
+          <li value="TalentoTech">Talento Tech</li>
+          <li value="AvanzaTec">Avanza Tec</li>
+          <!-- <li value="Gobiernodigital">Gobierno digital</li> -->
+          <li value="Yawa">Yawa</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Swiper con efecto cubo -->
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- Cada slide tiene un id correspondiente al value del <li> -->
+        <div class="swiper-slide" id="senatic">
+          <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733969333/UNIK/ifdtmslaqvilux4cuigq.webp" />
+          <div class="overlay">
+            <div class="btn">
+              <span><a href="#">Ver ahora</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" id="TalentoTech">
+          <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733969333/UNIK/tlmj1mzppwfhpbkkje5b.webp" />
+          <div class="overlay">
+            <div class="btn">
+              <span><a href="#">Ver ahora</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" id="AvanzaTec">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEvbI2grJk1IB2ZxsxU4a3tiDYSqFJR4p6QW9wPbWh0pBwe5eZV2f_mXsvwrrMMPt4VSI&usqp=CAU" />
+          <div class="cost">Diplomado</div>
+          <div class="overlay">
+            <h2>Avanza Tec</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div class="btn">
+              <span><a href="#">Ver ahora</a></span>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="swiper-slide" id="Gobiernodigital">
+          <img
+            src="https://img.freepik.com/vector-premium/fondo-degradado-color-abstracto-azul-rojo-amarillo-web-presentaciones-e-impresiones_7280-4155.jpg" />
+          <div class="cost">Diplomado</div>
+          <div class="overlay">
+            <h2>Gobierno digital</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div class="btn">
+              <span><a href="#">Ver ahora</a></span>
+            </div>
+          </div>
+        </div> -->
+        <div class="swiper-slide" id="Yawa">
+          <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733969333/UNIK/vrkecwazm1tsjlofg7et.webp" />
+          <div class="overlay">
+            <div class="btn">
+              <span><a href="#">Ver ahora</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fotterOertas">
+      <p>#FormacíonGratuitaTic</p>
+      <ul>
+        <li><a href="#">Colaboración</a></li>
+        <hr />
+        <li><a href="#">Educación digital</a></li>
+        <hr />
+        <li><a href="#">Inversión</a></li>
+        <hr />
+        <li><a href="#">Lineas de acción</a></li>
+        <hr />
+        <li><a href="#">Alcance nacional</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <script async src="https://cse.google.com/cse.js?cx=53f481c4c802b4503"></script>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+<!-- <script src='https://cdn.jsdelivr.net/npm/tsparticles@1.26.0/dist/tsparticles.min.js'></script> -->
+<script src="./scriptOther.js"></script>
+<script src="./script.js"></script>
+<script>
+  // Charater and text animation
+  const item_P = document.querySelectorAll(".item-p li");
+  const character = document.querySelector(".CuadroPersona figure");
+
+  item_P.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      item_P.forEach((item) => item.classList.remove("item-p_active"));
+      item.classList.add("item-p_active");
+      character.style.animation = "rotate-vertical-center 1.5s";
+      if (index === 0) {
+        character.style.backgroundImage = `url("https://res.cloudinary.com/dwca35nsw/image/upload/v1733754341/UNIK/character1.webp")`;
+      }
+      if (index === 1) {
+        character.style.backgroundImage = `url("https://res.cloudinary.com/dwca35nsw/image/upload/v1732822938/UNIK/character2.webp")`;
+      }
+      if (index === 2) {
+        character.style.backgroundImage = `url("https://res.cloudinary.com/dwca35nsw/image/upload/v1732822938/UNIK/character3.webp")`;
+      }
+      character.addEventListener("animationend", () => {
+        character.style.animation = "none";
+      }, { once: true });
     });
-  </script>
-  <script>
-    //Hamburguesa
+  });
+</script>
+<script>
+  //Hamburguesa
 
-    const menu = document.querySelector(".hamburger");
-    const menu_principal = document.querySelector(".menu-principal");
+  const menu = document.querySelector(".hamburger");
+  const menu_principal = document.querySelector(".menu-principal");
 
-    // Ensure the menu_principal is initially hidden
-    menu_principal.style.display = "none";
+  // Ensure the menu_principal is initially hidden
+  menu_principal.style.display = "none";
 
-    menu.addEventListener("click", () => {
-      menu.classList.toggle("is-active");
-      document.querySelector(".menuppal").classList.toggle("is_active");
-      setTimeout(() => {
-        menu_principal.style.display =
-          menu_principal.style.display === "none" ? "flex" : "none";
-      }, 300);
+  menu.addEventListener("click", () => {
+    menu.classList.toggle("is-active");
+    document.querySelector(".menuppal").classList.toggle("is_active");
+    setTimeout(() => {
+      menu_principal.style.display =
+        menu_principal.style.display === "none" ? "flex" : "none";
+    }, 300);
+  });
+
+  // Animar elementos del menú
+  const itemsMenu = document.querySelectorAll(".item_menu");
+  const itemPickOption = document.querySelectorAll(".item-pick");
+
+  itemsMenu.forEach((item) => {
+    item.addEventListener("click", () => {
+      itemPickOption.forEach((item) => item.classList.add("scale-up-vertical-top"));
     });
+  });
 
-    // Search
-    const searchIcon = document.querySelector("#search-icon");
-    const searchInput = document.querySelector("#search-input");
+  // Search
+  const searchIcon = document.querySelector("#search-icon");
+  const searchInput = document.querySelector("#search-input");
 
-    searchIcon.addEventListener("click", () => {
-      searchInput.style.display =
-        searchInput.style.display === "flex" ? "none" : "flex";
-      searchInput.style.animation = "open-input 0.5s";
-      searchInput.focus();
+  searchIcon.addEventListener("click", () => {
+    searchInput.style.display =
+      searchInput.style.display === "flex" ? "none" : "flex";
+      searchIcon.style.opcaity = "1";
+    searchInput.style.animation = "open-input 0.5s";
+    searchInput.focus();
+  });
+
+  searchInput.addEventListener("focusout", () => {
+    searchInput.style.display = "none";
+  });
+
+  // Translate
+
+  const translateIcon = document.querySelector("#translate");
+  const en = document.querySelector("#en");
+  const es = document.querySelector("#es");
+
+  translateIcon.addEventListener("click", () => {
+    en.classList.toggle("is_active");
+    es.classList.toggle("is_active");
+  });
+
+  // Animations
+  const divImagenenTexto = document.querySelector(".ImagenenTexto");
+
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const opacity = Math.min(1, scrollPosition / 1000);
+    const scale = Math.min(1, scrollPosition / 1000);
+    divImagenenTexto.style.opacity = opacity;
+    divImagenenTexto.style.transform = `scale(${scale})`;
+  });
+
+  // control slider
+  const controlSliderLeft = document.getElementById("control-slider-left");
+  const controlSliderRight = document.getElementById("control-slider-right");
+  const slidersImg = document.querySelector(".sliders-img");
+
+  const textSliders = [
+    document.querySelector(".service_descript1"),
+    document.querySelector(".service_descript2"),
+    document.querySelector(".service_descript3")
+  ];
+
+  // Inicializa el índice del slider
+  let index = 0;
+
+  // Función para actualizar los textos según el índice del slider
+  function updateTextSlider() {
+    textSliders.forEach((text, i) => {
+      if (i === index) {
+        text.classList.remove("d-none");
+        text.classList.add("fade-in");
+      } else {
+        text.classList.add("d-none");
+        text.classList.remove("fade-in");
+      }
     });
+  }
 
-    searchInput.addEventListener("focusout", () => {
-      searchInput.style.display = "none";
-    });
-
-    // Translate
-
-    const translateIcon = document.querySelector("#translate");
-    const en = document.querySelector("#en");
-    const es = document.querySelector("#es");
-
-    translateIcon.addEventListener("click", () => {
-      en.classList.toggle("is_active");
-      es.classList.toggle("is_active");
-    });
-
-    // Animations
-    const divImagenenTexto = document.querySelector(".ImagenenTexto");
-
-    window.addEventListener("scroll", () => {
-      const scrollPosition = window.scrollY;
-      const opacity = Math.min(1, scrollPosition / 1000);
-      const scale = Math.min(1, scrollPosition / 1000);
-      divImagenenTexto.style.opacity = opacity;
-      divImagenenTexto.style.transform = `scale(${scale})`;
-    });
-
-    // control slider
-    const controlSliderLeft = document.getElementById("control-slider-left");
-    const controlSliderRight = document.getElementById("control-slider-right");
-    const slidersImg = document.querySelector(".sliders-img");
-
-    const textSliders = [
-        document.querySelector(".service_descript1"),
-        document.querySelector(".service_descript2"),
-        document.querySelector(".service_descript3")
-    ];
-
-    // Inicializa el índice del slider
-    let index = 0;
-
-    // Función para actualizar los textos según el índice del slider
-    function updateTextSlider() {
-        textSliders.forEach((text, i) => {
-            if (i === index) {
-                text.classList.remove("d-none");
-                text.classList.add("fade-in");
-            } else {
-                text.classList.add("d-none");
-                text.classList.remove("fade-in");
-            }
-        });
+  // Mover al slider de la izquierda
+  controlSliderLeft.addEventListener("click", () => {
+    index--;
+    if (index < 0) {
+      index = textSliders.length - 1; // Volver al último slider
     }
+    slidersImg.scrollLeft = index * slidersImg.offsetWidth;
+    updateTextSlider();  // Actualizar el texto de acuerdo con el índice
+  });
 
-    // Mover al slider de la izquierda
-    controlSliderLeft.addEventListener("click", () => {
-        index--;
-        if (index < 0) {
-            index = textSliders.length - 1; // Volver al último slider
-        }
-        slidersImg.scrollLeft = index * slidersImg.offsetWidth;
-        updateTextSlider();  // Actualizar el texto de acuerdo con el índice
-    });
+  // Mover al slider de la derecha
+  controlSliderRight.addEventListener("click", () => {
+    index++;
+    if (index >= textSliders.length) {
+      index = 0; // Volver al primer slider
+    }
+    slidersImg.scrollLeft = index * slidersImg.offsetWidth;
+    updateTextSlider();  // Actualizar el texto de acuerdo con el índice
+  });
 
-    // Mover al slider de la derecha
-    controlSliderRight.addEventListener("click", () => {
-        index++;
-        if (index >= textSliders.length) {
-            index = 0; // Volver al primer slider
-        }
-        slidersImg.scrollLeft = index * slidersImg.offsetWidth;
-        updateTextSlider();  // Actualizar el texto de acuerdo con el índice
-    });
+  // mover los slides con el cursor del mouse (grab)
+  let isDown = false;
+  let startX;
+  let scrollLeft;
 
-    // mover los slides con el cursor del mouse (grab)
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+  slidersImg.addEventListener("mousedown", (e) => {
+    isDown = true;
+    slidersImg.classList.add("active");
+    slidersImg.style.cursor = "grabbing";
+    startX = e.pageX - slidersImg.offsetLeft;
+    scrollLeft = slidersImg.scrollLeft;
+  });
 
-    slidersImg.addEventListener("mousedown", (e) => {
-      isDown = true;
-      slidersImg.classList.add("active");
-      slidersImg.style.cursor = "grabbing";
-      startX = e.pageX - slidersImg.offsetLeft;
-      scrollLeft = slidersImg.scrollLeft;
-    });
-
-    slidersImg.addEventListener("mouseleave", () => {
-      isDown = false;
-      slidersImg.classList.remove("active");
-      slidersImg.style.cursor = "grab";
-    });
-
-    slidersImg.addEventListener("mouseup", () => {
-        isDown = false;
-        slidersImg.classList.remove("active");
-        slidersImg.style.cursor = "grab";
-        updateIndexBasedOnScroll();
-    });
-
-    slidersImg.addEventListener("mousemove", (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slidersImg.offsetLeft;
-      const walk = (x - startX) * 3; //scroll-fast
-      slidersImg.scrollLeft = scrollLeft - walk;
-    });
-
+  slidersImg.addEventListener("mouseleave", () => {
+    isDown = false;
+    slidersImg.classList.remove("active");
     slidersImg.style.cursor = "grab";
+  });
 
-    // movimiento de los slides automático
-    let autoSlideInterval;
+  slidersImg.addEventListener("mouseup", () => {
+    isDown = false;
+    slidersImg.classList.remove("active");
+    slidersImg.style.cursor = "grab";
+    updateIndexBasedOnScroll();
+  });
 
-    function startAutoSlide() {
-        autoSlideInterval = setInterval(() => {
-            index++;
-            if (index >= textSliders.length) {
-                index = 0;
-            }
-            slidersImg.scrollLeft = index * slidersImg.offsetWidth;
-            updateTextSlider();  // Actualizar el texto al cambiar el slider
-        }, 5000);
+  slidersImg.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slidersImg.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    slidersImg.scrollLeft = scrollLeft - walk;
+  });
+
+  slidersImg.style.cursor = "grab";
+
+  // movimiento de los slides automático
+  let autoSlideInterval;
+
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+      index++;
+      if (index >= textSliders.length) {
+        index = 0;
+      }
+      slidersImg.scrollLeft = index * slidersImg.offsetWidth;
+      updateTextSlider();  // Actualizar el texto al cambiar el slider
+    }, 5000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+
+  slidersImg.addEventListener("mouseenter", stopAutoSlide);
+  slidersImg.addEventListener("mouseleave", startAutoSlide);
+
+  function updateIndexBasedOnScroll() {
+    const newIndex = Math.round(slidersImg.scrollLeft / slidersImg.offsetWidth);
+    if (newIndex !== index) {
+      index = newIndex;
+      updateTextSlider();
     }
+  }
 
-    function stopAutoSlide() {
-      clearInterval(autoSlideInterval);
-    }
+  slidersImg.addEventListener("scroll", updateIndexBasedOnScroll);
 
-    slidersImg.addEventListener("mouseenter", stopAutoSlide);
-    slidersImg.addEventListener("mouseleave", startAutoSlide);
+  startAutoSlide();
+  updateTextSlider(); // Inicializar el texto del slider
 
-    function updateIndexBasedOnScroll() {
-        const newIndex = Math.round(slidersImg.scrollLeft / slidersImg.offsetWidth);
-        if (newIndex !== index) {
-            index = newIndex;
-            updateTextSlider();
-        }
-    }
+  // Si un elemento entra en el viewport, desplazar el scroll hasta dejarlo visible de manera más natural
 
-    slidersImg.addEventListener("scroll", updateIndexBasedOnScroll);
+  /*   const wrapperServices = document.querySelector(".wrapper-services");
+     const sectionOfert = document.querySelector(".section_ofert");
+     const sectionOfertMintic = document.querySelector(".section-ofert-mintic");
+ 
+     const observer = new IntersectionObserver((entries) => {
+         entries.forEach((entry) => {
+             if (entry.isIntersecting) {
+                 entry.target.scrollIntoView({
+                     behavior: "smooth",
+                     block: "start",
+                     inline: "nearest"
+                 });
+             }
+         });
+     }, {
+         threshold: 0.5 // Ajusta el umbral para que el elemento esté al menos al 50% visible antes de desplazarse
+     });
+ 
+     observer.observe(wrapperServices);
+     observer.observe(sectionOfert);
+     observer.observe(sectionOfertMintic);
+ */
 
-    startAutoSlide();
-    updateTextSlider(); // Inicializar el texto del slider
+  // menu mooc
+  const windows = document.querySelectorAll('.window');
+  const container1 = document.querySelector('.container-1');
+  const container2 = document.querySelector('.container-2');
 
-    // Si un elemento entra en el viewport, desplazar el scroll hasta dejarlo visible de manera más natural
+  windows.forEach((pest, index) => {
+    pest.addEventListener("click", () => {
+      // Eliminar la clase activa de todas las pestañas
+      windows.forEach((pest) => pest.classList.remove("is_active"));
+      // Agregar la clase activa a la pestaña seleccionada
+      pest.classList.add("is_active");
 
-    /*   const wrapperServices = document.querySelector(".wrapper-services");
-       const sectionOfert = document.querySelector(".section_ofert");
-       const sectionOfertMintic = document.querySelector(".section-ofert-mintic");
-   
-       const observer = new IntersectionObserver((entries) => {
-           entries.forEach((entry) => {
-               if (entry.isIntersecting) {
-                   entry.target.scrollIntoView({
-                       behavior: "smooth",
-                       block: "start",
-                       inline: "nearest"
-                   });
-               }
-           });
-       }, {
-           threshold: 0.5 // Ajusta el umbral para que el elemento esté al menos al 50% visible antes de desplazarse
-       });
-   
-       observer.observe(wrapperServices);
-       observer.observe(sectionOfert);
-       observer.observe(sectionOfertMintic);
-   */
-
-    // menu mooc
-    const windows = document.querySelectorAll('.window');
-    const container1 = document.querySelector('.container-1');
-    const container2 = document.querySelector('.container-2');
-
-    windows.forEach((pest, index) => {
-        pest.addEventListener("click", () => {
-            // Eliminar la clase activa de todas las pestañas
-            windows.forEach((pest) => pest.classList.remove("is_active"));
-            // Agregar la clase activa a la pestaña seleccionada
-            pest.classList.add("is_active");
-
-            if (index === 0) {
-                // Agregar animación al contenedor2
-                container2.classList.add("blur-out");
-                setTimeout(() => {
-                    // Ocultar contenedor2 después de la animación
-                    container2.style.display = "none";
-                    // Mostrar contenedor1
-                    container1.style.display = "flex";
-                    // Limpiar la animación del contenedor2
-                    container2.classList.remove("blur-out");
-                }, 800); // Reducido a 800ms para mejorar la experiencia
-            } else {
-                // Agregar animación al contenedor1
-                container1.classList.add("blur-out");
-                setTimeout(() => {
-                    // Ocultar contenedor1 después de la animación
-                    container1.style.display = "none";
-                    // Mostrar contenedor2
-                    container2.style.display = "flex";
-                    // Limpiar la animación del contenedor1
-                    container1.classList.remove("blur-out");
-                }, 800); // Reducido a 800ms para sincronizar con la animación
-            }
-        });
+      if (index === 0) {
+        // Agregar animación al contenedor2
+        container2.classList.add("blur-out");
+        setTimeout(() => {
+          // Ocultar contenedor2 después de la animación
+          container2.style.display = "none";
+          // Mostrar contenedor1
+          container1.style.display = "flex";
+          // Limpiar la animación del contenedor2
+          container2.classList.remove("blur-out");
+        }, 800); // Reducido a 800ms para mejorar la experiencia
+      } else {
+        // Agregar animación al contenedor1
+        container1.classList.add("blur-out");
+        setTimeout(() => {
+          // Ocultar contenedor1 después de la animación
+          container1.style.display = "none";
+          // Mostrar contenedor2
+          container2.style.display = "flex";
+          // Limpiar la animación del contenedor1
+          container1.classList.remove("blur-out");
+        }, 800); // Reducido a 800ms para sincronizar con la animación
+      }
     });
+  });
 
 
 </script>

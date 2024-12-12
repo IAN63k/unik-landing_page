@@ -272,15 +272,24 @@ class AWaves extends HTMLElement {
 customElements.define("a-waves", AWaves);
 
 //modales ofertas de formacion
+const liModals = document.querySelectorAll("#liModal");
 
-function setActive(element) {
+liModals.forEach((li) => {
+  li.addEventListener("click", function () {
+    setActive(li);
+  });
+});
+
+const setActive = (element) => {
   // Primero, elimina el desenfoque de todos los elementos
   const listItems = document.querySelectorAll("#ulModales li");
   listItems.forEach((item) => {
     item.classList.add("blur"); // Añade el blur a todos los elementos
+    item.style.zIndex = 1;
   });
 
   // Elimina el desenfoque (clase 'blur') del elemento que fue clicado
+  element.style.zIndex = 10;
   element.classList.remove("blur");
 }
 
@@ -296,8 +305,8 @@ function OpenModal(id) {
       titulo:
         "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-9.png",
       parrafo:
-        "El proyecto Senatic ofrece la posibilidad de formación y certificación en cursos reconocidos por gigantes tecnológicos, abarcando diferentes líneas de acción para impulsar el desarrollo tecnológico y digital del país.",
-      llamada: "¡Conócelos aquí!",
+        "El proyecto Senatic ofrece la posibilidad de formación y certificación en cursos reconocidos <br> por gigantes tecnológicos, abarcando diferentes líneas de acción para impulsar el desarrollo <br> tecnológico y digital del país. <a href='#'>¡Conócelos aquí!</a> ",
+      llamada: "",
       urlllamada: "",
     },
   ];
@@ -306,8 +315,8 @@ function OpenModal(id) {
       titulo:
         "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-13-1.png",
       parrafo:
-        "El proyecto tic ofrece la posibilidad de formación y certificación en cursos reconocidos por gigantes tecnológicos, abarcando diferentes líneas de acción para impulsar el desarrollo tecnológico y digital del país.",
-      llamada: "¡Conócelos aquí!",
+        "Si eres un curioso de los temas digitales y te interesa aprender, este es el lugar y momento indicados. Únete y transforma tu curiosidad en conocimiento práctico. <a href='#'>¡Conócelos aquí!</a>",
+      llamada: "",
       urlllamada: "",
     },
   ];
@@ -316,8 +325,8 @@ function OpenModal(id) {
       titulo:
         "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-20.png",
       parrafo:
-        "Talento Tech es un programa de formación que busca mediante un entrenamiento intensivo bajo la metodología de bootcamps, preparar a los nuevos talentos digitales del país en habilidades digitales avanzadas,capacitándolos para ingresar al mercado laboral tecnológico.  ",
-      llamada: "¡Descúbrelos aquí!",
+        "Talento Tech es un programa de formación que busca mediante un entrenamiento intensivo bajo la metodología de bootcamps, preparar a los nuevos talentos digitales del país en habilidades digitales avanzadas,capacitándolos para ingresar al mercado laboral tecnológico. <a href='#'>Descúbrelos aquí!</a>  ",
+      llamada: "",
       urlllamada: "https://",
     },
   ];
@@ -340,7 +349,7 @@ function OpenModal(id) {
       portada:
         "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15-100.jpg",
       titulo: "Análisis de datos de Google",
-      tipo: "Avanza hacia un título universitario ",
+      tipo: "Avanza hacia un título universitario",
       reconocimiento: "Certificado profesional",
     },
     {
@@ -368,29 +377,25 @@ function OpenModal(id) {
 
   const ticCards = [
     {
-      portada:
-        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-16-100.jpg",
+      portada: "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-16-100.jpg",
       titulo: "WhatsApp Bussines para emprendedores",
       tipo: "Taller ",
       reconocimiento: "Certificado",
     },
     {
-      portada:
-        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15-100-1.jpg",
+      portada: "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15-100-1.jpg",
       titulo: "Uso básico de herramientas digitales",
       tipo: "Taller ",
       reconocimiento: "Certificado",
     },
     {
-      portada:
-        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-14-100-1.jpg",
+      portada: "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-13-100.jpg",
       titulo: "Excel para principiantes",
       tipo: "Taller ",
       reconocimiento: "Certificado",
     },
     {
-      portada:
-        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-13-100.jpg",
+      portada: "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-14-100-1.jpg",
       titulo: "WhatsApp web para la vida digital",
       tipo: "Taller ",
       reconocimiento: "Certificado",
@@ -487,7 +492,7 @@ function OpenModal(id) {
             <img loading="lazy" class="animate__animated animate__zoomIn" src="${item.portada}" alt="Imagen del proyecto">
           </figure>
           <h2>${item.titulo}</h2>
-          <span><p>${item.tipo}</p></span>
+          <span><p><?xml version='1.0' encoding='UTF-8'?><svg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.43 10.5'><g id='mintic_ventanas_2' data-name='mintic ventanas 2'><g><path style='fill: #2355be;stroke-width: 0px;' d='M0,0v10.5h13.43V0H0ZM12.82,9.89H.61V.61h12.21v9.28Z' /><path style='fill: #2355be;stroke-width: 0px;' d='M7.2,5.69v2.65c0,.14.09.27.22.33.13.06.28.03.39-.08l.8-.8.8.8c.07.07.16.1.25.1.05,0,.09,0,.14-.03.13-.05.22-.18.22-.33v-2.65c.48-.4.79-1.01.79-1.69,0-1.21-.99-2.2-2.2-2.2s-2.2.99-2.2,2.2c0,.68.31,1.29.79,1.69ZM9.4,7.72l-.79-.79-.79.79v-1.67c.25.1.51.15.79.15s.55-.05.79-.15v1.67ZM8.61,2.41c.88,0,1.59.71,1.59,1.59s-.71,1.59-1.59,1.59-1.59-.71-1.59-1.59.71-1.59,1.59-1.59Z' /></g></g></svg> ${item.tipo}</p></span>
           <p>${item.reconocimiento}</p>
         `;
 
@@ -509,7 +514,7 @@ function OpenModal(id) {
       if (!tarjetasGeneradasPorModal.modalTic) {
         // Establecemos el fondo del modal
         modal.style.backgroundImage =
-          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-20-100.jpg')";
+          "url('https://res.cloudinary.com/dwca35nsw/image/upload/v1733951518/UNIK/qmw1eqkbhk0w6hlz89md.webp')";
         modal.style.backgroundRepeat = "no-repeat";
         modal.style.backgroundSize = "cover";
         tituloSenatic.innerHTML = `<img loading="lazy" class="animate__animated animate__fadeInUp" src="${tic[0].titulo}" />`;
