@@ -614,7 +614,7 @@
     <a-waves>
       <canvas class="js-canvas"></canvas>
     </a-waves>
-    <div>
+    <div class="container">
       <div class="list">
         <h2>OFERTAS</h2>
         <ul id="list_item">
@@ -625,50 +625,47 @@
           <li value="Yawa">Yawa</li>
         </ul>
       </div>
-    </div>
-
-    <!-- Swiper con efecto cubo -->
-
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <!-- Cada slide tiene un id correspondiente al value del <li> -->
-        <div class="swiper-slide" id="senatic">
-          <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733969333/UNIK/ifdtmslaqvilux4cuigq.webp" />
-          <div class="overlay">
-            <div class="btn">
-              <span><a href="#">Ver ahora</a></span>
+      <!-- Swiper con efecto cubo -->
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Cada slide tiene un id correspondiente al value del <li> -->
+          <div class="swiper-slide" id="senatic">
+            <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733969333/UNIK/ifdtmslaqvilux4cuigq.webp" />
+            <div class="overlay">
+              <div class="btn">
+                <span><a href="#">Ver ahora</a></span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="swiper-slide" id="TalentoTech">
-          <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733969333/UNIK/tlmj1mzppwfhpbkkje5b.webp" />
-          <div class="overlay">
-            <div class="btn">
-              <span><a href="#">Ver ahora</a></span>
+          <div class="swiper-slide" id="TalentoTech">
+            <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733969333/UNIK/tlmj1mzppwfhpbkkje5b.webp" />
+            <div class="overlay">
+              <div class="btn">
+                <span><a href="#">Ver ahora</a></span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="swiper-slide" id="AvanzaTec">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEvbI2grJk1IB2ZxsxU4a3tiDYSqFJR4p6QW9wPbWh0pBwe5eZV2f_mXsvwrrMMPt4VSI&usqp=CAU" />
-          <div class="cost">Diplomado</div>
-          <div class="overlay">
-            <h2>Avanza Tec</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-              in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <div class="btn">
-              <span><a href="#">Ver ahora</a></span>
+          <div class="swiper-slide" id="AvanzaTec">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEvbI2grJk1IB2ZxsxU4a3tiDYSqFJR4p6QW9wPbWh0pBwe5eZV2f_mXsvwrrMMPt4VSI&usqp=CAU" />
+            <div class="cost">Diplomado</div>
+            <div class="overlay">
+              <h2>Avanza Tec</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div class="btn">
+                <span><a href="#">Ver ahora</a></span>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- <div class="swiper-slide" id="Gobiernodigital">
+          <!-- <div class="swiper-slide" id="Gobiernodigital">
           <img
             src="https://img.freepik.com/vector-premium/fondo-degradado-color-abstracto-azul-rojo-amarillo-web-presentaciones-e-impresiones_7280-4155.jpg" />
           <div class="cost">Diplomado</div>
@@ -688,11 +685,12 @@
             </div>
           </div>
         </div> -->
-        <div class="swiper-slide" id="Yawa">
-          <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733969333/UNIK/vrkecwazm1tsjlofg7et.webp" />
-          <div class="overlay">
-            <div class="btn">
-              <span><a href="#">Ver ahora</a></span>
+          <div class="swiper-slide" id="Yawa">
+            <img src="https://res.cloudinary.com/dwca35nsw/image/upload/v1733969333/UNIK/vrkecwazm1tsjlofg7et.webp" />
+            <div class="overlay">
+              <div class="btn">
+                <span><a href="#">Ver ahora</a></span>
+              </div>
             </div>
           </div>
         </div>
@@ -781,7 +779,7 @@
   searchIcon.addEventListener("click", () => {
     searchInput.style.display =
       searchInput.style.display === "flex" ? "none" : "flex";
-      searchIcon.style.opcaity = "1";
+    searchIcon.style.opcaity = "1";
     searchInput.style.animation = "open-input 0.5s";
     searchInput.focus();
   });
