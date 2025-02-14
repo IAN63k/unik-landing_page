@@ -464,11 +464,6 @@ var swiper = new Swiper(".swiper", {
     shadowOffset: 10,
     shadowScale: 0.94,
   },
-
-  // autoplay: {
-  //   delay: 2600,
-  //   pauseOnMouseEnter: true,
-  // },
 });
 
 
