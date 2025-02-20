@@ -2937,3 +2937,105 @@ a-waves canvas {
     }
   }
 }
+
+
+@media (max-width: 1400px) {
+  .logo-unik {
+    width: 25% !important;
+  }
+
+  .item-p {
+
+    span {
+      font-size: 2vw !important;
+    }
+
+    li {
+      font-size: 1.5vw !important;
+    }
+  }
+
+  .CuadroPersona {
+    figure {
+      height: 65vw !important;
+      width: 65vw !important;
+    }
+  }
+
+  #section3 {
+    .container-site {
+      flex-direction: column;
+      min-height: 100vh;
+      height: auto !important;
+    }
+
+    .textos {
+      width: 100% !important;
+      padding: 0 !important;
+
+      h2 {
+        font-size: 3rem !important;
+      }
+    }
+
+    .ImagenenTexto {
+      img {
+        width: 100vw !important;
+        height: auto !important;
+      }
+    }
+  }
+
+  .community {
+    flex-direction: column-reverse !important;
+    min-height: 120vh !important;
+    height: auto !important;
+
+    .container_info {
+      width: 100%;
+      height: auto;
+
+      .header h2 {
+        font-size: 3rem !important;
+      }
+    }
+
+    .image {
+      width: 100% !important;
+      height: 300px !important;
+    }
+  }
+
+  .container-services {
+    width: 100%;
+    padding: 20px;
+    h1 {
+      font-size: 3rem !important;
+    }
+
+    .card {
+      height: auto;
+      flex-direction: column !important;
+
+      .text-section {
+        width: 100% !important;
+        padding: 0 !important;
+
+        h2 {
+          font-size: 2rem !important;
+        }
+
+        p {
+          font-size: 1rem !important;
+        }
+      }
+      .image-section{
+        width: 100% !important;
+        height: 400px !important;
+      }
+    }
+  }
+
+
+
+}
