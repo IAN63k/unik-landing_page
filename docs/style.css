@@ -3039,7 +3039,259 @@ a-waves canvas {
     }
   }
 
+  .section-mooc {
+    height: auto;
 
+    .windows {
+      height: auto;
+    }
+
+    & .container-1 {
+      & .textos {
+        h2 {
+          font-size: 3rem !important;
+        }
+      }
+    }
+  }
+
+  .section_educacion_continua {
+    flex-direction: column-reverse;
+    height: auto;
+
+    .container_info {
+      width: 100%;
+      height: auto;
+
+      & .header {
+        width: 100%;
+        text-align: center;
+
+        h2 {
+          font-size: 4.5rem;
+        }
+      }
+
+      figure {
+        bottom: -50px;
+      }
+
+      & .body {
+        p {
+          font-size: 1.2rem;
+          padding: 20px;
+        }
+      }
+    }
+
+    .image {
+      width: 85%;
+      height: 400px;
+    }
+
+  }
+
+  .sect-blue {
+    flex-direction: column !important;
+    justify-content: flex-start;
+    padding: 20px;
+    padding-top: 40px;
+    height: 800px;
+
+    & .container_info {
+      & .header {
+        h2 {
+          font-size: 3.5rem !important;
+        }
+      }
+    }
+
+    .card {
+      width: 100%;
+      height: 370px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      div {
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .ft-sec {
+        height: 60px;
+        bottom: -50px;
+
+        span {
+          font-size: .6rem;
+        }
+      }
+    }
+  }
+
+  .section_ofert {
+    flex-direction: column;
+    height: auto;
+
+    .text {
+      width: 100%;
+
+      & .title {
+        figure {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin: 0;
+        }
+
+        h1 {
+          font-size: 4rem !important;
+          height: auto;
+        }
+
+        h3 {
+          font-size: 1.5rem !important;
+        }
+
+        h4 {
+          font-size: 1.5rem !important;
+          letter-spacing: 0;
+        }
+
+        p {
+          font-size: .9rem !important;
+          width: 100%;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .menu-aliados {
+    .info {
+      width: 100%;
+      height: 100%;
+
+      .bgModales {
+        width: 100%;
+        height: 100%;
+
+        ul {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+
+          li {
+            width: 80px;
+            height: 70px;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .figure {
+    & figure {
+      img {
+        position: relative;
+        bottom: -10px;
+      }
+    }
+  }
+
+  #SectionCubo {
+    padding: 20px;
+    padding-top: 60px;
+    align-items: flex-start;
+    min-height: 730px;
+
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+
+    & .btn {
+      height: auto;
+
+      span {
+        font-size: .8rem;
+      }
+    }
+
+    & .list {
+      padding: 0;
+      width: 100%;
+
+      h2 {
+        font-size: 3rem;
+      }
+    }
+
+    .swiper {
+      position: relative;
+      width: 90%;
+      top: 40px;
+      height: 320px;
+    }
+
+    & .fotterOertas {
+      flex-direction: column;
+      height: 100px;
+      bottom: 0;
+
+      & ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        li {
+          font-size: .9rem;
+        }
+      }
+    }
+  }
+
+  .section-questions {
+    padding: 20px;
+    text-align: center;
+
+    .container_template {
+      h3 {
+        font-size: 3rem;
+      }
+
+      .wrapper-row {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+
+        .col {
+          details {
+            font-size: 1rem;
+            max-height: 100px;
+          }
+
+          details div {
+            padding: 1rem;
+          }
+        }
+      }
+
+    }
+  }
 
 }
 
