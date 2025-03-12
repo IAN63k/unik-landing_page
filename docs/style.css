@@ -2963,25 +2963,49 @@ a-waves canvas {
   }
 
   #section3 {
+    height: auto !important;
+
     .container-site {
+      position: relative !important;
       flex-direction: column;
       min-height: 100vh;
       height: auto !important;
     }
 
     .textos {
+      position: relative !important;
       width: 100% !important;
       padding: 0 !important;
 
       h2 {
+        padding: 0 !important;
         font-size: 3rem !important;
+      }
+
+      p {
+        padding: 0 !important;
       }
     }
 
     .ImagenenTexto {
+      position: relative !important;
+
       img {
         width: 100vw !important;
         height: auto !important;
+      }
+
+      .ContenedorNota {
+        left: 0 !important;
+        gap: 20px !important;
+        top: 0 !important;
+        width: 120px !important;
+        position: relative !important;
+      }
+
+      .nota {
+        width: 100% !important;
+        margin-top: 0 !important;
       }
     }
   }
@@ -3015,7 +3039,7 @@ a-waves canvas {
     }
 
     .card {
-      height: 700px;
+      height: 500px;
       flex-direction: column !important;
 
       .text-section {
@@ -3035,6 +3059,17 @@ a-waves canvas {
         flex: auto;
         width: 100% !important;
         height: 400px !important;
+
+        .sliders-img .slider {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
       }
     }
   }
@@ -3065,7 +3100,8 @@ a-waves canvas {
 
       & .header {
         width: 100%;
-        text-align: center;
+        text-align: left;
+        padding-left: 20px;
 
         h2 {
           font-size: 4.5rem;
@@ -3100,6 +3136,7 @@ a-waves canvas {
 
     & .container_info {
       & .header {
+        padding: 0;
         h2 {
           font-size: 3.5rem !important;
         }
@@ -3139,9 +3176,11 @@ a-waves canvas {
     height: auto;
 
     .text {
+      padding: 20px;
       width: 100%;
 
       & .title {
+        gap: 10px;
         figure {
           display: flex;
           justify-content: center;
@@ -3309,6 +3348,14 @@ a-waves canvas {
   }
 
   #Headersection {
+    & .hamburger, .menuppal {
+      width: 40px;
+      height: 40px;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+
     & #hero-section {
       height: 500px !important;
 
@@ -3321,19 +3368,23 @@ a-waves canvas {
       .item-p {
         right: 20px;
         display: flex;
-        top: 150px;
+        top: 25px;
         flex-direction: column;
         align-items: end;
 
         span {
           height: 30px;
+          font-size: 5vw !important;
           border-radius: 8px;
           margin-bottom: 10px;
         }
 
         li {
           padding: 0;
+          font-size: 3vw !important;
           padding-right: 10px;
+          z-index: 10;
+          cursor: pointer;
           right: 0;
         }
       }
@@ -3355,13 +3406,14 @@ a-waves canvas {
         & .RedesSociales {
           & ul {
             img {
-              width: 15px !important;
+              width: 20px !important;
+              height: 20px !important;
             }
           }
         }
 
         strong {
-          font-size: 1rem;
+          font-size: .8rem;
 
           &:hover {
             transform: none;
@@ -3369,6 +3421,95 @@ a-waves canvas {
           }
         }
 
+      }
+    }
+  }
+
+  #translate {
+    width: 35px !important;
+    height: 35px !important;
+
+    span {
+      font-size: .8rem !important;
+      display: none;
+    }
+
+  }
+
+  #search-icon {
+    width: 35px !important;
+    height: 35px !important;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .contact-unik {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .section-mooc {
+    .container-1 {
+      flex-direction: column;
+      background-size: cover;
+      background-position: 25%;
+      padding-bottom: 20px;
+
+      .textos {
+        margin-top: 120px;
+        padding: 0 10px;
+
+        .txt-efect {
+          font-size: 1.2rem;
+          height: 40px;
+          width: 80px;
+        }
+
+        h2 {
+          font-size: 2rem !important;
+        }
+
+        p {
+          font-size: 1.4rem;
+          line-height: 1;
+        }
+      }
+
+      .actions {
+        width: 100%;
+        gap: 20px;
+        padding: 0;
+
+
+        & div {
+          position: relative;
+          width: 100%;
+          flex-direction: row;
+        }
+      }
+    }
+
+    .container-2 {
+      flex-direction: column;
+      padding-bottom: 20px;
+
+      .explore {
+        padding: 0 20px;
+
+        .content {
+          padding: 20px 10px;
+        }
+      }
+
+      .info {
+        margin-top: 70px;
+
+        span:nth-child(1) {
+          font-size: 1rem;
+        }
       }
     }
   }
