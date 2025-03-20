@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #141313;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .search-bar-unik {
+        position: fixed;
+        top: 50px;
+        left: 70px;
+        width: 550px;
+        height: 120px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 8;
+        display: flex;
+        gap: 20px;
+
+        /* input {
+    outline: none;
+    border: none;
+    width: 60%;
+    height: 100%;
+    transition: all 0.3s;
+    left: -40px;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    background-color: #00000096;
+    display: none;
+    border-radius: 15px;
+    color: #fff;
+    padding: 0 40px;
+    font-size: 1.2rem;
+  } */
+
+        #translate {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-radius: 10px;
+            opacity: 0.3;
+
+            span {
+                font-size: 1.2rem;
+                display: none;
+            }
+
+            .is_active {
+                display: block;
+            }
+
+            &:hover {
+                transition: all 0.3s;
+                border: 2px solid #e9be54;
+                color: #e9be54;
+                opacity: 1;
+            }
+        }
+
+        #search-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            display: flex;
+            flex-direction: column;
+            z-index: 2;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            opacity: 0.3;
+            transition: all 0.3s;
+
+            &:hover {
+                transition: all 0.3s;
+                opacity: 1;
+            }
+
+            opacity: 0.3;
+            transition: all 0.3s;
+
+            &:hover {
+                transition: all 0.3s;
+                opacity: 1;
+            }
+
+            svg {
+                width: 100px;
+                height: 100px;
+                color: #fff;
+                font-size: 1.2rem;
+                border: none;
+                border-radius: 15px;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                &:hover {
+                    transition: all 0.3s;
+                }
+            }
+
+        }
+
+        .contact-unik {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 1px solid #27907d;
+            display: flex;
+            z-index: 2;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.1;
+        }
+
+    }
+
+    #search-input {
+        .gsc-control-cse {
+            width: 300px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+
+            .gsc-input-box {
+                border-radius: 8px;
+                height: 30px !important;
+            }
+
+            .gsc-search-button button {
+                padding: 8px;
+                border-radius: 8px;
+                margin: 0;
+            }
+        }
+    }
+</style>
+
+<body>
+    <div class="search-bar-unik">
+        <div class="d-flex">
+            <div id="translate">
+                <span id="en" class="is_active">EN</span>
+                <span id="es">ES</span>
+            </div>
+            <div id="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+        </div>
+        <div class="contact-unik"></div>
+    </div>
+    <div class="gcse-search" id="search-input"></div>
+
+
+    
+    <script>
+        const searchIcon = document.querySelector("#search-icon");
+        const searchInput = document.querySelector("#search-input");
+
+        searchIcon.addEventListener("click", () => {
+            searchInput.style.opacity = searchInput.style.opacity === "0" ? "1" : "0";
+            console.log(searchInput.style.opacity);
+        });
+
+    </script>
+    <script async src="https://cse.google.com/cse.js?cx=37a5b61c21f6c4a9f">
+    </script>
+</body>
+
+</html>

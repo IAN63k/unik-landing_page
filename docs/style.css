@@ -64,11 +64,11 @@ body {
   justify-content: flex-start;
   flex-direction: column;
   align-items: flex-start;
-  z-index: 9;
+  z-index: 8;
   display: flex;
   gap: 20px;
 
-  input {
+  /* input {
     outline: none;
     border: none;
     width: 60%;
@@ -84,7 +84,7 @@ body {
     color: #fff;
     padding: 0 40px;
     font-size: 1.2rem;
-  }
+  } */
 
   #translate {
     position: relative;
@@ -161,6 +161,7 @@ body {
         transition: all 0.3s;
       }
     }
+
   }
 
   .contact-unik {
@@ -177,6 +178,86 @@ body {
     opacity: 0.1;
   }
 
+}
+
+#search-input {
+  .gsc-control-cse {
+    width: 300px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    .gsc-input-box {
+      border-radius: 8px;
+      height: 30px !important;
+
+      input {
+        background-color: #000000d6;
+        font-size: 1.2rem;
+        background: none !important;
+      }
+
+    }
+
+    .gsc-selected-option-container{
+      font-size: 18px;
+      border-radius: 8px;
+      font-weight: 400;
+    }
+    .gsc-orderby-label,.gsc-result-info,.gcsc-find-more-on-google{
+      font-size: 18px;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .gsc-results-wrapper-overlay {
+      background-color: #000 !important;
+      border-radius: 18px;
+      opacity: 0.85 !important;
+
+      .gsc-wrapper {
+        gap: 20px;
+      }
+
+      .gsc-expansionArea {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        border: 0;
+
+        .gsc-webResult {
+          border: 0;
+          background-color: #ffffff2b;
+          padding: 10px;
+          border-radius: 12px;
+
+
+          .gs-result .gs-title {
+            color: #fff;
+            text-decoration: underline;
+          }
+
+          .gs-webResult .gs-snippet{
+            color: #fff;
+            font-size: 1.2rem;
+          }
+          .gs-image-box{
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    .gsc-modal-background-image {
+      background-color: #00000020 !important;
+    }
+
+    .gsc-search-button button {
+      padding: 8px;
+      border-radius: 8px;
+      margin: 0;
+    }
+  }
 }
 
 @keyframes open-input {
@@ -540,7 +621,15 @@ body {
         color: #fff;
         transition: all 0.5s ease;
         font-size: 2rem;
-        text-shadow: 1px 1px 1px #fff;
+        text-shadow:
+          0 0 7px #fff,
+          0 0 10px #fff,
+          0 0 21px #fff,
+          0 0 42px #0fa,
+          0 0 82px #0fa,
+          0 0 92px #0fa,
+          0 0 102px #0fa,
+          0 0 151px #0fa;
         letter-spacing: 1.75px;
         font-weight: 600;
       }
@@ -3012,6 +3101,7 @@ a-waves canvas {
 
   .container-services {
     width: 100%;
+    max-width: 550px;
     padding: 20px;
 
     h1 {
@@ -3025,6 +3115,7 @@ a-waves canvas {
       .text-section {
         width: 100% !important;
         padding: 0 !important;
+        padding-bottom: 20px !important;
 
         h2 {
           font-size: 2rem !important;
@@ -3074,6 +3165,7 @@ a-waves canvas {
   .section_educacion_continua {
     flex-direction: column-reverse;
     height: auto;
+    align-items: center;
 
     .container_info {
       width: 100%;
@@ -3104,6 +3196,10 @@ a-waves canvas {
     .image {
       width: 85%;
       height: 400px;
+
+      figure {
+        width: 400px;
+      }
     }
 
   }
@@ -3390,12 +3486,12 @@ a-waves canvas {
         right: 20px;
         display: flex;
         top: 75px;
-        z-index: 10;
+        z-index: 8;
         flex-direction: column;
         align-items: end;
 
         span {
-          font-size: 5vw !important;
+          font-size: 3.5vw !important;
           padding-top: 5px;
           height: 6vw;
           border-radius: 8px;
@@ -3478,6 +3574,32 @@ a-waves canvas {
     width: 35px !important;
     height: 35px !important;
   }
+
+  .container-services {
+    & .card {
+      max-width: 350px;
+
+      .text-section {
+        margin-bottom: 10px;
+      }
+    }
+
+    & .image-section {
+      .sliders-img {
+        width: 299px;
+      }
+
+      .sliders-img .slider {
+        min-width: 299px;
+      }
+
+      .slider>div {
+        padding-left: 40px;
+        padding-right: 30px;
+      }
+    }
+  }
+
 
   .section-mooc {
     .container-1 {

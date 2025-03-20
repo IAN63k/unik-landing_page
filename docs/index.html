@@ -28,14 +28,7 @@
         <span id="en" class="is_active">EN</span>
         <span id="es">ES</span>
       </div>
-      <div id="search-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </div>
-      <input type="text" id="search-input" placeholder="¿Que deseas aprender?" />
+      <div class="gcse-search" id="search-input"></div>
     </div>
     <div class="contact-unik"></div>
   </div>
@@ -865,317 +858,319 @@
     </div>
   </section>
 
-  <script async src="https://cse.google.com/cse.js?cx=53f481c4c802b4503"></script>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-<!-- <script src='https://cdn.jsdelivr.net/npm/tsparticles@1.26.0/dist/tsparticles.min.js'></script> -->
-<script src="./scriptOther.js"></script>
-<script src="./script.js"></script>
-<script>
-  // Charater and text animation
-  const item_P = document.querySelectorAll(".item-p li");
-  const character = document.querySelector(".CuadroPersona figure");
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <!-- <script src='https://cdn.jsdelivr.net/npm/tsparticles@1.26.0/dist/tsparticles.min.js'></script> -->
+  <script src="./scriptOther.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    // Charater and text animation
+    const item_P = document.querySelectorAll(".item-p li");
+    const character = document.querySelector(".CuadroPersona figure");
 
-  item_P.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      item_P.forEach((item) => item.classList.remove("item-p_active"));
-      item.classList.add("item-p_active");
-      character.style.animation = "rotate-vertical-center 1.5s";
-      if (index === 0) {
-        character.style.backgroundImage = `url("https://res.cloudinary.com/dwca35nsw/image/upload/v1733754341/UNIK/character1.webp")`;
-      }
-      if (index === 1) {
-        character.style.backgroundImage = `url("https://res.cloudinary.com/dwca35nsw/image/upload/v1732822938/UNIK/character2.webp")`;
-      }
-      if (index === 2) {
-        character.style.backgroundImage = `url("https://res.cloudinary.com/dwca35nsw/image/upload/v1732822938/UNIK/character3.webp")`;
-      }
-      character.addEventListener("animationend", () => {
-        character.style.animation = "none";
-      }, { once: true });
+    item_P.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        item_P.forEach((item) => item.classList.remove("item-p_active"));
+        item.classList.add("item-p_active");
+        character.style.animation = "rotate-vertical-center 1.5s";
+        if (index === 0) {
+          character.style.backgroundImage = `url("https://res.cloudinary.com/dwca35nsw/image/upload/v1733754341/UNIK/character1.webp")`;
+        }
+        if (index === 1) {
+          character.style.backgroundImage = `url("https://res.cloudinary.com/dwca35nsw/image/upload/v1732822938/UNIK/character2.webp")`;
+        }
+        if (index === 2) {
+          character.style.backgroundImage = `url("https://res.cloudinary.com/dwca35nsw/image/upload/v1732822938/UNIK/character3.webp")`;
+        }
+        character.addEventListener("animationend", () => {
+          character.style.animation = "none";
+        }, { once: true });
+      });
     });
-  });
-</script>
-<script>
-  //Hamburguesa
 
-  const menu = document.querySelector(".hamburger");
-  const menu_principal = document.querySelector(".menu-principal");
+    // // Search
+    // const search = document.querySelector("#search-input .gsc-input-box input");
+    // search.setAttribute("placeholder", "Buscar...");
 
-  // Ensure the menu_principal is initially hidden
-  menu_principal.style.display = "none";
+    //Hamburguesa
 
-  menu.addEventListener("click", () => {
-    menu.classList.toggle("is-active");
-    document.querySelector(".menuppal").classList.toggle("is_active");
-    setTimeout(() => {
-      menu_principal.style.display =
-        menu_principal.style.display === "none" ? "flex" : "none";
-    }, 300);
-  });
+    const menu = document.querySelector(".hamburger");
+    const menu_principal = document.querySelector(".menu-principal");
 
-  // Animar elementos del menú
-  const itemsMenu = document.querySelectorAll(".item_menu");
-  const itemPickOption = document.querySelectorAll(".item-pick");
+    // Ensure the menu_principal is initially hidden
+    menu_principal.style.display = "none";
 
-  itemsMenu.forEach((item) => {
-    item.addEventListener("click", () => {
-      itemPickOption.forEach((item) => item.classList.add("scale-up-vertical-top"));
+    menu.addEventListener("click", () => {
+      menu.classList.toggle("is-active");
+      document.querySelector(".menuppal").classList.toggle("is_active");
+      setTimeout(() => {
+        menu_principal.style.display =
+          menu_principal.style.display === "none" ? "flex" : "none";
+      }, 300);
     });
-  });
 
-  // Search
-  const searchIcon = document.querySelector("#search-icon");
-  const searchInput = document.querySelector("#search-input");
+    // Animar elementos del menú
+    const itemsMenu = document.querySelectorAll(".item_menu");
+    const itemPickOption = document.querySelectorAll(".item-pick");
 
-  searchIcon.addEventListener("click", () => {
-    searchInput.style.display =
-      searchInput.style.display === "flex" ? "none" : "flex";
-    searchIcon.style.opcaity = "1";
-    searchInput.style.animation = "open-input 0.5s";
-    searchInput.focus();
-  });
-
-  searchInput.addEventListener("focusout", () => {
-    searchInput.style.display = "none";
-  });
-
-  // Translate
-
-  const translateIcon = document.querySelector("#translate");
-  const en = document.querySelector("#en");
-  const es = document.querySelector("#es");
-
-  translateIcon.addEventListener("click", () => {
-    en.classList.toggle("is_active");
-    es.classList.toggle("is_active");
-  });
-
-  // Animations
-  const divImagenenTexto = document.querySelector(".ImagenenTexto");
-
-  window.addEventListener("scroll", () => {
-    const scrollPosition = window.scrollY;
-    const opacity = Math.min(1, scrollPosition / 1000);
-    const scale = Math.min(1, scrollPosition / 1000);
-    divImagenenTexto.style.opacity = opacity;
-    divImagenenTexto.style.transform = `scale(${scale})`;
-  });
-
-  // control slider
-  const controlSliderLeft = document.getElementById("control-slider-left");
-  const controlSliderRight = document.getElementById("control-slider-right");
-  const slidersImg = document.querySelector(".sliders-img");
-
-  const textSliders = [
-    document.querySelector(".service_descript1"),
-    document.querySelector(".service_descript2"),
-    document.querySelector(".service_descript3")
-  ];
-
-  // Inicializa el índice del slider
-  let index = 0;
-
-  // Función para actualizar los textos según el índice del slider
-  function updateTextSlider() {
-    textSliders.forEach((text, i) => {
-      if (i === index) {
-        text.classList.remove("d-none");
-        text.classList.add("fade-in");
-      } else {
-        text.classList.add("d-none");
-        text.classList.remove("fade-in");
-      }
+    itemsMenu.forEach((item) => {
+      item.addEventListener("click", () => {
+        itemPickOption.forEach((item) => item.classList.add("scale-up-vertical-top"));
+      });
     });
-  }
 
-  // Mover al slider de la izquierda
-  controlSliderLeft.addEventListener("click", () => {
-    index--;
-    if (index < 0) {
-      index = textSliders.length - 1; // Volver al último slider
+    // Translate
+
+    const translateIcon = document.querySelector("#translate");
+    const en = document.querySelector("#en");
+    const es = document.querySelector("#es");
+
+    translateIcon.addEventListener("click", () => {
+      en.classList.toggle("is_active");
+      es.classList.toggle("is_active");
+    });
+
+    // Animations
+    const divImagenenTexto = document.querySelector(".ImagenenTexto");
+
+    window.addEventListener("scroll", () => {
+      const scrollPosition = window.scrollY;
+      const opacity = Math.min(1, scrollPosition / 1000);
+      const scale = Math.min(1, scrollPosition / 1000);
+      divImagenenTexto.style.opacity = opacity;
+      divImagenenTexto.style.transform = `scale(${scale})`;
+    });
+
+    // control slider
+    const controlSliderLeft = document.getElementById("control-slider-left");
+    const controlSliderRight = document.getElementById("control-slider-right");
+    const slidersImg = document.querySelector(".sliders-img");
+
+    const textSliders = [
+      document.querySelector(".service_descript1"),
+      document.querySelector(".service_descript2"),
+      document.querySelector(".service_descript3")
+    ];
+
+    // Inicializa el índice del slider
+    let index = 0;
+
+    // Función para actualizar los textos según el índice del slider
+    function updateTextSlider() {
+      textSliders.forEach((text, i) => {
+        if (i === index) {
+          text.classList.remove("d-none");
+          text.classList.add("fade-in");
+        } else {
+          text.classList.add("d-none");
+          text.classList.remove("fade-in");
+        }
+      });
     }
-    slidersImg.scrollLeft = index * slidersImg.offsetWidth;
-    updateTextSlider();  // Actualizar el texto de acuerdo con el índice
-  });
 
-  // Mover al slider de la derecha
-  controlSliderRight.addEventListener("click", () => {
-    index++;
-    if (index >= textSliders.length) {
-      index = 0; // Volver al primer slider
-    }
-    slidersImg.scrollLeft = index * slidersImg.offsetWidth;
-    updateTextSlider();  // Actualizar el texto de acuerdo con el índice
-  });
-
-  // mover los slides con el cursor del mouse (grab)
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-
-  slidersImg.addEventListener("mousedown", (e) => {
-    isDown = true;
-    slidersImg.classList.add("active");
-    slidersImg.style.cursor = "grabbing";
-    startX = e.pageX - slidersImg.offsetLeft;
-    scrollLeft = slidersImg.scrollLeft;
-  });
-
-  slidersImg.addEventListener("mouseleave", () => {
-    isDown = false;
-    slidersImg.classList.remove("active");
-    slidersImg.style.cursor = "grab";
-  });
-
-  slidersImg.addEventListener("mouseup", () => {
-    isDown = false;
-    slidersImg.classList.remove("active");
-    slidersImg.style.cursor = "grab";
-    updateIndexBasedOnScroll();
-  });
-
-  slidersImg.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slidersImg.offsetLeft;
-    const walk = (x - startX) * 3; //scroll-fast
-    slidersImg.scrollLeft = scrollLeft - walk;
-  });
-
-  slidersImg.style.cursor = "grab";
-
-  // movimiento de los slides automático
-  let autoSlideInterval;
-
-  function startAutoSlide() {
-    autoSlideInterval = setInterval(() => {
-      index++;
-      if (index >= textSliders.length) {
-        index = 0;
+    // Mover al slider de la izquierda
+    controlSliderLeft.addEventListener("click", () => {
+      index--;
+      if (index < 0) {
+        index = textSliders.length - 1; // Volver al último slider
       }
       slidersImg.scrollLeft = index * slidersImg.offsetWidth;
-      updateTextSlider();  // Actualizar el texto al cambiar el slider
-    }, 5000);
-  }
+      updateTextSlider();  // Actualizar el texto de acuerdo con el índice
+    });
 
-  function stopAutoSlide() {
-    clearInterval(autoSlideInterval);
-  }
+    // Mover al slider de la derecha
+    controlSliderRight.addEventListener("click", () => {
+      index++;
+      if (index >= textSliders.length) {
+        index = 0; // Volver al primer slider
+      }
+      slidersImg.scrollLeft = index * slidersImg.offsetWidth;
+      updateTextSlider();  // Actualizar el texto de acuerdo con el índice
+    });
 
-  slidersImg.addEventListener("mouseenter", stopAutoSlide);
-  slidersImg.addEventListener("mouseleave", startAutoSlide);
+    // mover los slides con el cursor del mouse (grab)
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-  function updateIndexBasedOnScroll() {
-    const newIndex = Math.round(slidersImg.scrollLeft / slidersImg.offsetWidth);
-    if (newIndex !== index) {
-      index = newIndex;
-      updateTextSlider();
+    slidersImg.addEventListener("mousedown", (e) => {
+      isDown = true;
+      slidersImg.classList.add("active");
+      slidersImg.style.cursor = "grabbing";
+      startX = e.pageX - slidersImg.offsetLeft;
+      scrollLeft = slidersImg.scrollLeft;
+    });
+
+    slidersImg.addEventListener("mouseleave", () => {
+      isDown = false;
+      slidersImg.classList.remove("active");
+      slidersImg.style.cursor = "grab";
+    });
+
+    slidersImg.addEventListener("mouseup", () => {
+      isDown = false;
+      slidersImg.classList.remove("active");
+      slidersImg.style.cursor = "grab";
+      updateIndexBasedOnScroll();
+    });
+
+    slidersImg.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slidersImg.offsetLeft;
+      const walk = (x - startX) * 3; //scroll-fast
+      slidersImg.scrollLeft = scrollLeft - walk;
+    });
+
+    slidersImg.style.cursor = "grab";
+
+    // movimiento de los slides automático
+    let autoSlideInterval;
+
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(() => {
+        index++;
+        if (index >= textSliders.length) {
+          index = 0;
+        }
+        slidersImg.scrollLeft = index * slidersImg.offsetWidth;
+        updateTextSlider();  // Actualizar el texto al cambiar el slider
+      }, 5000);
     }
-  }
 
-  slidersImg.addEventListener("scroll", updateIndexBasedOnScroll);
+    function stopAutoSlide() {
+      clearInterval(autoSlideInterval);
+    }
 
-  startAutoSlide();
-  updateTextSlider(); // Inicializar el texto del slider
+    slidersImg.addEventListener("mouseenter", stopAutoSlide);
+    slidersImg.addEventListener("mouseleave", startAutoSlide);
 
-  // Si un elemento entra en el viewport, desplazar el scroll hasta dejarlo visible de manera más natural
-
-  /*   const wrapperServices = document.querySelector(".wrapper-services");
-     const sectionOfert = document.querySelector(".section_ofert");
-     const sectionOfertMintic = document.querySelector(".section-ofert-mintic");
- 
-     const observer = new IntersectionObserver((entries) => {
-         entries.forEach((entry) => {
-             if (entry.isIntersecting) {
-                 entry.target.scrollIntoView({
-                     behavior: "smooth",
-                     block: "start",
-                     inline: "nearest"
-                 });
-             }
-         });
-     }, {
-         threshold: 0.5 // Ajusta el umbral para que el elemento esté al menos al 50% visible antes de desplazarse
-     });
- 
-     observer.observe(wrapperServices);
-     observer.observe(sectionOfert);
-     observer.observe(sectionOfertMintic);
- */
-
-  // menu mooc
-  const windows = document.querySelectorAll('.window');
-  const container1 = document.querySelector('.container-1');
-  const container2 = document.querySelector('.container-2');
-
-  windows.forEach((pest, index) => {
-    pest.addEventListener("click", () => {
-      // Eliminar la clase activa de todas las pestañas
-      windows.forEach((pest) => pest.classList.remove("is_active"));
-      // Agregar la clase activa a la pestaña seleccionada
-      pest.classList.add("is_active");
-
-      if (index === 0) {
-        // Agregar animación al contenedor2
-        container2.classList.add("blur-out");
-        setTimeout(() => {
-          // Ocultar contenedor2 después de la animación
-          container2.style.display = "none";
-          // Mostrar contenedor1
-          container1.style.display = "flex";
-          // Limpiar la animación del contenedor2
-          container2.classList.remove("blur-out");
-        }, 800); // Reducido a 800ms para mejorar la experiencia
-      } else {
-        // Agregar animación al contenedor1
-        container1.classList.add("blur-out");
-        setTimeout(() => {
-          // Ocultar contenedor1 después de la animación
-          container1.style.display = "none";
-          // Mostrar contenedor2
-          container2.style.display = "flex";
-          // Limpiar la animación del contenedor1
-          container1.classList.remove("blur-out");
-        }, 800); // Reducido a 800ms para sincronizar con la animación
+    function updateIndexBasedOnScroll() {
+      const newIndex = Math.round(slidersImg.scrollLeft / slidersImg.offsetWidth);
+      if (newIndex !== index) {
+        index = newIndex;
+        updateTextSlider();
       }
+    }
+
+    slidersImg.addEventListener("scroll", updateIndexBasedOnScroll);
+
+    startAutoSlide();
+    updateTextSlider(); // Inicializar el texto del slider
+
+    // Si un elemento entra en el viewport, desplazar el scroll hasta dejarlo visible de manera más natural
+
+    /*   const wrapperServices = document.querySelector(".wrapper-services");
+       const sectionOfert = document.querySelector(".section_ofert");
+       const sectionOfertMintic = document.querySelector(".section-ofert-mintic");
+   
+       const observer = new IntersectionObserver((entries) => {
+           entries.forEach((entry) => {
+               if (entry.isIntersecting) {
+                   entry.target.scrollIntoView({
+                       behavior: "smooth",
+                       block: "start",
+                       inline: "nearest"
+                   });
+               }
+           });
+       }, {
+           threshold: 0.5 // Ajusta el umbral para que el elemento esté al menos al 50% visible antes de desplazarse
+       });
+   
+       observer.observe(wrapperServices);
+       observer.observe(sectionOfert);
+       observer.observe(sectionOfertMintic);
+   */
+
+    // menu mooc
+    const windows = document.querySelectorAll('.window');
+    const container1 = document.querySelector('.container-1');
+    const container2 = document.querySelector('.container-2');
+
+    windows.forEach((pest, index) => {
+      pest.addEventListener("click", () => {
+        // Eliminar la clase activa de todas las pestañas
+        windows.forEach((pest) => pest.classList.remove("is_active"));
+        // Agregar la clase activa a la pestaña seleccionada
+        pest.classList.add("is_active");
+
+        if (index === 0) {
+          // Agregar animación al contenedor2
+          container2.classList.add("blur-out");
+          setTimeout(() => {
+            // Ocultar contenedor2 después de la animación
+            container2.style.display = "none";
+            // Mostrar contenedor1
+            container1.style.display = "flex";
+            // Limpiar la animación del contenedor2
+            container2.classList.remove("blur-out");
+          }, 800); // Reducido a 800ms para mejorar la experiencia
+        } else {
+          // Agregar animación al contenedor1
+          container1.classList.add("blur-out");
+          setTimeout(() => {
+            // Ocultar contenedor1 después de la animación
+            container1.style.display = "none";
+            // Mostrar contenedor2
+            container2.style.display = "flex";
+            // Limpiar la animación del contenedor1
+            container1.classList.remove("blur-out");
+          }, 800); // Reducido a 800ms para sincronizar con la animación
+        }
+      });
     });
-  });
 
 
-</script>
-<script>
-  /*
-    * Función para abrir acordion de preguntas frecuentes
-    * @param ??
-    */
-  const accordions = document.querySelectorAll('.accordion');
-  const wrapper_accordion = document.querySelectorAll('.wrapper_acordion');
-  accordions.forEach(accordion => {
-    accordion.addEventListener('click', function () {
-      this.classList.toggle('active_acordeon');
-      const svg = this.querySelector('svg');
-      if (this.classList.contains('active_acordeon')) {
-        this.parentElement.style.backgroundColor = '#fff';
-        this.parentElement.style.border = '1px solid #00805a';
-        this.parentElement.style.gap = '10px';
-        svg.style.transform = 'rotate(45deg)';
-        svg.style.color = 'black';
-      } else {
-        svg.style.transform = 'rotate(0deg)';
-        svg.style.color = 'white';
-        this.parentElement.style.backgroundColor = '#c4cfd3';
-        this.parentElement.style.border = 'none';
-        this.parentElement.style.gap = '0px';
-      }
-      const panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + 'px';
-      }
+  </script>
+  <script>
+    /*
+      * Función para abrir acordion de preguntas frecuentes
+      * @param ??
+      */
+    const accordions = document.querySelectorAll('.accordion');
+    const wrapper_accordion = document.querySelectorAll('.wrapper_acordion');
+    accordions.forEach(accordion => {
+      accordion.addEventListener('click', function () {
+        this.classList.toggle('active_acordeon');
+        const svg = this.querySelector('svg');
+        if (this.classList.contains('active_acordeon')) {
+          this.parentElement.style.backgroundColor = '#fff';
+          this.parentElement.style.border = '1px solid #00805a';
+          this.parentElement.style.gap = '10px';
+          svg.style.transform = 'rotate(45deg)';
+          svg.style.color = 'black';
+        } else {
+          svg.style.transform = 'rotate(0deg)';
+          svg.style.color = 'white';
+          this.parentElement.style.backgroundColor = '#c4cfd3';
+          this.parentElement.style.border = 'none';
+          this.parentElement.style.gap = '0px';
+        }
+        const panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+      });
     });
-  });
-</script>
+  </script>
+  <script>
+    // dots navegation
+    const containerDots = document.querySelector('.dots-navegation');
+    containerDots.addEventListener('click', (e) => {
+      containerDots.querySelectorAll('.dot').forEach(dot => {
+        dot.classList.remove('active');
+        if (e.target === dot) {
+          dot.classList.add('active');
+        }
+      });
+    });
+
+  </script>
+  <script async src="https://cse.google.com/cse.js?cx=37a5b61c21f6c4a9f">
+  </script>
+</body>
+
 
 </html>
