@@ -199,12 +199,13 @@ body {
 
     }
 
-    .gsc-selected-option-container{
+    .gsc-selected-option-container {
       font-size: 18px;
       border-radius: 8px;
       font-weight: 400;
     }
-    .gsc-orderby-label,.gsc-result-info,.gcsc-find-more-on-google{
+
+    .gsc-orderby-label, .gsc-result-info, .gcsc-find-more-on-google {
       font-size: 18px;
       font-weight: 400;
       color: #fff;
@@ -237,11 +238,12 @@ body {
             text-decoration: underline;
           }
 
-          .gs-webResult .gs-snippet{
+          .gs-webResult .gs-snippet {
             color: #fff;
             font-size: 1.2rem;
           }
-          .gs-image-box{
+
+          .gs-image-box {
             margin-right: 10px;
           }
         }
@@ -1252,7 +1254,7 @@ body {
 .section-mooc {
   position: relative;
   height: 850px;
-  background-color: var(--color-quaternary);
+  background-image: linear-gradient(-135deg, #64923f 0%, #09335b 100%);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1334,7 +1336,7 @@ body {
 
       p {
         font-size: 1.7rem;
-        line-height: .5;
+        line-height: .85;
         letter-spacing: 1px;
       }
     }
@@ -1769,7 +1771,7 @@ body {
   align-items: center;
   height: auto;
   top: 0;
-  padding-top: 5%;
+  padding-top: 8%;
   padding-bottom: 100px;
 
   h1 {
@@ -3028,8 +3030,9 @@ a-waves canvas {
 
     .container-site {
       position: relative !important;
-      flex-direction: column;
+      flex-direction: row;
       min-height: 100vh;
+      padding: 60px 60px 0 60px;
       height: auto !important;
     }
 
@@ -3056,14 +3059,20 @@ a-waves canvas {
       img {
         width: 370px !important;
         height: auto !important;
+        left: auto !important;
+        top: 30px;
       }
 
       .ContenedorNota {
-        left: 0 !important;
+        left: -180px !important;
         gap: 20px !important;
         top: 0 !important;
         width: 120px !important;
         position: relative !important;
+
+        .message {
+          width: 150px !important;
+        }
       }
 
       .nota {
@@ -3071,71 +3080,86 @@ a-waves canvas {
         margin-top: 0 !important;
       }
     }
+
+    .ImagenenTexto>div:first-of-type {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
   }
 
   .community {
-    flex-direction: column-reverse !important;
-    min-height: 120vh !important;
-    height: auto !important;
+    flex-direction: row !important;
     padding-bottom: 0 !important;
     justify-content: end !important;
+    padding: 20px 60px 0 0;
+    min-height: 540px;
+    max-height: 640px;
+    gap: 0;
 
     .container_info {
       width: 100%;
       height: auto;
 
       .header h2 {
-        font-size: 3rem !important;
+        font-size: 3.5rem !important;
+      }
+
+      .body {
+        p {
+          font-size: 1.2rem;
+        }
       }
     }
 
     .image {
       width: 100% !important;
-      height: 300px !important;
+      height: 100% !important;
+      align-items: flex-end;
 
       figure {
-        width: 370px !important;
+        position: relative;
+        height: 560px;
+        width: 650px !important;
       }
     }
   }
 
   .container-services {
     width: 100%;
-    max-width: 550px;
     padding: 20px;
+    padding-top: 10%;
 
     h1 {
-      font-size: 3rem !important;
+      font-size: 5vw !important;
     }
 
     .card {
-      height: 500px;
-      flex-direction: column !important;
-
       .text-section {
-        width: 100% !important;
-        padding: 0 !important;
-        padding-bottom: 20px !important;
+        padding-right: 0;
+        flex: 1;
 
         h2 {
-          font-size: 2rem !important;
+          font-size: 4vw !important;
         }
 
         p {
-          font-size: 1rem !important;
+          font-size: 1.5vw !important;
         }
       }
 
       .image-section {
-        flex: auto;
-        width: 100% !important;
-        height: 400px !important;
+        width: 50%;
+
+        .sliders-img {
+          width: 100%;
+        }
 
         .sliders-img .slider {
           position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          min-width: 100% !important;
 
           img {
             width: 100%;
@@ -3154,6 +3178,8 @@ a-waves canvas {
     }
 
     & .container-1 {
+      background-size: contain;
+
       & .textos {
         h2 {
           font-size: 3rem !important;
@@ -3163,9 +3189,10 @@ a-waves canvas {
   }
 
   .section_educacion_continua {
-    flex-direction: column-reverse;
+    flex-direction: row;
     height: auto;
     align-items: center;
+    padding: 60px 60px 0 0;
 
     .container_info {
       width: 100%;
@@ -3191,60 +3218,39 @@ a-waves canvas {
           padding: 20px;
         }
       }
+
     }
 
     .image {
-      width: 85%;
-      height: 400px;
+      width: 100%;
+      height: 600px;
 
       figure {
-        width: 400px;
+        width: 600px;
       }
     }
 
   }
 
   .sect-blue {
-    flex-direction: column !important;
-    justify-content: flex-start;
-    padding: 20px;
-    padding-top: 40px;
-    height: 800px;
+    padding: 60px;
 
-    & .container_info {
-      & .header {
-        padding: 0;
-
+    .container_info {
+      .header {
         h2 {
-          font-size: 3.5rem !important;
+          font-size: 7vw !important;
         }
+      }
+
+      .body {
+        padding-left: 20px;
+
       }
     }
 
-    .card {
-      width: 100%;
-      height: 370px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      div {
-        width: 100%;
-        height: 100%;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      .ft-sec {
-        height: 60px;
-        bottom: -50px;
-
-        span {
-          font-size: .6rem;
-        }
+    .footer_section {
+      span {
+        font-size: .6rem;
       }
     }
   }
@@ -3451,6 +3457,50 @@ a-waves canvas {
 
 }
 
+@media (max-width: 1040px) {
+  #section3 {
+    height: auto !important;
+
+    .container-site {
+      flex-direction: column;
+    }
+  }
+
+  .community {
+    min-height: 500px !important;
+    align-items: center !important;
+
+    .image {
+      display: none;
+    }
+  }
+
+  .section_educacion_continua {
+    gap: 0 !important;
+
+    .image {
+      align-items: flex-end;
+
+      figure {
+        background-size: cover;
+        width: 100% !important;
+        height: 600px;
+      }
+    }
+
+    .container_info {
+      gap: 0;
+
+      .header {
+        h2 {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+
+}
+
 /* Celulares */
 @media (max-width: 900px) {
   .search-bar-unik {
@@ -3570,27 +3620,60 @@ a-waves canvas {
     }
   }
 
+  .community {
+    min-height: 600px !important;
+    padding: 30px;
+  }
+
   .contact-unik {
     width: 35px !important;
     height: 35px !important;
   }
 
   .container-services {
+    padding-top: clamp(100px, 10%, 300px);
+
+
+    h1 {
+      font-size: 1.5rem !important;
+    }
+
     & .card {
-      max-width: 350px;
+      width: 100%;
+      height: 500px;
+      flex-direction: column !important;
 
       .text-section {
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 10px;
+
+        p {
+          font-size: 1.2rem !important;
+        }
       }
     }
 
     & .image-section {
+      width: 100% !important;
+      padding: 0px clamp(50px, 10%, 200px);
+
+      .right {
+        right: clamp(50px, 10%, 200px) !important;
+      }
+
+      .left {
+        left: clamp(50px, 10%, 200px) !important;
+      }
+
       .sliders-img {
-        width: 299px;
+        width: 100%;
       }
 
       .sliders-img .slider {
-        min-width: 299px;
+        min-width: 100%;
       }
 
       .slider>div {
@@ -3600,6 +3683,37 @@ a-waves canvas {
     }
   }
 
+  .section_educacion_continua {
+    gap: 20px !important;
+    flex-direction: column;
+
+    .card, .card div, .card div img {
+      width: 100%;
+    }
+  }
+
+  #section3 {
+    .container-site {
+      padding: 10px;
+    }
+
+    .textos {
+      p {
+        font-size: 1.2rem !important;
+      }
+    }
+
+    .ImagenenTexto {
+      .ContenedorNota {
+        left: -100px !important;
+      }
+    }
+  }
+
+  .gsc-control-cse {
+    width: 200px !important;
+    height: 30px !important;
+  }
 
   .section-mooc {
     .container-1 {
@@ -3676,6 +3790,14 @@ a-waves canvas {
     }
   }
 
+  .section_educacion_continua {
+    padding: 60px;
+
+    .image {
+      display: none;
+    }
+  }
+
   .section-questions {
     & .container_template {
       .wrapper-row {
@@ -3696,4 +3818,38 @@ a-waves canvas {
       }
     }
   }
+}
+
+@media (max-width: 500px) {
+  .container-services {
+    .card {
+      .text-section {
+        h2 {
+          font-size: 2rem !important;
+        }
+
+        p {
+          font-size: 1rem !important;
+        }
+      }
+    }
+
+    .image-section {
+      padding: 0 !important;
+
+      .left {
+        left: 0px !important;
+      }
+
+      .right {
+        right: 0px !important;
+      }
+    }
+  }
+
+  .section_educacion_continua {
+    padding: 60px 20px;
+  }
+
+
 }
