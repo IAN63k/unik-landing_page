@@ -1261,6 +1261,7 @@ body {
 .section-mooc {
   position: relative;
   height: 790px;
+  max-height: 1400px;
   /* background-image: linear-gradient(-135deg, #64923f 0%, #09335b 100%); */
   width: 100%;
   background-color: #dcdcdc;
@@ -1439,6 +1440,7 @@ body {
     width: 100%;
     max-width: 1600px;
     height: 100%;
+    max-height: 1400px;
     background-color: var(--color-quaternary);
     display: flex;
     flex-direction: row;
@@ -2675,6 +2677,19 @@ a-waves canvas {
 
   .active {
     font-size: 40px;
+    color: #fff;
+    transition: all 0.5s ease;
+    font-size: 2rem;
+    text-shadow:
+      0 0 7px #ccc,
+      0 0 10px #ccc,
+      0 0 10px #ccc,
+      0 0 17px #00805a,
+      0 0 42px #00805a,
+      0 0 52px #00805a,
+      0 0 72px #00805a,
+      0 0 120px #00805a;
+    letter-spacing: 1.75px;
     font-weight: 600;
   }
 
@@ -2714,35 +2729,18 @@ a-waves canvas {
 
   .fotterOertas {
     position: absolute;
+    bottom: 30px;
+    left: 0;
+    z-index: 2;
     width: 100%;
-    height: 30px;
     display: flex;
-    bottom: 0;
     align-items: center;
-    justify-content: space-around;
-    color: #fff;
 
-    ul {
-      display: flex;
-      list-style: none;
-
-      hr {
-        margin: 5px;
-      }
-
-      li {
-        cursor: pointer;
-        transition: all 0.5s ease-in-out;
-
-        a {
-          color: #fff;
-          text-decoration: none;
-        }
-      }
-
-      li:hover {
-        color: #a8a8a8;
-      }
+    span {
+      font-size: .8rem;
+      font-weight: 600;
+      padding: 5px;
+      color: #fff;
     }
   }
 
@@ -2957,22 +2955,24 @@ a-waves canvas {
 
       .accordion h5 {
         margin: 0;
-        font-weight: 500;
+        font-weight: normal;
         transition: all .5s ease-in;
         width: 90%;
         font-size: 1.25rem;
-        color: #001733;
-        padding-left: 5px;
+        color: #000;
       }
 
       .panal {
-        padding: 0 15px;
         font-size: 14px;
         text-align: justify;
         overflow: hidden;
         transition: all .5s ease-in;
         max-height: 0;
         font-size: 1.25rem;
+
+        p {
+        font-weight: lighter;
+        }
       }
 
       .wrapper {
@@ -2995,7 +2995,7 @@ a-waves canvas {
 
           .wrapper_acordion {
             display: flex;
-            padding: 10px 12px 10px 10px;
+            padding: 30px 25px;
             border-radius: 1em;
             background-color: #c4cfd3;
             flex-direction: column;
