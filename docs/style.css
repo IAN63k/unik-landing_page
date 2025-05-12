@@ -1252,7 +1252,7 @@ body {
   cursor: pointer;
 
   a {
-    color: #fff;git
+    color: #fff;
     text-decoration: none;
   }
 
@@ -1313,7 +1313,7 @@ body {
   .container-1 {
     position: relative;
     width: 100%;
-    max-width: 1600px;
+    max-width: 1400px;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -3182,8 +3182,6 @@ a-waves canvas {
   }
 
   .section-mooc {
-    height: auto;
-
     .windows {
       height: auto;
     }
