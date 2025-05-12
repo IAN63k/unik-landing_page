@@ -54,37 +54,14 @@ body {
   width: 550px;
 }
 
-.search-bar-unik {
+.fix-navigation {
   position: fixed;
+  left: 60px;
   top: 50px;
-  left: 70px;
-  width: 550px;
-  height: 120px;
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
-  align-items: flex-start;
-  z-index: 8;
-  display: flex;
-  gap: 20px;
-
-  /* input {
-    outline: none;
-    border: none;
-    width: 60%;
-    height: 100%;
-    transition: all 0.3s;
-    left: -40px;
-    position: relative;
-    z-index: 1;
-    text-align: left;
-    background-color: #00000096;
-    display: none;
-    border-radius: 15px;
-    color: #fff;
-    padding: 0 40px;
-    font-size: 1.2rem;
-  } */
+  z-index: 10;
+  gap: 15px;
 
   #translate {
     position: relative;
@@ -118,6 +95,53 @@ body {
       opacity: 1;
     }
   }
+
+  .contact-unik {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #27907d;
+    display: flex;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.1;
+  }
+}
+
+.search-bar-unik {
+  position: absolute;
+  top: 50px;
+  left: 130px;
+  width: 550px;
+  height: 120px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 8;
+  display: flex;
+  gap: 20px;
+
+  /* input {
+    outline: none;
+    border: none;
+    width: 60%;
+    height: 100%;
+    transition: all 0.3s;
+    left: -40px;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    background-color: #00000096;
+    display: none;
+    border-radius: 15px;
+    color: #fff;
+    padding: 0 40px;
+    font-size: 1.2rem;
+  } */
 
   #search-icon {
     width: 50px;
@@ -164,21 +188,9 @@ body {
 
   }
 
-  .contact-unik {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    border-radius: 50%;
-    border: 1px solid #27907d;
-    display: flex;
-    z-index: 2;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.1;
-  }
-
 }
+
+
 
 #search-input {
   .gsc-control-cse {
@@ -624,14 +636,14 @@ body {
         transition: all 0.5s ease;
         font-size: 2rem;
         text-shadow:
-          0 0 7px #fff,
-          0 0 10px #fff,
-          0 0 21px #fff,
-          0 0 42px #0fa,
-          0 0 82px #0fa,
-          0 0 92px #0fa,
-          0 0 102px #0fa,
-          0 0 151px #0fa;
+          0 0 7px #ccc,
+          0 0 10px #ccc,
+          0 0 10px #ccc,
+          0 0 17px #63913f,
+          0 0 42px #63913f,
+          0 0 52px #63913f,
+          0 0 72px #63913f,
+          0 0 120px #63913f;
         letter-spacing: 1.75px;
         font-weight: 600;
       }
@@ -839,7 +851,7 @@ body {
   #section3 {
     position: relative;
     z-index: 2;
-    height: 2200px;
+    height: auto;
     width: 100%;
     background-color: var(--color-quaternary);
     display: flex;
@@ -848,8 +860,8 @@ body {
     padding: 20px;
 
     .container-site {
-      position: sticky;
-      top: 0;
+      position: relative;
+      gap: 50px;
       display: flex;
       max-width: 1400px;
       height: 100%;
@@ -859,7 +871,7 @@ body {
     }
 
     .textos {
-      position: sticky;
+      position: relative;
       top: 0;
       width: 1200px;
       display: flex;
@@ -1240,7 +1252,7 @@ body {
   cursor: pointer;
 
   a {
-    color: #fff;
+    color: #fff;git
     text-decoration: none;
   }
 
@@ -1253,7 +1265,7 @@ body {
 
 .section-mooc {
   position: relative;
-  height: 850px;
+  height: 790px;
   background-image: linear-gradient(-135deg, #64923f 0%, #09335b 100%);
   width: 100%;
   display: flex;
@@ -1309,8 +1321,8 @@ body {
     align-items: flex-end;
     padding: 20px;
     gap: 20px;
-    background-image: url("https://res.cloudinary.com/dwca35nsw/image/upload/v1733763351/UNIK/hpybgfozaetlwtfj4wi2.webp");
-    background-size: 100% 100%;
+    background-image: url("https://res.cloudinary.com/dwca35nsw/image/upload/v1747077265/UNIK/j0pv7w1lffcj3fhcvgwq.webp");
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     padding-bottom: 60px;
@@ -3031,7 +3043,6 @@ a-waves canvas {
     .container-site {
       position: relative !important;
       flex-direction: row;
-      min-height: 100vh;
       padding: 60px 60px 0 60px;
       height: auto !important;
     }
@@ -3852,4 +3863,12 @@ a-waves canvas {
   }
 
 
+}
+
+
+/* Edicciones on view */
+
+.gsc-search-button-v2 {
+  background-color: #000 !important;
+  border-color: #000 !important;
 }
