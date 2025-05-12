@@ -671,11 +671,6 @@ body {
         font-size: 1.8rem;
         font-weight: 600;
         transition: all 1.5s;
-
-        &:hover {
-          color: #b2eaee;
-          transform: scale(1.1);
-        }
       }
 
       .RedesSociales {
@@ -1266,8 +1261,9 @@ body {
 .section-mooc {
   position: relative;
   height: 790px;
-  background-image: linear-gradient(-135deg, #64923f 0%, #09335b 100%);
+  /* background-image: linear-gradient(-135deg, #64923f 0%, #09335b 100%); */
   width: 100%;
+  background-color: #dcdcdc;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -1313,7 +1309,7 @@ body {
   .container-1 {
     position: relative;
     width: 100%;
-    max-width: 1400px;
+    max-width: 2000px;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -1322,8 +1318,8 @@ body {
     padding: 20px;
     gap: 20px;
     background-image: url("https://res.cloudinary.com/dwca35nsw/image/upload/v1747077265/UNIK/j0pv7w1lffcj3fhcvgwq.webp");
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-position: top;
     background-repeat: no-repeat;
     padding-bottom: 60px;
 
@@ -3020,7 +3016,6 @@ a-waves canvas {
   }
 
   .item-p {
-
     span {
       font-size: 2vw !important;
     }
@@ -3032,8 +3027,8 @@ a-waves canvas {
 
   .CuadroPersona {
     figure {
-      height: 65vw !important;
-      width: 65vw !important;
+      height: 58vw !important;
+      width: 58vw !important;
     }
   }
 
@@ -3187,8 +3182,6 @@ a-waves canvas {
     }
 
     & .container-1 {
-      background-size: contain;
-
       & .textos {
         h2 {
           font-size: 3rem !important;
