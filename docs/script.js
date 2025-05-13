@@ -453,6 +453,7 @@ function OpenModal(id) {
   ContModales.style.height = "100px";
   modals.classList.add("open");
   bgModal.classList.add("bgModal");
+  bgModal.style.display = "flex";
 
   const parrafo = document.getElementById("parrafo");
   const tituloSenatic = document.getElementById("tituloSenatic");
@@ -633,6 +634,7 @@ function closeModal(id) {
   modals.classList.remove("open");
   ContModales.style.height = "200px";
   bgModal.classList.remove("bgModal");
+  bgModal.style.display = "none";
 
   setTimeout(noRender, 300);
   function noRender() {

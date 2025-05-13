@@ -1129,6 +1129,8 @@ body {
       top: 280px !important;
     }
   }
+
+
 }
 
 .community {
@@ -2222,10 +2224,19 @@ body {
   height: 800px;
   width: 100%;
   display: flex;
-  position: relative;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    max-width: 1300px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
 
   .text {
     display: flex;
@@ -2233,7 +2244,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
-    width: 40%;
+    width: 100%;
     padding: 20px;
     padding-top: 50px;
     font-family: "mollen", sans-serif;
@@ -2244,6 +2255,7 @@ body {
 
     .title {
       display: flex;
+      width: 100%;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
@@ -2285,9 +2297,10 @@ body {
   }
 }
 
-.figure {
+.figure-mintic {
   position: relative;
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -2295,11 +2308,14 @@ body {
 
   figure {
     position: relative;
-    height: 95%;
+    height: 100%;
+    width: 100%;
 
     img {
       width: 100%;
       height: 100%;
+      object-fit: contain;
+      object-position: bottom;
       user-select: none;
       -drag: none;
       -moz-user-select: none;
@@ -2314,7 +2330,7 @@ body {
   width: 100%;
   height: 100%;
   transition: all 1s ease-in-out;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 
@@ -2517,9 +2533,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 0 40px;
     border-radius: 1rem;
-    margin-top: 10px;
 
     ul {
       transition: all 1s ease-in-out;
@@ -2556,6 +2570,113 @@ body {
       }
     }
   }
+}
+
+@media (max-width: 1120px) {
+  .section_ofert {
+    height: auto !important;
+
+    .container {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      justify-items: center;
+      align-items: center;
+
+      .text {
+        .title {
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .figure-mintic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        figure {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: clamp(380px, 50vw, 500px);
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+
+  #ContenidoCardsModal {
+    gap: 5px !important;
+    height: auto !important;
+
+    .card {
+      width: auto !important;
+      height: auto !important;
+
+      figure {
+        display: none !important;
+      }
+    }
+  }
+
+  #SectionCubo {
+    padding: 20px;
+    padding-top: 60px;
+    align-items: flex-start;
+    min-height: 730px;
+
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+
+    & .btn {
+      height: auto;
+
+      span {
+        font-size: .8rem;
+      }
+    }
+
+    & .list {
+      padding: 0 !important;
+      width: 100% !important;
+      justify-content: center !important;
+      align-items: center !important;
+
+    }
+
+    .swiper {
+      position: relative;
+      width: 400px !important;
+      top: 40px !important;
+      height: auto !important;
+    }
+
+    & .fotterOertas {
+      flex-direction: column;
+      height: 100px;
+      bottom: 0;
+
+      & ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        li {
+          font-size: .9rem;
+        }
+      }
+    }
+
+    .fotterOertas {
+      bottom: -50px !important;
+    }
+  }
+
 }
 
 a-waves {
@@ -2971,7 +3092,7 @@ a-waves canvas {
         font-size: 1.25rem;
 
         p {
-        font-weight: lighter;
+          font-weight: lighter;
         }
       }
 
@@ -3258,49 +3379,14 @@ a-waves canvas {
   }
 
   .section_ofert {
-    flex-direction: column;
-    height: auto;
+    flex-direction: row;
+    height: 790px;
 
-    .text {
-      padding: 20px;
-      width: 100%;
-
-      & .title {
-        gap: 10px;
-
-        figure {
-          display: flex;
-          justify-content: center;
-          width: 100%;
-          margin: 0;
-        }
-
-        h1 {
-          font-size: 4rem !important;
-          height: auto;
-        }
-
-        h3 {
-          font-size: 1.5rem !important;
-        }
-
-        h4 {
-          font-size: 1.5rem !important;
-          letter-spacing: 0;
-        }
-
-        p {
-          font-size: .9rem !important;
-          width: 100%;
-          margin-top: 5px;
-        }
-      }
-    }
 
     #bgModal {
       .contenedorModal {
-        width: 100%;
-        padding: 20px;
+        width: 90%;
+        height: auto;
 
         figure {
           height: auto;
@@ -3315,21 +3401,22 @@ a-waves canvas {
 
         #parrafo {
           p {
-            font-size: 3.5vw;
+            font-size: 1.5rem;
           }
 
           span {
             a {
-              font-size: 3.5vw;
+              font-size: 1.5rem;
             }
           }
         }
 
         .ContenidoCardsModal {
-          flex-direction: column !important;
+
+          flex-wrap: wrap;
 
           .card {
-            width: 100%;
+            max-width: 200px;
           }
         }
       }
@@ -3338,27 +3425,30 @@ a-waves canvas {
 
   .menu-aliados {
     .info {
-      width: 100%;
-      height: 100%;
+      width: auto;
+      height: auto;
 
       .bgModales {
         width: 100%;
         height: 100%;
 
         ul {
+          display: grid;
+          place-items: center;
+          grid-template-columns: repeat(2, 1fr);
           width: 100%;
+          gap: 10px;
           height: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-items: center;
 
           li {
-            width: 80px;
-            height: 70px;
+            width: 120px;
+            height: 90px;
+            background-color: #000000a0;
+            border: 1px solid #00805a;
           }
 
           img {
+            object-fit: scale-down;
             width: 100%;
             height: 100%;
           }
@@ -3376,57 +3466,6 @@ a-waves canvas {
     }
   }
 
-  #SectionCubo {
-    padding: 20px;
-    padding-top: 60px;
-    align-items: flex-start;
-    min-height: 730px;
-
-    .container {
-      flex-direction: column;
-      height: auto;
-    }
-
-    & .btn {
-      height: auto;
-
-      span {
-        font-size: .8rem;
-      }
-    }
-
-    & .list {
-      padding: 0;
-      width: 100%;
-
-      h2 {
-        font-size: 3rem;
-      }
-    }
-
-    .swiper {
-      position: relative;
-      width: 90%;
-      top: 40px;
-      height: 320px;
-    }
-
-    & .fotterOertas {
-      flex-direction: column;
-      height: 100px;
-      bottom: 0;
-
-      & ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        li {
-          font-size: .9rem;
-        }
-      }
-    }
-  }
 
   .section-questions {
     padding: 20px;
@@ -3456,7 +3495,6 @@ a-waves canvas {
 
     }
   }
-
 }
 
 @media (max-width: 1040px) {
@@ -3822,7 +3860,7 @@ a-waves canvas {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .container-services {
     .card {
       .text-section {
@@ -3853,7 +3891,49 @@ a-waves canvas {
     padding: 60px 20px;
   }
 
+  .section_ofert {
+    .text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
+      .title {
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+
+        h1 {
+          font-size: 5.5rem !important;
+        }
+
+        h4 {
+          font-size: 2rem !important;
+          letter-spacing: 1px;
+        }
+
+        p {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
+  #ContenidoCardsModal {
+    flex-wrap: wrap;
+
+    .card {
+      width: 100% !important;
+      max-width: 50% !important;
+      height: auto !important;
+
+
+    }
+  }
+
+  #SectionCubo {
+    .swiper {
+      width: 100% !important;
+    }
+  }
 }
 
 
