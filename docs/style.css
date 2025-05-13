@@ -107,7 +107,20 @@ body {
     z-index: 2;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s;
     opacity: 0.1;
+
+    &:hover {
+      transition: all 0.3s;
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    svg {
+      position: relative;
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
