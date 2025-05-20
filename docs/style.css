@@ -1275,8 +1275,8 @@ body {
 
 .section-mooc {
   position: relative;
-  height: 790px;
-  max-height: 1400px;
+  height: auto;
+  max-height: 1700px;
   /* background-image: linear-gradient(-135deg, #64923f 0%, #09335b 100%); */
   width: 100%;
   background-color: #dcdcdc;
@@ -1455,7 +1455,7 @@ body {
     width: 100%;
     max-width: 1600px;
     height: 100%;
-    max-height: 1400px;
+    /* max-height: 1400px; */
     background-color: var(--color-quaternary);
     display: flex;
     flex-direction: row;
@@ -2289,7 +2289,7 @@ body {
         text-transform: uppercase;
         font-weight: 600;
         height: 110px;
-        color: #e3a702;
+        color: #f36b14;
       }
 
       h4 {
@@ -2626,11 +2626,35 @@ body {
     height: auto !important;
 
     .card {
+      padding: 5px !important;
+      border-radius: 10px !important;
       width: auto !important;
       height: auto !important;
+      display: flex !important;
+      gap: 8px !important;
+      flex-direction: row !important;
+
+      h2 {
+        font-size: .7rem !important;
+      }
+
+      p {
+        font-size: .6rem !important;
+      }
 
       figure {
-        display: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-radius: 10px !important;
+        width: 200px !important;
+        height: 70px !important;
+
+        img {
+          width: 100% !important;
+          border-radius: 10px !important;
+          height: 100% !important;
+          object-fit: cover !important;
+        }
       }
     }
   }
@@ -2639,7 +2663,7 @@ body {
     padding: 20px;
     padding-top: 60px;
     align-items: flex-start;
-    min-height: 730px;
+    min-height: 750px;
 
     .container {
       flex-direction: column;
@@ -2751,7 +2775,6 @@ a-waves canvas {
   justify-content: center;
   align-items: center;
   min-height: 800px;
-  padding: 20px 60px;
   background-color: #00805a;
   width: 100%;
   /* CONTENT */
@@ -3399,7 +3422,15 @@ a-waves canvas {
     #bgModal {
       .contenedorModal {
         width: 90%;
-        height: auto;
+        height: 95%;
+        justify-content: center;
+        align-items: center;
+
+        .close {
+          width: 30px;
+          height: 30px;
+          font-size: 20px;
+        }
 
         figure {
           height: auto;
@@ -3409,6 +3440,12 @@ a-waves canvas {
           img {
             width: 100%;
             height: 100%;
+          }
+        }
+
+        #parrafo {
+          p {
+            font-size: 1rem !important;
           }
         }
 
@@ -3425,11 +3462,12 @@ a-waves canvas {
         }
 
         .ContenidoCardsModal {
-
           flex-wrap: wrap;
+          width: 100%;
+          padding: 10px;
 
           .card {
-            max-width: 200px;
+            width: 100% !important;
           }
         }
       }
@@ -3448,22 +3486,22 @@ a-waves canvas {
         ul {
           display: grid;
           place-items: center;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(4, 50px);
           width: 100%;
-          gap: 10px;
           height: 100%;
+          z-index: 5;
 
           li {
-            width: 120px;
-            height: 90px;
-            background-color: #000000a0;
-            border: 1px solid #00805a;
+            width: 70px;
+            height: 50px;
+            background-color: #00805a;
           }
 
           img {
             object-fit: scale-down;
             width: 100%;
             height: 100%;
+            z-index: 1;
           }
         }
       }
@@ -3901,7 +3939,81 @@ a-waves canvas {
   }
 
   .section_educacion_continua {
-    padding: 60px 20px;
+    padding: 60px 20px 0;
+    flex-direction: column-reverse;
+
+    .image {
+      display: flex;
+      height: 400px;
+
+      figure {
+        width: 100% !important;
+        position: relative;
+        top: 35px !important;
+        height: 100% !important;
+        left: 0 !important;
+        object-fit: scale-down !important;
+        background-size: contain;
+      }
+    }
+
+    .container_info {
+      .header {
+        text-align: center;
+        padding: 0;
+        gap: 0;
+        margin-bottom: 40px;
+
+        h2 {
+          font-size: 3rem !important;
+        }
+
+      }
+
+      figure {
+        justify-content: center;
+        width: 100% !important;
+        height: 30px;
+      }
+
+      .body {
+        p {
+          padding: 0;
+          font-size: 1.1rem !important;
+          text-align: left;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .sect-blue {
+    flex-direction: column;
+    height: 700px;
+
+    .container_info {
+      .header {
+        gap: 20px;
+        text-align: left;
+
+        span {
+          border-radius: 10px;
+        }
+      }
+
+      .body {
+        padding-left: 0px;
+      }
+    }
+
+    .card {
+      padding: 5px
+    }
+
+    .footer_section {
+      display: none;
+    }
+
   }
 
   .section_ofert {
@@ -3915,19 +4027,45 @@ a-waves canvas {
         align-items: flex-start !important;
 
         h1 {
-          font-size: 5.5rem !important;
+          font-size: 5rem !important;
+          height: 80px;
         }
 
         h4 {
+          font-size: 1.4rem !important;
+          letter-spacing: 4px;
+          font-weight: 400;
+          color: #646d6d;
+        }
+
+        h3 {
           font-size: 2rem !important;
           letter-spacing: 1px;
         }
 
         p {
           width: 100% !important;
+          font-size: 1.2rem !important;
         }
       }
     }
+
+    .menu-aliados {
+      #ulModales {
+        grid-template-columns: repeat(4, 40px);
+
+        li {
+          background-color: #1c6f44;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .contenedorModal {
+      padding:10px;
+      border-radius: 6px !important;
+    }
+
   }
 
   #ContenidoCardsModal {
@@ -3935,16 +4073,17 @@ a-waves canvas {
 
     .card {
       width: 100% !important;
-      max-width: 50% !important;
       height: auto !important;
-
-
     }
   }
 
   #SectionCubo {
+    height: auto;
+    min-height: 930px;
+
     .swiper {
       width: 100% !important;
+      height: 500px !important;
     }
   }
 }

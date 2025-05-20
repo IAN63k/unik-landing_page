@@ -492,10 +492,12 @@ function OpenModal(id) {
           <figure>
             <img loading="lazy" class="animate__animated animate__zoomIn" src="${item.portada}" alt="Imagen del proyecto">
           </figure>
-          <h2>${item.titulo}</h2>
-          <span><p><?xml version='1.0' encoding='UTF-8'?><svg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.43 10.5'><g id='mintic_ventanas_2' data-name='mintic ventanas 2'><g><path style='fill: #2355be;stroke-width: 0px;' d='M0,0v10.5h13.43V0H0ZM12.82,9.89H.61V.61h12.21v9.28Z' /><path style='fill: #2355be;stroke-width: 0px;' d='M7.2,5.69v2.65c0,.14.09.27.22.33.13.06.28.03.39-.08l.8-.8.8.8c.07.07.16.1.25.1.05,0,.09,0,.14-.03.13-.05.22-.18.22-.33v-2.65c.48-.4.79-1.01.79-1.69,0-1.21-.99-2.2-2.2-2.2s-2.2.99-2.2,2.2c0,.68.31,1.29.79,1.69ZM9.4,7.72l-.79-.79-.79.79v-1.67c.25.1.51.15.79.15s.55-.05.79-.15v1.67ZM8.61,2.41c.88,0,1.59.71,1.59,1.59s-.71,1.59-1.59,1.59-1.59-.71-1.59-1.59.71-1.59,1.59-1.59Z' /></g></g></svg> ${item.tipo}</p></span>
-          <p>${item.reconocimiento}</p>
-        `;
+          <div>
+            <h2>${item.titulo}</h2>
+            <span><p><?xml version='1.0' encoding='UTF-8'?><svg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.43 10.5'><g id='mintic_ventanas_2' data-name='mintic ventanas 2'><g><path style='fill: #2355be;stroke-width: 0px;' d='M0,0v10.5h13.43V0H0ZM12.82,9.89H.61V.61h12.21v9.28Z' /><path style='fill: #2355be;stroke-width: 0px;' d='M7.2,5.69v2.65c0,.14.09.27.22.33.13.06.28.03.39-.08l.8-.8.8.8c.07.07.16.1.25.1.05,0,.09,0,.14-.03.13-.05.22-.18.22-.33v-2.65c.48-.4.79-1.01.79-1.69,0-1.21-.99-2.2-2.2-2.2s-2.2.99-2.2,2.2c0,.68.31,1.29.79,1.69ZM9.4,7.72l-.79-.79-.79.79v-1.67c.25.1.51.15.79.15s.55-.05.79-.15v1.67ZM8.61,2.41c.88,0,1.59.71,1.59,1.59s-.71,1.59-1.59,1.59-1.59-.71-1.59-1.59.71-1.59,1.59-1.59Z' /></g></g></svg> ${item.tipo}</p></span>
+            <p>${item.reconocimiento}</p>
+          </div>
+          `;
 
           // Añadimos la tarjeta al contenedor
           containerSenatic.appendChild(card);
@@ -675,7 +677,7 @@ function getSlideIndexByValue(value) {
   const slideIds = {
     senatic: 0,
     TalentoTech: 1,
-    AvanzaTec: 2,
+    Datic: 2,
     Gobiernodigital: 3,
     Yawa: 4,
   };
