@@ -305,18 +305,19 @@ function OpenModal(id) {
       titulo:
         "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-9.png",
       parrafo:
-        "El proyecto Senatic ofrece la posibilidad de formación y certificación en cursos reconocidos <br> por gigantes tecnológicos, abarcando diferentes líneas de acción para impulsar el desarrollo <br> tecnológico y digital del país. <a href='#'>¡Conócelos aquí!</a> ",
+        "El proyecto Senatic ofrece la posibilidad de formación y certificación en cursos reconocidos por gigantes tecnológicos, abarcando diferentes líneas de acción para impulsar el desarrollo tecnológico y digital del país. <br> <a href='#'>¡Conócelos aquí!</a> ",
       llamada: "",
       urlllamada: "",
     },
   ];
-  const tic = [
+  const daTic = [
     {
       titulo:
-        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-13-1.png",
+        "https://res.cloudinary.com/dwca35nsw/image/upload/v1748029464/UNIK/zyhvruxdeq1wh29rkoop.png",
       parrafo:
-        "Si eres un curioso de los temas digitales y te interesa aprender, este es el lugar y momento indicados. Únete y transforma tu curiosidad en conocimiento práctico. <a href='#'>¡Conócelos aquí!</a>",
+        "Si eres un curioso de los temas digitales y te interesa aprender, este es el lugar y momento indicados. Únete y transforma tu curiosidad en conocimiento práctico. <br><a href='#'>¡Conócelos aquí!</a>",
       llamada: "",
+      icono: "https://res.cloudinary.com/dwca35nsw/image/upload/v1748030358/UNIK/lggljtmerarwdoyy4ovp.webp",
       urlllamada: "",
     },
   ];
@@ -325,7 +326,7 @@ function OpenModal(id) {
       titulo:
         "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-20.png",
       parrafo:
-        "Talento Tech es un programa de formación que busca mediante un entrenamiento intensivo bajo la metodología de bootcamps, preparar a los nuevos talentos digitales del país en habilidades digitales avanzadas,capacitándolos para ingresar al mercado laboral tecnológico. <a href='#'>Descúbrelos aquí!</a>  ",
+        "Talento Tech es un programa de formación que busca mediante un entrenamiento intensivo bajo la metodología de bootcamps, preparar a los nuevos talentos digitales del país en habilidades digitales avanzadas,capacitándolos para ingresar al mercado laboral tecnológico.<br> <a href='#'>Descúbrelos aquí!</a>  ",
       llamada: "",
       urlllamada: "https://",
     },
@@ -347,28 +348,28 @@ function OpenModal(id) {
   const SenaticCards = [
     {
       portada:
-        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15-100.jpg",
+        "https://res.cloudinary.com/dwca35nsw/image/upload/v1748012216/UNIK/b3pdzqyqahr1zd1afepj.webp",
       titulo: "Análisis de datos de Google",
       tipo: "Avanza hacia un título universitario",
       reconocimiento: "Certificado profesional",
     },
     {
       portada:
-        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15-100.jpg",
+        "https://res.cloudinary.com/dwca35nsw/image/upload/v1748012216/UNIK/kq32vmq6oozyzru6qyeg.webp",
       titulo: "Gestión de proyectos de Google",
       tipo: "Avanza hacia un título universitario ",
       reconocimiento: "Certificado profesional",
     },
     {
       portada:
-        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15-100.jpg",
+        "https://res.cloudinary.com/dwca35nsw/image/upload/v1748012216/UNIK/f4hueqdxr13j1tf0fldf.webp",
       titulo: "Soporte de TI de googlev",
       tipo: "Avanza hacia un título universitario ",
       reconocimiento: "Certificado profesional",
     },
     {
       portada:
-        "https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-15-100.jpg",
+        "https://res.cloudinary.com/dwca35nsw/image/upload/v1748012216/UNIK/gkp7lki9xuabojtnvjgp.webp",
       titulo: "Diseño de experiencia del usuario (UX) de Google",
       tipo: "Avanza hacia un título universitario ",
       reconocimiento: "Certificado profesional",
@@ -466,6 +467,12 @@ function OpenModal(id) {
     modalYawa: false,
   };
 
+  const bgModalSenatic = "https://res.cloudinary.com/dwca35nsw/image/upload/v1748027794/UNIK/wd4rvjxpmzylemcrbmcg.webp";
+  const bgModalDaTic = "https://res.cloudinary.com/dwca35nsw/image/upload/v1748028412/UNIK/scm7unkykx8vbdghxdyi.webp";
+  const bgModalTech = "https://res.cloudinary.com/dwca35nsw/image/upload/v1748028469/UNIK/gkordn00s8wxs2wvyam4.webp";
+  const bgModalYawa = "https://res.cloudinary.com/dwca35nsw/image/upload/v1748028468/UNIK/njgqgd4on6vnyuxusbk3.webp";
+
+
   switch (id) {
     case "modalSenatic":
       // Limpiar el contenedor de tarjetas cuando se cambia de modal
@@ -475,8 +482,7 @@ function OpenModal(id) {
       // Si las tarjetas no se han generado aún para este modal
       if (!tarjetasGeneradasPorModal.modalSenatic) {
         // Establecemos el fondo del modal
-        modal.style.backgroundImage =
-          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-17-100.jpg')";
+        modal.style.backgroundImage = `url('${bgModalSenatic}')`;
         modal.style.backgroundRepeat = "no-repeat";
         modal.style.backgroundSize = "cover";
         tituloSenatic.innerHTML = `<img loading="lazy" class="animate__animated animate__fadeInUp" src="${Senatic[0].titulo}" />`;
@@ -516,12 +522,15 @@ function OpenModal(id) {
       // Si las tarjetas no se han generado aún para este modal
       if (!tarjetasGeneradasPorModal.modalTic) {
         // Establecemos el fondo del modal
-        modal.style.backgroundImage =
-          "url('https://res.cloudinary.com/dwca35nsw/image/upload/v1733951518/UNIK/qmw1eqkbhk0w6hlz89md.webp')";
+        modal.style.backgroundImage = `url('${bgModalDaTic}')`;
         modal.style.backgroundRepeat = "no-repeat";
         modal.style.backgroundSize = "cover";
-        tituloSenatic.innerHTML = `<img loading="lazy" class="animate__animated animate__fadeInUp" src="${tic[0].titulo}" />`;
-        parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${tic[0].parrafo}</p><span class="animate__animated animate__fadeInLeft"><a id="llamda" href="${tic[0].urlllamada}">${tic[0].llamada}</a></span>`;
+        tituloSenatic.innerHTML = `
+          <div class="card-icon">
+            <img loading="lazy" src="${item.icono}" alt="icono de la tarjeta">
+          </div>`;
+        tituloSenatic.innerHTML = `<img loading="lazy" class="animate__animated animate__fadeInUp" src="${daTic[0].titulo}" />`;
+        parrafo.innerHTML = `<p class="animate__animated animate__fadeInDown">${daTic[0].parrafo}</p><span class="animate__animated animate__fadeInLeft"><a id="llamda" href="${daTic[0].urlllamada}">${daTic[0].llamada}</a></span>`;
 
         // Iteramos sobre el arreglo ticCards y creamos las tarjetas
         ticCards.forEach((item) => {
@@ -530,13 +539,15 @@ function OpenModal(id) {
 
           // Creamos el contenido de la tarjeta
           card.innerHTML = `
-        <figure>
+          <figure>
             <img loading="lazy" class="animate__animated animate__zoomIn" src="${item.portada}" alt="Imagen del proyecto">
           </figure>
-          <h2>${item.titulo}</h2>
-          <span><p>${item.tipo}</p></span>
-          <p>${item.reconocimiento}</p>
-        `;
+          <div>
+            <h2>${item.titulo}</h2>
+            <span><p>${item.tipo}</p></span>
+            <p>${item.reconocimiento}</p>
+          </div>
+          `;
 
           // Añadimos la tarjeta al contenedor
           containerTic.appendChild(card);
@@ -555,8 +566,7 @@ function OpenModal(id) {
       // Si las tarjetas no se han generado aún para este modal
       if (!tarjetasGeneradasPorModal.modaltech) {
         // Establecemos el fondo del modal
-        modal.style.backgroundImage =
-          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-19-100.jpg')";
+        modal.style.backgroundImage = `url('${bgModalTech}')`;
         modal.style.backgroundRepeat = "no-repeat";
         modal.style.backgroundSize = "cover";
         tituloSenatic.innerHTML = `<img loading="lazy" class="animate__animated animate__fadeInUp" src="${tech[0].titulo}" />`;
@@ -572,9 +582,11 @@ function OpenModal(id) {
             <figure>
             <img loading="lazy" class="animate__animated animate__zoomIn" src="${item.portada}" alt="Imagen del proyecto">
           </figure>
-          <h2>${item.titulo}</h2>
-          <span><p>${item.tipo}</p></span>
-          <p>${item.reconocimiento}</p>
+          <div>
+            <h2>${item.titulo}</h2>
+            <span><p>${item.tipo}</p></span>
+            <p>${item.reconocimiento}</p>
+          </div>
         `;
 
           // Añadimos la tarjeta al contenedor
@@ -594,8 +606,7 @@ function OpenModal(id) {
       // Si las tarjetas no se han generado aún para este modal
       if (!tarjetasGeneradasPorModal.modalYawa) {
         // Establecemos el fondo del modal
-        modal.style.backgroundImage =
-          "url('https://www.uniajc.edu.co/wp-content/uploads/2016/11/Recurso-20-100.jpg')";
+        modal.style.backgroundImage = `url('${bgModalYawa}')`;
         modal.style.backgroundRepeat = "no-repeat";
         modal.style.backgroundSize = "cover";
         tituloSenatic.innerHTML = `<img loading="lazy" class="animate__animated animate__fadeInUp" src="${yawa[0].titulo}" />`;
@@ -611,9 +622,11 @@ function OpenModal(id) {
           <figure>
             <img loading="lazy" class="animate__animated animate__zoomIn" src="${item.portada}" alt="Imagen del proyecto">
           </figure>
-          <h2>${item.titulo}</h2>
-          <span><p>${item.tipo}</p></span>
-          <p>${item.reconocimiento}</p>
+          <div>
+            <h2>${item.titulo}</h2>
+            <span><p>${item.tipo}</p></span>
+            <p>${item.reconocimiento}</p>
+          </div>
         `;
 
           // Añadimos la tarjeta al contenedor
